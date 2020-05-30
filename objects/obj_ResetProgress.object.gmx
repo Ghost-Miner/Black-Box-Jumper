@@ -32,7 +32,12 @@ file_delete("Level-2.sav");
 file_delete("Level-3.sav");
 file_delete("Level-4.sav");
 file_delete("Level-5.sav");
-
+file_delete("Level-6.sav");
+file_delete("Level-7.sav");
+file_delete("Level-8.sav");
+file_delete("Level-9.sav");
+file_delete("Level-10.sav");
+file_delete("Tutorial.sav");
 </string>
           </argument>
         </arguments>

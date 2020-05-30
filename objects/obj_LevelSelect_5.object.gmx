@@ -83,7 +83,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>room_width/2</string>
+            <string>room_width/2+64</string>
           </argument>
           <argument>
             <kind>0</kind>

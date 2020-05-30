@@ -72,7 +72,7 @@
     <instance objName="obj_wall" x="672" y="416" name="inst_A34EC992" locked="0" code="" scaleX="0.333333343267441" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy" x="480" y="480" name="inst_F872B42E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ENEMY_border" x="352" y="480" name="inst_8B9B46A2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ENEMY_border" x="576" y="480" name="inst_716AB8EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ENEMY_border" x="592" y="480" name="inst_716AB8EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="832" y="544" name="inst_409EE35C" locked="0" code="" scaleX="0.333333343267441" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1024" y="640" name="inst_825DFFBB" locked="0" code="" scaleX="0.666666686534882" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_key" x="224" y="352" name="inst_E7D5E340" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

@@ -60,8 +60,6 @@
     <instance objName="obj_UI_level_number" x="16" y="16" name="inst_B5AEA52B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mus_play_Complex" x="112" y="16" name="inst_6ADF8536" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="576" y="160" name="inst_4D2726BB" locked="0" code="" scaleX="0.666666686534882" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ENEMY_border" x="352" y="480" name="inst_8B9B46A2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ENEMY_border" x="1048" y="384" name="inst_42DB97A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_borderr_vert" x="-32" y="704" name="inst_BC2336F2" locked="0" code="" scaleX="10.1333332061768" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_15sec_spawn" x="176" y="16" name="inst_6B4793B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="160" y="608" name="inst_6B9BBA90" locked="0" code="" scaleX="0.16666667163372" scaleY="1" colour="4294967295" rotation="0"/>
@@ -87,11 +85,13 @@
     <instance objName="obj_wall" x="288" y="96" name="inst_E58A9E77" locked="0" code="" scaleX="0.833333313465118" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy" x="352" y="64" name="inst_2AA94802" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_key_TUT" x="608" y="288" name="inst_66189349" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ENEMY_border" x="224" y="64" name="inst_79CB08DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ENEMY_border" x="256" y="64" name="inst_79CB08DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike" x="32" y="192" name="inst_742F7B5A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_key" x="128" y="192" name="inst_DCD321D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_key" x="426" y="65" name="inst_48FA94EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_SAVE_Level9" x="32" y="32" name="inst_03F6136B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ENEMY_border" x="480" y="64" name="inst_0A1DC252" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ENEMY_border" x="768" y="512" name="inst_4EC99AF2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
