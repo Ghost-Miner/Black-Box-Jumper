@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1280</width>
   <height>720</height>
-  <vsnap>16</vsnap>
-  <hsnap>16</hsnap>
+  <vsnap>32</vsnap>
+  <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -62,18 +62,12 @@
     <instance objName="obj_wall" x="576" y="160" name="inst_4D2726BB" locked="0" code="" scaleX="0.666666686534882" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="192" y="576" name="inst_0218DDC1" locked="0" code="" scaleX="0.5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike" x="224" y="680" name="inst_FA5977EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="448" y="608" name="inst_F035BA93" locked="0" code="" scaleX="0.333333343267441" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike" x="200" y="680" name="inst_79212D7B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_key" x="608" y="672" name="inst_30DE00FA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike" x="480" y="680" name="inst_C76B75E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="672" y="544" name="inst_35C209DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="992" y="448" name="inst_5D024AB3" locked="0" code="" scaleX="0.333333343267441" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="1184" y="352" name="inst_6F74B2BD" locked="0" code="" scaleX="0.333333343267441" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="992" y="256" name="inst_7DBC4557" locked="0" code="" scaleX="0.333333343267441" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="32" y="448" name="inst_DF1F0237" locked="0" code="" scaleX="0.333333343267441" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_key" x="64" y="416" name="inst_5D35497B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_key" x="231" y="290" name="inst_5D35497B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike" x="32" y="416" name="inst_54145223" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="800" y="224" name="inst_880A604B" locked="0" code="" scaleX="0.16666667163372" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy" x="768" y="512" name="inst_F81F9883" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ENEMY_border" x="640" y="512" name="inst_BE6631DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_borderr_vert" x="480" y="704" name="inst_200D513A" locked="0" code="" scaleX="15" scaleY="1" colour="4294967295" rotation="0"/>
@@ -88,6 +82,15 @@
     <instance objName="obj_15sec_spawn" x="176" y="16" name="inst_6B4793B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_SAVE_Level8" x="48" y="16" name="inst_7F39B95F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ENEMY_border" x="896" y="496" name="inst_966036F1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_1x1" x="800" y="224" name="inst_B795B7DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="spr_platorm_2x1" x="32" y="448" name="inst_00999426" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="spr_platorm_2x1" x="448" y="608" name="inst_E93A7A5E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="spr_platorm_2x1" x="992" y="448" name="inst_A80AEAEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="spr_platorm_2x1" x="992" y="256" name="inst_8E34F1E7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="spr_platorm_2x1" x="1184" y="352" name="inst_251321E5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="spr_platorm_2x1" x="192" y="320" name="inst_23171767" locked="0" code="" scaleX="1.5" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spike" x="256" y="288" name="inst_1CF4907A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spike" x="241" y="299" name="inst_BF8ADEF1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

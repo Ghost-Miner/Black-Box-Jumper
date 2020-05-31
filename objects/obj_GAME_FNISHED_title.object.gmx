@@ -33,7 +33,7 @@ draw_text(room_width/2,room_height/2-128,"THE END");
 draw_set_font(fnt_small)
 draw_text(room_width/2,room_height/2-64,"THANK YOU FOR PLAYING MY GAME!");
 draw_text(room_width/2,room_height/2,"I hope you enjoyed it.");
-draw_text(room_width/2,room_height/2+40,"If you liked it don't forget to vote for it on the game jam page");
+draw_text(room_width/2,room_height/2+40,"If you liked it don't forget to vote for it on the game jam page!");
 draw_text(room_width/2,room_height/2+100,"Press ENTER to go back to menu");
 
 </string>

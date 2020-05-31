@@ -16,6 +16,8 @@
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_platform_1x1</sprite>
+    <sprite>sprites\spr_platofrm_2x1</sprite>
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_gate</sprite>
@@ -94,6 +96,8 @@
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
+    <object>objects\obj_platform_1x1</object>
+    <object>objects\spr_platorm_2x1</object>
     <object>objects\obj_bullet</object>
     <object>objects\obj_spike</object>
     <object>objects\obj_enemy</object>
