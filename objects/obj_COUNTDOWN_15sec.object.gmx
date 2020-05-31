@@ -69,7 +69,9 @@ showTime=myTime
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x,y,obj_GAMEOVER);
+            <string>global.points += 1;
+
+instance_create(x,y,obj_GAMEOVER);
 
 instance_destroy(obj_Skip_Tutorial);
 instance_destroy(obj_player);

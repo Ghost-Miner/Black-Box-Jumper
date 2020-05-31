@@ -348,7 +348,7 @@ instance_destroy(obj_key);
 instance_destroy(obj_COUNTDOWN_10sec);
 instance_destroy(obj_COUNTDOWN_15sec);
 instance_destroy(obj_COUNTDOWN_20sec);
-instance_destroy(obj_COUNTDOWN_30sec);
+instance_destroy(obj_COUNTDOWN_25sec);
 instance_destroy(obj_ENEMY_border);
 </string>
           </argument>
@@ -475,7 +475,7 @@ instance_destroy(obj_key);
 instance_destroy(obj_COUNTDOWN_10sec);
 instance_destroy(obj_COUNTDOWN_15sec);
 instance_destroy(obj_COUNTDOWN_20sec);
-instance_destroy(obj_COUNTDOWN_30sec);
+instance_destroy(obj_COUNTDOWN_25sec);
 instance_destroy(obj_ENEMY_border);
 </string>
           </argument>
@@ -574,7 +574,7 @@ instance_destroy(obj_key);
 instance_destroy(obj_COUNTDOWN_10sec);
 instance_destroy(obj_COUNTDOWN_15sec);
 instance_destroy(obj_COUNTDOWN_20sec);
-instance_destroy(obj_COUNTDOWN_30sec);
+instance_destroy(obj_COUNTDOWN_25sec);
 instance_destroy(obj_ENEMY_border);
 </string>
           </argument>
@@ -850,14 +850,11 @@ instance_destroy(obj_ENEMY_border);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.bullets &gt; 0 
-{ 
-    global.bullets -= 1;
-    bullet = instance_create(x,y,obj_bullet);
-    bullet.direction = image_angle;
-    bullet.image_angle = image_angle;
-    bullet.speed = 15;
-}
+            <string>bullet = instance_create(x,y,obj_bullet);
+bullet.direction = image_angle;
+bullet.image_angle = image_angle;
+bullet.speed = 15;
+
 </string>
           </argument>
         </arguments>
