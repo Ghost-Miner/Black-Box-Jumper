@@ -60,47 +60,7 @@
 draw_set_valign(fa_middle);
 draw_set_font(fnt_timer);
 draw_set_color(c_white);
-draw_text(room_width/2,32,"TIME LEFT: 10 second");
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="45">
-      <action>
-        <libid>1</libid>
-        <id>203</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if !instance_exists(obj_COUNTDOWN_10sec)
-    {
-    instance_create(room_width/2,16,obj_COUNTDOWN_10sec);    
-    }
+draw_text(room_width/2,32,"TIME LEFT: 10 seconds");
 </string>
           </argument>
         </arguments>

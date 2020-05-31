@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>6</kind>
-            <sound>mus_CareFree_Kevin</sound>
+            <sound>mus_TheComplex_Kevin</sound>
           </argument>
         </arguments>
       </action>
@@ -45,9 +45,43 @@
         <arguments>
           <argument>
             <kind>6</kind>
-            <sound>mus_TheComplex_Kevin</sound>
+            <sound>mus_CareFree_Kevin</sound>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>408</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>global.Music = 1</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
       <action>
         <libid>1</libid>
@@ -93,8 +127,22 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
     </event>
-    <event eventtype="7" enumb="2">
+    <event eventtype="7" enumb="4">
       <action>
         <libid>1</libid>
         <id>801</id>
@@ -116,29 +164,6 @@
           <argument>
             <kind>4</kind>
             <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>global.points = 0;
-global.Tutorial_Finished = 0;
-global.MaxLevel = 10;
-</string>
           </argument>
         </arguments>
       </action>
@@ -188,12 +213,18 @@ draw_text(320,75,"Black Box Jumper");
           <argument>
             <kind>1</kind>
             <string>file_delete("Save.sav");
+file_delete("Tutorial-sav")
 
 file_delete("Level-1.sav");
 file_delete("Level-2.sav");
 file_delete("Level-3.sav");
 file_delete("Level-4.sav");
 file_delete("Level-5.sav");
+file_delete("Level-6.sav");
+file_delete("Level-7.sav");
+file_delete("Level-8.sav");
+file_delete("Level-9.sav");
+file_delete("Level-10.sav");
 
 </string>
           </argument>

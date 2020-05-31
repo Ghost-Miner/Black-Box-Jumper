@@ -54,6 +54,7 @@
     <instance objName="obj_UI_back" x="16" y="656" name="inst_8685EC5B" locked="0" code="" scaleX="1.3125" scaleY="1.26315784454346" colour="4294967295" rotation="0"/>
     <instance objName="obj_UI_text_credits" x="16" y="180" name="inst_56FED152" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_UI_ESC_F11" x="80" y="32" name="inst_38B94DE5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_UI_playtesters" x="16" y="544" name="inst_5833053E" locked="0" code="" scaleX="1.0625" scaleY="1.09090912342072" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

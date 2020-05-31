@@ -53,6 +53,7 @@
         <sprite>sprites\spr_UI_Options</sprite>
         <sprite>sprites\spr_UI_End</sprite>
         <sprite>sprites\spr_UI_back</sprite>
+        <sprite>sprites\spr_UI_playtesters</sprite>
         <sprite>sprites\spr_UI_credits</sprite>
         <sprite>sprites\spr_UI_Level_Select</sprite>
         <sprite>sprites\spr_UI_controls</sprite>
@@ -63,7 +64,9 @@
       <sprite>sprites\spr_UI_TimesUp</sprite>
       <sprite>sprites\spr_UnlockTheLevel</sprite>
       <sprite>sprites\spr_CURSOR</sprite>
+      <sprite>sprites\spr_CURSOR_when_loading</sprite>
     </sprites>
+    <sprite>sprites\spr_UI_loading</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -116,7 +119,7 @@
       <object>objects\obj_15sec_spawn</object>
       <object>objects\obj_20sec_spawn</object>
       <object>objects\obj_25sec_spawn</object>
-      <object>objects\obj_START_timer_LVL1</object>
+      <object>objects\obj_LOAD_timer</object>
     </objects>
     <objects name="G U I">
       <objects name="Buttons">
@@ -126,6 +129,7 @@
           <object>objects\obj_UI_PlayTutorial</object>
           <object>objects\obj_UI_Controls</object>
           <object>objects\obj_UI_back</object>
+          <object>objects\obj_UI_playtesters</object>
           <object>objects\oj_UI_Level_select</object>
           <object>objects\obj_UI_Credits</object>
           <object>objects\obj_UI_options</object>
@@ -159,6 +163,7 @@
         <object>objects\obj_UI_title_Level_select</object>
         <object>objects\obj_UI_level_number</object>
         <object>objects\obj_UI_text_credits</object>
+        <object>objects\obj_UI_text_credits_playtesters</object>
         <object>objects\obj_UI_text_controls</object>
         <object>objects\obj_UI_text_Options</object>
         <object>objects\obj_UI_BETA</object>
@@ -174,6 +179,7 @@
       <object>objects\obj_SAVE_Level8</object>
       <object>objects\obj_SAVE_Level9</object>
       <object>objects\obj_SAVE_Level10</object>
+      <object>objects\obj_TUT_SAVE</object>
     </objects>
     <object>objects\obj_mus_play_Complex</object>
     <object>objects\obj_mus_play_Carefree</object>
@@ -185,13 +191,16 @@
     <object>objects\obj_SCRRENSHOT_saved_info</object>
     <object>objects\obj_UI_OpenSCREENSHOTfolder</object>
     <object>objects\obj_GAME_FNISHED_title</object>
-    <object>objects\obj_TUT_SAVE</object>
     <object>objects\obj_version_menu</object>
+    <object>objects\obj_UI_loading</object>
+    <object>objects\obj_UI_loader_TEXT</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_UI_menu_FIRST_RUN</room>
+    <room>rooms\room_LOAD_GAME</room>
     <room>rooms\room_UI_menu</room>
+    <room>rooms\room_UI_menu_FIRST_RUN</room>
     <room>rooms\room_UI_credits</room>
+    <room>rooms\room_UI_Credits_playtesters</room>
     <room>rooms\room_UI_controls</room>
     <room>rooms\room_UI_Options</room>
     <room>rooms\room_UI_Level_select</room>
