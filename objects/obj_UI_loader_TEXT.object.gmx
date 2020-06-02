@@ -49,7 +49,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Reset variables
+            <string>///Initialise variables
 global.scrnum = 0;
 global.Sound = 1;
 global.Music = 1;

@@ -35,9 +35,9 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_font(fnt_small)
 draw_set_color(c_white)
-draw_text(x,y+50,"ARROW KEYS: Movement");
+draw_text(x,y+50,"ARROW KEYS or WAD: Movement");
 draw_text(x,y+100,"SPACEBAR: Shooting");
-draw_text(x,y+200,"R: Restart level");
+draw_text(x,y+150,"R: Restart level");
 draw_text(x,y+250,"ESC: Return to menu");
 draw_text(x,y+300,"F2: Take a screenshot");
 draw_text(x,y+350,"F11: Toggle fullscreen");

@@ -37,9 +37,9 @@ draw_set_font(fnt_small)
 draw_set_color(c_white)
 draw_text(x,y,"Sefaku");
 draw_text(x,y+50,"ASecondGuy");
-draw_text(x,y+150,"(Kauna) Best_coolkitten747");
-draw_text(x,y+200,"Marshy");
-draw_text(x,y+250,"Ozzy");
+draw_text(x,y+100,"(Kauna) Best_coolkitten747");
+draw_text(x,y+150,"Marshy");
+draw_text(x,y+200,"Ozzy");
 </string>
           </argument>
         </arguments>

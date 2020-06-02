@@ -18,6 +18,9 @@
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_platform_1x1</sprite>
     <sprite>sprites\spr_platofrm_2x1</sprite>
+    <sprite>sprites\spr_platform_3x1</sprite>
+    <sprite>sprites\spr_platform_4x1</sprite>
+    <sprite>sprites\spr_platform_5x1</sprite>
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_gate</sprite>
@@ -97,7 +100,10 @@
     <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_platform_1x1</object>
-    <object>objects\spr_platorm_2x1</object>
+    <object>objects\obj_platform_2x1</object>
+    <object>objects\obj_platform_3x1</object>
+    <object>objects\obj_platform_4x1</object>
+    <object>objects\obj_platform_5x1</object>
     <object>objects\obj_bullet</object>
     <object>objects\obj_spike</object>
     <object>objects\obj_enemy</object>
@@ -108,12 +114,15 @@
     <object>objects\obj_borderr_vert</object>
     <object>objects\obj_key</object>
     <object>objects\obj_key_TUT</object>
-    <object>objects\obj_DEATH_COUNT</object>
-    <object>objects\obj_score_check</object>
-    <object>objects\gate_spawner</object>
     <object>objects\gate_spawner_TUT</object>
+    <object>objects\gate_spawner</object>
     <object>objects\obj_GAMEOVER</object>
     <object>objects\obj_DEATH_GAMEOVER</object>
+    <objects name="Statisctics">
+      <object>objects\obj_score_check</object>
+      <object>objects\obj_DEATH_COUNT</object>
+      <object>objects\obj_level_bgr_mus_play</object>
+    </objects>
     <objects name="Timers">
       <object>objects\obj_COUNTDOWN_10sec</object>
       <object>objects\obj_COUNTDOWN_15sec</object>
@@ -140,12 +149,14 @@
         </objects>
         <object>objects\obj_Skip_Tutorial</object>
         <objects name="Options">
+          <object>objects\obj_UI_Opt_Music_text</object>
           <object>objects\obj_UI_Opt_musicON</object>
           <object>objects\obj_UI_Opt_MuiscOFF</object>
           <object>objects\obj_ResetProgress</object>
           <object>objects\obj_Opt_UI_Music</object>
           <object>objects\obj_UI_Opt_Sound</object>
           <object>objects\obj_UI_ProgressResetInfo</object>
+          <object>objects\obj_UI_OpenSCREENSHOTfolder</object>
         </objects>
         <objects name="Level Select">
           <object>objects\obj_UI_UnlockTheLevelFirst</object>
@@ -171,6 +182,8 @@
         <object>objects\obj_UI_text_controls</object>
         <object>objects\obj_UI_text_Options</object>
         <object>objects\obj_UI_BETA</object>
+        <object>objects\obj_SCRRENSHOT_saved_info</object>
+        <object>objects\obj_version_menu</object>
       </objects>
     </objects>
     <objects name="SAVEFILES">
@@ -185,17 +198,14 @@
       <object>objects\obj_SAVE_Level10</object>
       <object>objects\obj_TUT_SAVE</object>
     </objects>
-    <object>objects\obj_mus_play_Complex</object>
-    <object>objects\obj_mus_play_Carefree</object>
-    <object>objects\obj_mus_play_Decisions</object>
+    <objects name="play music objects">
+      <object>objects\obj_mus_play_Complex</object>
+      <object>objects\obj_mus_play_Carefree</object>
+      <object>objects\obj_mus_play_Decisions</object>
+    </objects>
     <object>objects\obj_BULLET_counter</object>
-    <object>objects\obj_level_bgr_mus_play</object>
     <object>objects\obj_UI_ESC_F11</object>
-    <object>objects\obj_UI_Opt_Music_text</object>
-    <object>objects\obj_SCRRENSHOT_saved_info</object>
-    <object>objects\obj_UI_OpenSCREENSHOTfolder</object>
     <object>objects\obj_GAME_FNISHED_title</object>
-    <object>objects\obj_version_menu</object>
     <object>objects\obj_UI_loading</object>
     <object>objects\obj_UI_loader_TEXT</object>
   </objects>
