@@ -2,7 +2,7 @@
 
 ### This repository for latest versions of Black Box Jumper
 
-### If you are looking for GameDev.tv jam version - v. 1.0.1 >> [Click here](https://github.com/Ghost-Miner/Black-Box-Jumper)
+### If you are looking for GameDev.tv jam version - v. 1.0.1 >> [Click here](https://github.com/Ghost-Miner/Black-Box-Jumper-Jam-Version/)
 
 <br/>
 
