@@ -52,12 +52,12 @@
   </views>
   <instances>
     <instance objName="obj_UI_back" x="16" y="640" name="inst_8685EC5B" locked="0" code="" scaleX="1.3125" scaleY="1.26315784454346" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Opt_UI_Music" x="32" y="200" name="inst_97319594" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ResetProgress" x="32" y="376" name="inst_1E98A9C3" locked="0" code="" scaleX="1.12374579906464" scaleY="1.07000005245209" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Opt_UI_Music" x="16" y="200" name="inst_97319594" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ResetProgress" x="16" y="376" name="inst_1E98A9C3" locked="0" code="" scaleX="1.12374579906464" scaleY="1.07000005245209" colour="4294967295" rotation="0"/>
     <instance objName="obj_UI_ESC_F11" x="16" y="0" name="inst_3AA20CA5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_UI_text_Options" x="32" y="48" name="inst_FE7BFF54" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_UI_Opt_Sound" x="32" y="280" name="inst_35785DBC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_UI_OpenSCREENSHOTfolder" x="36" y="456" name="inst_55213B49" locked="0" code="" scaleX="0.828125" scaleY="0.888888895511627" colour="4294967295" rotation="0"/>
+    <instance objName="obj_UI_Opt_Sound" x="16" y="288" name="inst_35785DBC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_UI_OpenSCREENSHOTfolder" x="16" y="456" name="inst_55213B49" locked="0" code="" scaleX="0.828125" scaleY="0.888888895511627" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

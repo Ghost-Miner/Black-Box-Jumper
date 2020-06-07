@@ -27,13 +27,27 @@
             <kind>1</kind>
             <string>draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_set_font(fnt_large);
+draw_set_font(fnt_small_bold);
 draw_set_color(c_white);
-draw_text(room_width/2,room_height/2,"CONGRATULATIONS!");
+draw_text(room_width/2,100,"CONGRATULATIONS!");
+draw_set_font(fnt_small_bold)
+draw_text(room_width/2,200,"You completed the tutorial!");
 draw_set_font(fnt_small)
-draw_text(room_width/2,room_height/2+64,"You completed the tutorial!");
-draw_text(room_width/2,room_height/2+196,"Press ENTER to start the game");
-draw_text(room_width/2,room_height/2+256,"Press ESCAPE to return to main menu");
+draw_text(room_width/2,300,"Press ENTER to start the game");
+draw_text(room_width/2,350,"Press ESCAPE to return to main menu");
+
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle)
+draw_set_font(fnt_small_bold);
+draw_text(room_width/2,450,"Other keys you should know about:");
+
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle)
+draw_set_font(fnt_small);
+draw_text(room_width/2,500,"R: Restart level");
+draw_text(room_width/2,550,"ESC: Return to menu");
+draw_text(room_width/2,600,"F2: Take a screenshot");
+draw_text(room_width/2,650,"F11: Toggle fullscreen");
 </string>
           </argument>
         </arguments>

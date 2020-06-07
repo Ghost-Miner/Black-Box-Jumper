@@ -12,15 +12,18 @@
     <sound>sound\sfx_key</sound>
     <sound>sound\sfx_LevelComplete</sound>
     <sound>sound\sfx_shoot</sound>
+    <sound>sound\sfx_error</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
-    <sprite>sprites\spr_wall</sprite>
-    <sprite>sprites\spr_platform_1x1</sprite>
-    <sprite>sprites\spr_platofrm_2x1</sprite>
-    <sprite>sprites\spr_platform_3x1</sprite>
-    <sprite>sprites\spr_platform_4x1</sprite>
-    <sprite>sprites\spr_platform_5x1</sprite>
+    <sprites name="Platforms ">
+      <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_platform_1x1</sprite>
+      <sprite>sprites\spr_platofrm_2x1</sprite>
+      <sprite>sprites\spr_platform_4x1</sprite>
+      <sprite>sprites\spr_platform_3x1</sprite>
+      <sprite>sprites\spr_platform_5x1</sprite>
+    </sprites>
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_gate</sprite>
@@ -33,6 +36,8 @@
     <sprite>sprites\spr_TUT_NextLevel</sprite>
     <sprites name="GUI">
       <sprites name="Level buttons">
+        <sprite>sprites\spr_UnlockTheLevel</sprite>
+        <sprite>sprites\spr_UI_LevelLocked</sprite>
         <sprite>sprites\spr__UI_LevelSelect_1</sprite>
         <sprite>sprites\spr__UI_LevelSelect_2</sprite>
         <sprite>sprites\spr__UI_LevelSelect_3</sprite>
@@ -43,6 +48,8 @@
         <sprite>sprites\spr_UI_LevelSelect_8</sprite>
         <sprite>sprites\spr_UI_LevelSelect_9</sprite>
         <sprite>sprites\spr_UI_LevelSelect_10</sprite>
+        <sprite>sprites\spr_UI_LevelSelect_11</sprite>
+        <sprite>sprites\spr_UI_LevelSelect_12</sprite>
       </sprites>
       <sprites name="Menu">
         <sprites name="Options">
@@ -55,19 +62,22 @@
           <sprite>sprites\spr_UI_Opt_SoundFX_OFF</sprite>
         </sprites>
         <sprite>sprites\spr_UI_play</sprite>
+        <sprite>sprites\spr_UI_NewGame</sprite>
+        <sprite>sprites\spr_UI_Continue</sprite>
+        <sprite>sprites\spr_UI_Continue_OFF</sprite>
         <sprite>sprites\spr_UI_Options</sprite>
         <sprite>sprites\spr_UI_End</sprite>
         <sprite>sprites\spr_UI_back</sprite>
         <sprite>sprites\spr_UI_playtesters</sprite>
         <sprite>sprites\spr_UI_credits</sprite>
         <sprite>sprites\spr_UI_Level_Select</sprite>
+        <sprite>sprites\spr_UI_LevelSelectOFF</sprite>
         <sprite>sprites\spr_UI_controls</sprite>
         <sprite>sprites\spr_UI_Play_Tutorial</sprite>
       </sprites>
       <sprite>sprites\spr_UI_Death</sprite>
       <sprite>sprites\sprite32</sprite>
       <sprite>sprites\spr_UI_TimesUp</sprite>
-      <sprite>sprites\spr_UnlockTheLevel</sprite>
       <sprite>sprites\spr_CURSOR</sprite>
       <sprite>sprites\spr_CURSOR_when_loading</sprite>
     </sprites>
@@ -88,8 +98,13 @@
   <paths name="paths">
     <path>paths\path_lvl4_enemy</path>
   </paths>
+  <scripts name="scripts">
+    <script>scripts\scr_Death_GameOver.gml</script>
+    <script>scripts\scr_SaveGane.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_small</font>
+    <font>fonts\fnt_small_bold</font>
     <font>fonts\fnt_xsmall</font>
     <font>fonts\fnt_large</font>
     <font>fonts\fnt_UI_title</font>
@@ -98,12 +113,14 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
-    <object>objects\obj_wall</object>
-    <object>objects\obj_platform_1x1</object>
-    <object>objects\obj_platform_2x1</object>
-    <object>objects\obj_platform_3x1</object>
-    <object>objects\obj_platform_4x1</object>
-    <object>objects\obj_platform_5x1</object>
+    <objects name="Platforms">
+      <object>objects\obj_wall</object>
+      <object>objects\obj_platform_1x1</object>
+      <object>objects\obj_platform_2x1</object>
+      <object>objects\obj_platform_3x1</object>
+      <object>objects\obj_platform_4x1</object>
+      <object>objects\obj_platform_5x1</object>
+    </objects>
     <object>objects\obj_bullet</object>
     <object>objects\obj_spike</object>
     <object>objects\obj_enemy</object>
@@ -136,8 +153,11 @@
     </objects>
     <objects name="G U I">
       <objects name="Buttons">
+        <object>objects\obj_Skip_Tutorial</object>
         <objects name="Menu">
           <object>objects\obj_UI_PLAY</object>
+          <object>objects\obj_UI_NewGame</object>
+          <object>objects\obj_UI_Continue</object>
           <object>objects\obj_UI_END</object>
           <object>objects\obj_UI_PlayTutorial</object>
           <object>objects\obj_UI_Controls</object>
@@ -147,9 +167,7 @@
           <object>objects\obj_UI_Credits</object>
           <object>objects\obj_UI_options</object>
         </objects>
-        <object>objects\obj_Skip_Tutorial</object>
         <objects name="Options">
-          <object>objects\obj_UI_Opt_Music_text</object>
           <object>objects\obj_UI_Opt_musicON</object>
           <object>objects\obj_UI_Opt_MuiscOFF</object>
           <object>objects\obj_ResetProgress</object>
@@ -170,6 +188,8 @@
           <object>objects\obj_LevelSelect_8</object>
           <object>objects\obj_LevelSelect_9</object>
           <object>objects\obj_LevelSelect_10</object>
+          <object>objects\obj_LevelSelect_11</object>
+          <object>objects\obj_LevelSelect_12</object>
         </objects>
       </objects>
       <objects name="Titles">
@@ -196,6 +216,8 @@
       <object>objects\obj_SAVE_Level8</object>
       <object>objects\obj_SAVE_Level9</object>
       <object>objects\obj_SAVE_Level10</object>
+      <object>objects\osbj_SAVE_Level11</object>
+      <object>objects\osbj_SAVE_Level12</object>
       <object>objects\obj_TUT_SAVE</object>
     </objects>
     <objects name="play music objects">
@@ -210,30 +232,39 @@
     <object>objects\obj_UI_loader_TEXT</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_LOAD_GAME</room>
-    <room>rooms\room_UI_menu</room>
-    <room>rooms\room_UI_menu_FIRST_RUN</room>
-    <room>rooms\room_UI_credits</room>
-    <room>rooms\room_UI_Credits_playtesters</room>
-    <room>rooms\room_UI_controls</room>
-    <room>rooms\room_UI_Options</room>
-    <room>rooms\room_UI_Level_select</room>
-    <room>rooms\room_Game_Finished</room>
-    <room>rooms\room_TUT_1</room>
-    <room>rooms\room_TUT_2</room>
-    <room>rooms\room_TUT_3</room>
-    <room>rooms\room_TUT_4</room>
-    <room>rooms\room_TUT_Finished</room>
-    <room>rooms\room_Level_1</room>
-    <room>rooms\room_Level_2</room>
-    <room>rooms\room_Level_3</room>
-    <room>rooms\room_Level_4</room>
-    <room>rooms\room_Level_5</room>
-    <room>rooms\room_Level_6</room>
-    <room>rooms\room_Level_7</room>
-    <room>rooms\room_Level_8</room>
-    <room>rooms\room_Level_9</room>
-    <room>rooms\room_Level_10</room>
+    <rooms name="Menu and GUI">
+      <room>rooms\room_LOAD_GAME</room>
+      <room>rooms\room_UI_menu</room>
+      <room>rooms\room_UI_PlayOptions</room>
+      <room>rooms\room_UI_menu_FIRST_RUN_a</room>
+      <room>rooms\room_UI_credits</room>
+      <room>rooms\room_UI_Credits_playtesters</room>
+      <room>rooms\room_UI_controls</room>
+      <room>rooms\room_UI_Level_select</room>
+      <room>rooms\room_UI_Options</room>
+      <room>rooms\room_Game_Finished</room>
+    </rooms>
+    <rooms name="Tutorial">
+      <room>rooms\room_TUT_1</room>
+      <room>rooms\room_TUT_2</room>
+      <room>rooms\room_TUT_3</room>
+      <room>rooms\room_TUT_4</room>
+      <room>rooms\room_TUT_Finished</room>
+    </rooms>
+    <rooms name="Levels">
+      <room>rooms\room_Level_1</room>
+      <room>rooms\room_Level_2</room>
+      <room>rooms\room_Level_3</room>
+      <room>rooms\room_Level_4</room>
+      <room>rooms\room_Level_5</room>
+      <room>rooms\room_Level_6</room>
+      <room>rooms\room_Level_7</room>
+      <room>rooms\room_Level_8</room>
+      <room>rooms\room_Level_9</room>
+      <room>rooms\room_Level_10</room>
+      <room>rooms\room_Level_11</room>
+      <room>rooms\room_Level_12</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

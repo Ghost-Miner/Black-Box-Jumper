@@ -54,8 +54,9 @@ global.scrnum = 0;
 global.Sound = 1;
 global.Music = 1;
 global.points = 0;
-global.MaxLevel = 10;
+global.MaxLevel = 12;
 global.bullets = 1000000000;
+global.Cheats = 0;
 </string>
           </argument>
         </arguments>

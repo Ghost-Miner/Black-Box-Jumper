@@ -25,10 +25,23 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!instance_exists(obj_key_TUT))
+            <string>if (global.TUTNumber = 2)
+if (!instance_exists(obj_gate))
 {
-    instance_create(960,384,obj_gate);
+    if (!instance_exists(obj_key_TUT))
+    {
+        instance_create(960,384,obj_gate);
+    }
 }
+if (global.TUTNumber = 3)
+if (!instance_exists(obj_gate))
+{
+    if (!instance_exists(obj_key))
+    {
+        instance_create(1080,320,obj_gate);
+    }
+}
+//1080, 320
 </string>
           </argument>
         </arguments>

@@ -138,13 +138,15 @@ y += vsp;
           <argument>
             <kind>1</kind>
             <string>///Debug keys
+if (debug_mode or (global.Cheats = 1))
+{
 if (keyboard_check_pressed(ord("3")))
 {
-    room_goto(room_Game_Finished);
+    room_goto(room_Level_11);
 }
 if (keyboard_check_pressed(ord("2")))
 {
-    if (global.LevelNumber &lt; 10)
+    if (global.LevelNumber &lt; global.MaxLevel)
     {
         room_goto_next();
     }
@@ -155,7 +157,7 @@ if (keyboard_check_pressed(ord("2")))
 }
 if (keyboard_check_pressed(ord("1")))
 {
-    if (global.LevelNumber &gt;= 1)
+    if (global.LevelNumber &gt; 1)
     {
         room_goto_previous();
     }
@@ -164,7 +166,32 @@ if (keyboard_check_pressed(ord("1")))
     room_goto(room_UI_menu);
     }
 }
-
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Turns on cheats mode
+if (debug_mode or (keyboard_check(vk_control)) and (keyboard_check(vk_shift)) and (keyboard_check(ord("C"))))
+{
+global.Cheats =1;
+}
 </string>
           </argument>
         </arguments>
@@ -335,75 +362,6 @@ if (keyboard_check_pressed(ord("1")))
     <event eventtype="4" ename="obj_enemy">
       <action>
         <libid>1</libid>
-        <id>502</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_draw_background</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>7</kind>
-            <background>bgr_empty</background>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>3</kind>
-            <string>1</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>global.points += 1;
-instance_create(x,y,obj_DEATH_GAMEOVER);
-instance_destroy(obj_Skip_Tutorial);
-instance_destroy(obj_player);
-instance_destroy(obj_wall);
-instance_destroy(obj_bullet);
-instance_destroy(obj_spike);
-instance_destroy(obj_enemy);
-instance_destroy(obj_ENEMY_border);
-instance_destroy(obj_gate);
-instance_destroy(gate_spawner);
-instance_destroy(obj_key);
-instance_destroy(obj_COUNTDOWN_10sec);
-instance_destroy(obj_COUNTDOWN_15sec);
-instance_destroy(obj_COUNTDOWN_20sec);
-instance_destroy(obj_COUNTDOWN_25sec);
-instance_destroy(obj_ENEMY_border);
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>408</id>
         <kind>0</kind>
         <userelative>0</userelative>
@@ -443,6 +401,46 @@ instance_destroy(obj_ENEMY_border);
           <argument>
             <kind>3</kind>
             <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>scr_Death_GameOver</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -494,38 +492,41 @@ instance_destroy(obj_ENEMY_border);
       </action>
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>global.points += 1;
-instance_create(room_width/2,room_height/2,obj_DEATH_GAMEOVER);
-instance_destroy(obj_Skip_Tutorial);
-instance_destroy(obj_player);
-instance_destroy(obj_wall);
-instance_destroy(obj_bullet);
-instance_destroy(obj_spike);
-instance_destroy(obj_enemy)
-instance_destroy(obj_ENEMY_border);;
-instance_destroy(obj_gate);
-instance_destroy(gate_spawner);
-instance_destroy(obj_key);
-instance_destroy(obj_COUNTDOWN_10sec);
-instance_destroy(obj_COUNTDOWN_15sec);
-instance_destroy(obj_COUNTDOWN_20sec);
-instance_destroy(obj_COUNTDOWN_25sec);
-instance_destroy(obj_ENEMY_border);
-</string>
+            <kind>9</kind>
+            <script>scr_Death_GameOver</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -559,75 +560,6 @@ file_text_close(SaveFile);
       </action>
     </event>
     <event eventtype="7" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>502</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_draw_background</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>7</kind>
-            <background>bgr_empty</background>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>3</kind>
-            <string>1</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>global.points += 1;
-instance_create(x,y,obj_DEATH_GAMEOVER);
-instance_destroy(obj_Skip_Tutorial);
-instance_destroy(obj_player);
-instance_destroy(obj_wall);
-instance_destroy(obj_bullet);
-instance_destroy(obj_spike);
-instance_destroy(obj_enemy);
-instance_destroy(obj_ENEMY_border);
-instance_destroy(obj_gate);
-instance_destroy(gate_spawner);
-instance_destroy(obj_key);
-instance_destroy(obj_COUNTDOWN_10sec);
-instance_destroy(obj_COUNTDOWN_15sec);
-instance_destroy(obj_COUNTDOWN_20sec);
-instance_destroy(obj_COUNTDOWN_25sec);
-instance_destroy(obj_ENEMY_border);
-</string>
-          </argument>
-        </arguments>
-      </action>
       <action>
         <libid>1</libid>
         <id>408</id>
@@ -669,6 +601,46 @@ instance_destroy(obj_ENEMY_border);
           <argument>
             <kind>3</kind>
             <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>scr_Death_GameOver</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>

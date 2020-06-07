@@ -25,9 +25,25 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!instance_exists(obj_key))
+            <string>if (global.LevelNumber = 11)
 {
-    instance_create(640,128,obj_gate);
+if (!instance_exists(obj_gate))
+{
+    if (!instance_exists(obj_key))
+    {
+        instance_create(640,100,obj_gate);
+    }
+}
+}
+else
+{
+if (!instance_exists(obj_gate))
+{
+    if (!instance_exists(obj_key))
+    {
+        instance_create(640,128,obj_gate);
+    }
+}
 }
 </string>
           </argument>
