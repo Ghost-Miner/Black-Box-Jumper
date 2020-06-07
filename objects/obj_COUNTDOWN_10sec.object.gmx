@@ -55,6 +55,20 @@ showTime=myTime
       </action>
       <action>
         <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -73,7 +87,7 @@ showTime=myTime
 
 instance_create(x,y,obj_GAMEOVER);
 
-instance_destroy(obj_Skip_Tutorial);
+/*instance_destroy(obj_Skip_Tutorial);
 instance_destroy(obj_player);
 instance_destroy(obj_wall);
 instance_destroy(obj_bullet);
@@ -86,6 +100,20 @@ instance_destroy(obj_COUNTDOWN_10sec);
 </string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
       <action>
         <libid>1</libid>
@@ -103,7 +131,9 @@ instance_destroy(obj_COUNTDOWN_10sec);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if myTime &gt;= 0 
+            <string>if (instance_exists(obj_player))
+{
+if myTime &gt;= 0 
 {
     myTime=myTime-delta_time/1000000
 }
@@ -111,6 +141,7 @@ instance_destroy(obj_COUNTDOWN_10sec);
    {
     myTime=0
    }
+}
 showTime=(myTime)
 </string>
           </argument>

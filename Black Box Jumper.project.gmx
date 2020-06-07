@@ -113,6 +113,7 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
+    <object>objects\obj_player_DEAD_COPY</object>
     <objects name="Platforms">
       <object>objects\obj_wall</object>
       <object>objects\obj_platform_1x1</object>
@@ -230,6 +231,7 @@
     <object>objects\obj_GAME_FNISHED_title</object>
     <object>objects\obj_UI_loading</object>
     <object>objects\obj_UI_loader_TEXT</object>
+    <object>objects\obj_screenShake</object>
   </objects>
   <rooms name="rooms">
     <rooms name="Menu and GUI">
