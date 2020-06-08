@@ -73,16 +73,6 @@ showTime=myTime
 
 instance_create(x,y,obj_GAMEOVER);
 
-instance_destroy(obj_Skip_Tutorial);
-instance_destroy(obj_player);
-instance_destroy(obj_wall);
-instance_destroy(obj_bullet);
-instance_destroy(obj_spike);
-instance_destroy(obj_enemy);
-instance_destroy(obj_gate);
-instance_destroy(gate_spawner);
-instance_destroy(obj_key);
-instance_destroy(obj_COUNTDOWN_15sec);
 </string>
           </argument>
         </arguments>
