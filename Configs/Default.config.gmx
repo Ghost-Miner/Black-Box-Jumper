@@ -501,7 +501,7 @@ Twitter: @_ghostminer
     <option_use_new_audio>True</option_use_new_audio>
     <option_variableerrors>False</option_variableerrors>
     <option_version>1.0.1</option_version>
-    <option_version_build>2</option_version_build>
+    <option_version_build>4</option_version_build>
     <option_version_company></option_version_company>
     <option_version_copyright></option_version_copyright>
     <option_version_description>Black Box Jumper - Made by GhostMiner, 2020</option_version_description>
@@ -584,7 +584,7 @@ Twitter: @_ghostminer
     <option_windows_build_version>2</option_windows_build_version>
     <option_windows_company_info></option_windows_company_info>
     <option_windows_copyright_info></option_windows_copyright_info>
-    <option_windows_create_textures_on_demand>True</option_windows_create_textures_on_demand>
+    <option_windows_create_textures_on_demand>False</option_windows_create_textures_on_demand>
     <option_windows_description_info>Black Box Jumper - Made by GhostMiner, 2020</option_windows_description_info>
     <option_windows_enable_steam>0</option_windows_enable_steam>
     <option_windows_game_icon>Configs\Default\windows\runner_icon.ico</option_windows_game_icon>

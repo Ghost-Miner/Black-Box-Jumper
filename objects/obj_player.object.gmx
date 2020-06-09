@@ -29,9 +29,13 @@
 grav = 0.55;
 hsp = 0;
 vsp = 0;
-jumpspeed = 13;
+jumpspeed = 12.5;
 movespeed = 6;
-ImageAngle = 0
+ImageAngle = 0;
+global.TimerActive = 0;
+
+jumps = 0;
+jumpsmax = 2;
 </string>
           </argument>
         </arguments>
@@ -83,7 +87,7 @@ bullet.speed = 15;
             <string>//Get player's input
 key_right = (keyboard_check(vk_right) or keyboard_check(ord("D")));
 key_left = -(keyboard_check(vk_left) or keyboard_check(ord("A")));
-key_jump = (keyboard_check(vk_up) or keyboard_check(ord("W")));
+key_jump = (keyboard_check_pressed(vk_up) or keyboard_check_pressed(ord("W")));
 
 //React to inputs
 move = key_left + key_right;
@@ -92,7 +96,13 @@ if (vsp &lt; 10) vsp += grav;
 
 if (place_meeting(x,y+1,obj_wall))
 {
-    vsp = key_jump * -jumpspeed
+    jumps = jumpsmax;
+}
+
+if ((key_jump) and (jumps &gt; 0))
+{
+    jumps -= 1;
+    vsp = -jumpspeed;
 }
 
 //Horizontal collision
@@ -191,6 +201,31 @@ if (keyboard_check_pressed(ord("1")))
 if (debug_mode or (keyboard_check(vk_control)) and (keyboard_check(vk_shift)) and (keyboard_check(ord("C"))))
 {
 global.Cheats =1;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (keyboard_check_pressed(vk_left) or keyboard_check_pressed(vk_right) or keyboard_check_pressed(vk_up) or keyboard_check_pressed(vk_space)
+ or keyboard_check_pressed(ord("A")) or keyboard_check_pressed(ord("D")) or keyboard_check_pressed(ord("W")))
+{
+    global.TimerActive = 1 
 }
 </string>
           </argument>

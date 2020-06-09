@@ -55,12 +55,17 @@
       <sprites name="Menu">
         <sprites name="Options">
           <sprite>sprites\spr_UI_ResetProgress</sprite>
+          <sprite>sprites\spr_UI_Opt_advanced</sprite>
           <sprite>sprites\spr_UI_OpenSCREENSHOTfolder</sprite>
           <sprite>sprites\spr_UI_Progress_Reset_title</sprite>
           <sprite>sprites\spr_UI_Opt_MusicON</sprite>
           <sprite>sprites\spr_UI_Opt_MusicOFF</sprite>
           <sprite>sprites\spr_UI_Opt_SoundFX_ON</sprite>
           <sprite>sprites\spr_UI_Opt_SoundFX_OFF</sprite>
+          <sprite>sprites\spr_UI_Screenshake</sprite>
+          <sprite>sprites\spr_UI_plus</sprite>
+          <sprite>sprites\spr_UI_minus</sprite>
+          <sprite>sprites\spt_UI_Reset</sprite>
         </sprites>
         <sprite>sprites\spr_UI_play</sprite>
         <sprite>sprites\spr_UI_NewGame</sprite>
@@ -79,7 +84,7 @@
       <sprite>sprites\spr_UI_Death</sprite>
       <sprite>sprites\spr_UI_TimesUp</sprite>
       <sprite>sprites\spr_CURSOR</sprite>
-      <sprite>sprites\spr_CURSOR_when_loading</sprite>
+      <sprite>sprites\spr_CURSOR_hidden</sprite>
     </sprites>
     <sprite>sprites\spr_UI_loading</sprite>
   </sprites>
@@ -87,21 +92,19 @@
     <background>background\background0</background>
     <background>background\bgr_empty</background>
     <background>background\bgr_UI_background</background>
-    <background>background\spr_UI_bgr1080</background>
-    <background>background\spr_UI_blur</background>
     <background>background\bgr_game_fiished</background>
     <background>background\bgr_TUT_1</background>
     <background>background\bgr_TUT_2</background>
     <background>background\bgr_TUT_3</background>
     <background>background\bgr_TUT_4</background>
   </backgrounds>
-  <paths name="paths">
-    <path>paths\path_lvl4_enemy</path>
-  </paths>
+  <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_Death_GameOver.gml</script>
     <script>scripts\scr_SaveGane.gml</script>
     <script>scripts\scr_SlideThruBlack.gml</script>
+    <script>scripts\scr_timer.gml</script>
+    <script>scripts\scr_DisplayTime.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_small</font>
@@ -203,6 +206,7 @@
         <object>objects\obj_UI_text_credits_playtesters</object>
         <object>objects\obj_UI_text_controls</object>
         <object>objects\obj_UI_text_Options</object>
+        <object>objects\obj_UI_text_OptionsAdvanced</object>
         <object>objects\obj_UI_BETA</object>
         <object>objects\obj_SCRRENSHOT_saved_info</object>
         <object>objects\obj_version_menu</object>
@@ -233,6 +237,11 @@
     <object>objects\obj_UI_loading</object>
     <object>objects\obj_UI_loader_TEXT</object>
     <object>objects\obj_screenShake</object>
+    <object>objects\obj_Opt_ScrShake</object>
+    <object>objects\obj_UI_Options_Advanced</object>
+    <object>objects\obj_UI_ScrShake_pluss</object>
+    <object>objects\obj_UI_ScrShake_minus</object>
+    <object>objects\obj_ScrShake_Reset</object>
   </objects>
   <rooms name="rooms">
     <rooms name="Menu and GUI">
@@ -245,6 +254,7 @@
       <room>rooms\room_UI_controls</room>
       <room>rooms\room_UI_Level_select</room>
       <room>rooms\room_UI_Options</room>
+      <room>rooms\room_Options_Advanced</room>
       <room>rooms\room_Game_Finished</room>
     </rooms>
     <rooms name="Tutorial">
