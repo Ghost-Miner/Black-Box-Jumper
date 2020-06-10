@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1280</width>
   <height>720</height>
-  <vsnap>8</vsnap>
-  <hsnap>8</hsnap>
+  <vsnap>32</vsnap>
+  <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -32,7 +32,7 @@ global.TUTNumber = 1;</code>
     <yoffset>0</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="-1" foreground="0" name="bgr_TUT_1" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="bgr_TUT_1" x="0" y="0" htiled="0" vtiled="0" hspeed="0" vspeed="0" stretch="-1"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -61,8 +61,8 @@ global.TUTNumber = 1;</code>
     <instance objName="obj_wall" x="544" y="480" name="inst_63B7B7DA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="864" y="384" name="inst_3BA742A8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_TUT1_nextlevel" x="912" y="304" name="inst_61CB9E8F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Skip_Tutorial" x="552" y="128" name="inst_D3F7399E" locked="0" code="" scaleX="0.713513493537903" scaleY="0.639999985694885" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mus_play_Carefree" x="16" y="16" name="inst_3E6A4170" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mus_play_BreakTime" x="16" y="16" name="inst_3E6A4170" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Skip_Tutorial" x="497" y="174" name="inst_59CD9628" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

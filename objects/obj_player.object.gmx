@@ -29,8 +29,8 @@
 grav = 0.55;
 hsp = 0;
 vsp = 0;
-jumpspeed = 12.5;
-movespeed = 6;
+jumpspeed = 13;
+movespeed = global.PlayerSpeed;
 ImageAngle = 0;
 global.TimerActive = 0;
 
@@ -963,6 +963,28 @@ file_text_close(SaveFile);
             string(current_second) +
             ".png")
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="112">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>

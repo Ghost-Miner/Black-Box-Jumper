@@ -72,7 +72,6 @@ global.TUTNumber = 3;</code>
     <instance objName="obj_spike" x="576" y="672" name="inst_2A5DA102" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1008" y="384" name="inst_86D08F47" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike" x="1152" y="352" name="inst_B89889E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Skip_Tutorial" x="976" y="88" name="inst_9FB40627" locked="0" code="" scaleX="0.735135138034821" scaleY="0.864864885807037" colour="4294967295" rotation="0"/>
     <instance objName="obj_ENEMY_border" x="512" y="456" name="inst_D3C50695" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ENEMY_border" x="880" y="432" name="inst_C3144BFA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_platform_3x1" x="768" y="464" name="inst_9FE08583" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -81,6 +80,8 @@ global.TUTNumber = 3;</code>
     <instance objName="obj_spike" x="1135" y="363" name="inst_CDCA7609" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike" x="1168" y="364" name="inst_8C5E3E05" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="gate_spawner_TUT" x="32" y="96" name="inst_204309EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mus_play_BreakTime" x="64" y="96" name="inst_DAC70FCC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Skip_Tutorial" x="927" y="78" name="inst_2D0AECD6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

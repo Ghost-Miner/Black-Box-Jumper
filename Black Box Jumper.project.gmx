@@ -8,6 +8,7 @@
     <sound>sound\mus_TheComplex_Kevin</sound>
     <sound>sound\mus_Decisions_Kevin</sound>
     <sound>sound\mus_CareFree_Kevin</sound>
+    <sound>sound\mus_Breaktime_Kevin</sound>
     <sound>sound\sfx_death</sound>
     <sound>sound\sfx_key</sound>
     <sound>sound\sfx_LevelComplete</sound>
@@ -171,6 +172,7 @@
           <object>objects\oj_UI_Level_select</object>
           <object>objects\obj_UI_Credits</object>
           <object>objects\obj_UI_options</object>
+          <object>objects\obj_UI_Options_Advanced</object>
         </objects>
         <objects name="Options">
           <object>objects\obj_UI_Opt_musicON</object>
@@ -196,6 +198,16 @@
           <object>objects\obj_LevelSelect_11</object>
           <object>objects\obj_LevelSelect_12</object>
         </objects>
+        <objects name="Advanced options">
+          <object>objects\obj_Opt_ScrShake</object>
+          <object>objects\obj_Opt_PlayerSpeed</object>
+          <object>objects\obj_UI_ScrShake_pluss</object>
+          <object>objects\obj_ScrShake_Reset</object>
+          <object>objects\obj_UI_ScrShake_minus</object>
+          <object>objects\obj_UI_Playerspeed_plus</object>
+          <object>objects\obj_UI_PlayerSpeed_minus</object>
+          <object>objects\obj_PlayerSpeed_Reset</object>
+        </objects>
       </objects>
       <objects name="Titles">
         <object>objects\obj_TUT_Finihed</object>
@@ -210,6 +222,7 @@
         <object>objects\obj_UI_BETA</object>
         <object>objects\obj_SCRRENSHOT_saved_info</object>
         <object>objects\obj_version_menu</object>
+        <object>objects\obj_GAME_FNISHED_title</object>
       </objects>
     </objects>
     <objects name="SAVEFILES">
@@ -228,20 +241,16 @@
     </objects>
     <objects name="play music objects">
       <object>objects\obj_mus_play_Complex</object>
-      <object>objects\obj_mus_play_Carefree</object>
+      <object>objects\obj_mus_play_BreakTime</object>
       <object>objects\obj_mus_play_Decisions</object>
     </objects>
-    <object>objects\obj_BULLET_counter</object>
-    <object>objects\obj_UI_ESC_F11</object>
-    <object>objects\obj_GAME_FNISHED_title</object>
-    <object>objects\obj_UI_loading</object>
-    <object>objects\obj_UI_loader_TEXT</object>
+    <objects name="Miscellaneous">
+      <object>objects\obj_UI_loading</object>
+      <object>objects\obj_UI_loader_TEXT</object>
+      <object>objects\obj_BULLET_counter</object>
+      <object>objects\obj_UI_ESC_F11</object>
+    </objects>
     <object>objects\obj_screenShake</object>
-    <object>objects\obj_Opt_ScrShake</object>
-    <object>objects\obj_UI_Options_Advanced</object>
-    <object>objects\obj_UI_ScrShake_pluss</object>
-    <object>objects\obj_UI_ScrShake_minus</object>
-    <object>objects\obj_ScrShake_Reset</object>
   </objects>
   <rooms name="rooms">
     <rooms name="Menu and GUI">

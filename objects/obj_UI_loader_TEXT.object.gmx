@@ -60,6 +60,7 @@ global.Cheats = 0;
 
 global.ScreenShakeX = -2;
 global.ScreenShakeY = 2;
+global.PlayerSpeed = 6;
 
 display_reset(1, true);
 </string>
