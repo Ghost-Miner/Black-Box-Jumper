@@ -91,7 +91,7 @@ draw_text(room_width/2,600,"F11: Toggle fullscreen");
         <arguments>
           <argument>
             <kind>11</kind>
-            <room>room_Level_1</room>
+            <room>room_EASY_Level_1</room>
           </argument>
         </arguments>
       </action>

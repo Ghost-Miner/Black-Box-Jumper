@@ -7,7 +7,8 @@ if (global.TimerActive = 1) and (instance_exists(obj_player))
     else
     {
         myTime = 0
-        global.points += 1;
+        global.Attempts += 1;
+        global.points -= 5;
         instance_destroy();
         instance_create(x,y,obj_GAMEOVER);
         instance_destroy(obj_player);

@@ -88,6 +88,7 @@
       <sprite>sprites\spr_CURSOR_hidden</sprite>
     </sprites>
     <sprite>sprites\spr_UI_loading</sprite>
+    <sprite>sprites\spr_LevelSelectButton</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -102,13 +103,14 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_Death_GameOver.gml</script>
-    <script>scripts\scr_SaveGane.gml</script>
+    <script>scripts\scr_SaveGane_easy.gml</script>
     <script>scripts\scr_SlideThruBlack.gml</script>
     <script>scripts\scr_timer.gml</script>
     <script>scripts\scr_DisplayTime.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_small</font>
+    <font>fonts\fnt_LevelSelect</font>
     <font>fonts\fnt_small_bold</font>
     <font>fonts\fnt_xsmall</font>
     <font>fonts\fnt_large</font>
@@ -226,17 +228,17 @@
       </objects>
     </objects>
     <objects name="SAVEFILES">
-      <object>objects\obj_SAVE_Level2</object>
-      <object>objects\obj_SAVE_Level3</object>
-      <object>objects\obj_SAVE_Level4</object>
-      <object>objects\obj_SAVE_Level5</object>
-      <object>objects\obj_SAVE_Level6</object>
-      <object>objects\obj_SAVE_Level7</object>
-      <object>objects\obj_SAVE_Level8</object>
-      <object>objects\obj_SAVE_Level9</object>
-      <object>objects\obj_SAVE_Level10</object>
-      <object>objects\osbj_SAVE_Level11</object>
-      <object>objects\osbj_SAVE_Level12</object>
+      <object>objects\obj_SAVE_Level2_EASY</object>
+      <object>objects\obj_SAVE_Level3_EASY</object>
+      <object>objects\obj_SAVE_Level4_EASY</object>
+      <object>objects\obj_SAVE_Level5_EASY</object>
+      <object>objects\obj_SAVE_Level6_EASY</object>
+      <object>objects\obj_SAVE_Level7_EASY</object>
+      <object>objects\obj_SAVE_Level8_EASY</object>
+      <object>objects\obj_SAVE_Level9_EASY</object>
+      <object>objects\obj_SAVE_Level10_EASY</object>
+      <object>objects\osbj_SAVE_Level11_EASY</object>
+      <object>objects\osbj_SAVE_Level12_EASY</object>
       <object>objects\obj_TUT_SAVE</object>
     </objects>
     <objects name="play music objects">
@@ -251,13 +253,13 @@
       <object>objects\obj_UI_ESC_F11</object>
     </objects>
     <object>objects\obj_screenShake</object>
+    <object>objects\ojb_LvlSelect_Controll</object>
   </objects>
   <rooms name="rooms">
     <rooms name="Menu and GUI">
       <room>rooms\room_LOAD_GAME</room>
       <room>rooms\room_UI_menu</room>
       <room>rooms\room_UI_PlayOptions</room>
-      <room>rooms\room_UI_menu_FIRST_RUN_a</room>
       <room>rooms\room_UI_credits</room>
       <room>rooms\room_UI_Credits_playtesters</room>
       <room>rooms\room_UI_controls</room>
@@ -274,18 +276,34 @@
       <room>rooms\room_TUT_Finished</room>
     </rooms>
     <rooms name="Levels">
-      <room>rooms\room_Level_1</room>
-      <room>rooms\room_Level_2</room>
-      <room>rooms\room_Level_3</room>
-      <room>rooms\room_Level_4</room>
-      <room>rooms\room_Level_5</room>
-      <room>rooms\room_Level_6</room>
-      <room>rooms\room_Level_7</room>
-      <room>rooms\room_Level_8</room>
-      <room>rooms\room_Level_9</room>
-      <room>rooms\room_Level_10</room>
-      <room>rooms\room_Level_11</room>
-      <room>rooms\room_Level_12</room>
+      <rooms name="Easy">
+        <room>rooms\room_EASY_Level_1</room>
+        <room>rooms\room_EASY_Level_2</room>
+        <room>rooms\room_EASY_Level_3</room>
+        <room>rooms\room_EASY_Level_4</room>
+        <room>rooms\room_EASY_Level_5</room>
+        <room>rooms\room_EASY_Level_6</room>
+        <room>rooms\room_EASY_Level_7</room>
+        <room>rooms\room_EASY_Level_8</room>
+        <room>rooms\room_EASY_Level_9</room>
+        <room>rooms\room_EASY_Level_10</room>
+        <room>rooms\room_EASY_Level_11</room>
+        <room>rooms\room_EASY_Level_12</room>
+      </rooms>
+      <rooms name="Medium">
+        <room>rooms\room_MEDIUM_Level_1</room>
+        <room>rooms\room_MEDIUM_Level_2</room>
+        <room>rooms\room_MEDIUM_Level_3</room>
+        <room>rooms\room_MEDIUM_Level_4</room>
+        <room>rooms\room_MEDIUM_Level_5</room>
+        <room>rooms\room_MEDIUM_Level_6</room>
+        <room>rooms\room_MEDIUM_Level_7</room>
+        <room>rooms\room_MEDIUM_Level_8</room>
+        <room>rooms\room_MEDIUM_Level_9</room>
+        <room>rooms\room_MEDIUM_Level_10</room>
+        <room>rooms\room_MEDIUM_Level_11</room>
+        <room>rooms\room_MEDIUM_Level_12</room>
+      </rooms>
     </rooms>
   </rooms>
   <help>

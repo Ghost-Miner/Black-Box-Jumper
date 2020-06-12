@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//global.points = global.points + 10;
+            <string>global.points += 10;
 </string>
           </argument>
         </arguments>
