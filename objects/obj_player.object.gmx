@@ -40,6 +40,46 @@ jumpsmax = 2;
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>532</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_effect</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>-1</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>4</kind>
+            <string>1</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>2</string>
+          </argument>
+          <argument>
+            <kind>13</kind>
+            <string>16777215</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>1</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="2" enumb="0">
       <action>
@@ -84,7 +124,8 @@ bullet.speed = 15;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Get player's input
+            <string>///controls and gravity
+//Get player's input
 key_right = (keyboard_check(vk_right) or keyboard_check(ord("D")));
 key_left = -(keyboard_check(vk_left) or keyboard_check(ord("A")));
 key_jump = (keyboard_check_pressed(vk_up) or keyboard_check_pressed(ord("W")));
@@ -147,35 +188,52 @@ y += vsp;
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///Start the timer
+if (keyboard_check(vk_left) or keyboard_check(vk_right) or keyboard_check(vk_up) or keyboard_check(vk_space)
+ or keyboard_check(ord("A")) or keyboard_check(ord("D")) or keyboard_check(ord("W")))
+{
+    global.TimerActive = 1 
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>///Debug keys
 if (debug_mode or (global.Cheats = 1))
 {
-if (keyboard_check_pressed(ord("3")))
-{
-    room_goto(room_Level_11);
-}
-if (keyboard_check_pressed(ord("2")))
-{
-    if (global.LevelNumber &lt; global.MaxLevel)
+    if (keyboard_check_pressed(ord("3")))
+    {
+        room_goto(room_UI_Medium_Level_select);
+    }
+    if (keyboard_check_pressed(ord("4")))
+    {
+        instance_destroy(obj_key);
+    }
+    if (keyboard_check_pressed(ord("2")))
     {
         room_goto_next();
     }
-    else
-    {
-    room_goto(room_UI_menu);
-    }
-}
-if (keyboard_check_pressed(ord("1")))
-{
-    if (global.LevelNumber &gt; 1)
+
+    if (keyboard_check_pressed(ord("1")))
     {
         room_goto_previous();
     }
-    else
-    {
-    room_goto(room_UI_menu);
-    }
-}
 }
 </string>
           </argument>
@@ -198,34 +256,9 @@ if (keyboard_check_pressed(ord("1")))
           <argument>
             <kind>1</kind>
             <string>///Turns on cheats mode
-if (debug_mode or (keyboard_check(vk_control)) and (keyboard_check(vk_shift)) and (keyboard_check(ord("C"))))
+if (debug_mode or (keyboard_check(vk_control)) and (keyboard_check(ord("C"))))
 {
 global.Cheats =1;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (keyboard_check_pressed(vk_left) or keyboard_check_pressed(vk_right) or keyboard_check_pressed(vk_up) or keyboard_check_pressed(vk_space)
- or keyboard_check_pressed(ord("A")) or keyboard_check_pressed(ord("D")) or keyboard_check_pressed(ord("W")))
-{
-    global.TimerActive = 1 
 }
 </string>
           </argument>
@@ -327,74 +360,6 @@ global.Cheats =1;
       </action>
       <action>
         <libid>1</libid>
-        <id>408</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>global.LevelNumber = global.MaxLevel</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>224</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_another_room</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>11</kind>
-            <room>room_Game_Finished</room>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>421</id>
-        <kind>3</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>222</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_next_room</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -409,7 +374,15 @@ global.Cheats =1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.points += 20;
+            <string>if (global.LastLevel = true)
+    {
+    room_goto(room_Game_Finished);
+    }
+else
+{
+    room_goto_next();    
+}
+global.points += 20;
 </string>
           </argument>
         </arguments>
@@ -784,28 +757,172 @@ global.Cheats =1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (file_exists("Save-easy.sav")) file_delete("Save-easy.sav");
-var SaveFile = file_text_open_write("Save-easy.sav");
-var SavedRoom = room;
-file_text_write_real(SaveFile,SavedRoom);
-file_text_close(SaveFile);
+            <string>///Save game
+    if (file_exists("Save.sav")) file_delete("Save.sav");
+    var SaveFile = file_text_open_write("Save.sav");
+    var SavedRoom = room;
+    file_text_write_real(SaveFile,SavedRoom);
+    file_text_close(SaveFile);
 </string>
           </argument>
         </arguments>
       </action>
       <action>
         <libid>1</libid>
-        <id>203</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
-        <whoName>obj_DEATH_GAMEOVER</whoName>
+        <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Save levels
+//Easy
+if global.difficulty = "Easy"
+{
+    if global.EM_Number = 1
+    {
+        game_save("Level-E1.sav")
+    }
+    if global.EM_Number = 2
+    {
+        game_save("Level-E2.sav")
+    }
+    if global.EM_Number = 3
+    {
+        game_save("Level-E3.sav")
+    }
+    if global.EM_Number = 4
+    {
+        game_save("Level-E4.sav")
+    }
+    if global.EM_Number = 5
+    {
+        game_save("Level-E5.sav")
+    }
+    if global.EM_Number = 6
+    {
+        game_save("Level-E6.sav")
+    }
+    if global.EM_Number = 7
+    {
+        game_save("Level-E7.sav")
+    }
+    if global.EM_Number = 8
+    {
+        game_save("Level-E8.sav")
+    }
+    if global.EM_Number = 9
+    {
+        game_save("Level-E9.sav")
+    }
+    if global.EM_Number = 10
+    {
+        game_save("Level-E10.sav")
+    }
+    if global.EM_Number = 11
+    {
+        game_save("Level-E11.sav")
+    }
+    if global.EM_Number = 12
+    {
+        game_save("Level-E12.sav")
+    }
+}
+
+//Medium
+if global.difficulty = "Medium"
+{
+    if global.MM_Number = 1
+    {
+        game_save("Level-M1.sav")
+    }
+    if global.MM_Number = 2
+    {
+        game_save("Level-M2.sav")
+    }
+    if global.MM_Number = 3
+    {
+        game_save("Level-M3.sav")
+    }
+    if global.MM_Number = 4
+    {
+        game_save("Level-M4.sav")
+    }
+    if global.MM_Number = 5
+    {
+        game_save("Level-M5.sav")
+    }
+    if global.MM_Number = 6
+    {
+        game_save("Level-M6.sav")
+    }
+    if global.MM_Number = 7
+    {
+        game_save("Level-M7.sav")
+    }
+    if global.MM_Number = 8
+    {
+        game_save("Level-M8.sav")
+    }
+    if global.MM_Number = 9
+    {
+        game_save("Level-M9.sav")
+    }
+    if global.MM_Number = 10
+    {
+        game_save("Level-M10.sav")
+    }
+    if global.MM_Number = 11
+    {
+        game_save("Level-M11.sav")
+    }
+    if global.MM_Number = 12
+    {
+        game_save("Level-M12.sav")
+    }
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_destroy(obj_DEATH_GAMEOVER);
+
+if (!instance_exists(obj_score))
+{
+    instance_create(1248,64,obj_score);
+}
+if (!instance_exists(obj_FPS_meter))
+{
+    instance_create(1248,96,obj_FPS_meter);
+}
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
     <event eventtype="7" enumb="0">
@@ -1189,6 +1306,124 @@ file_text_close(SaveFile);
 </string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="38">
+      <action>
+        <libid>1</libid>
+        <id>408</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>jumps = 1</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>401</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_empty</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>-1</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>+1</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>532</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_effect</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>-1</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>4</kind>
+            <string>2</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>+16</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>13</kind>
+            <string>16777215</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="9" enumb="37">

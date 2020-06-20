@@ -11,80 +11,6 @@
     <event eventtype="6" enumb="4">
       <action>
         <libid>1</libid>
-        <id>408</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>file_exists("Tutorial.sav")</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>224</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_another_room</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>11</kind>
-            <room>room_EASY_Level_1</room>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>421</id>
-        <kind>3</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>224</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_another_room</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>11</kind>
-            <room>room_TUT_1</room>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -99,27 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Deletes save files and resets variables
-//Reset variables
+            <string>instance_destroy(obj_arrow)
+instance_create(384,312,obj_arrow);
+instance_create(450,304,obj_UI_Easy_NEWGame);
+instance_create(450,395,obj_UI_Medium_NewGame);
+instance_destroy(obj_Continue_Easy);
+instance_destroy(obj_Continue_Medium);
+
 global.points = 0;
-global.bullets = 1000000000;
-
-//Delete save files
-file_delete("Save.sav");
-
-file_delete("Level-1.sav");
-file_delete("Level-2.sav");
-file_delete("Level-3.sav");
-file_delete("Level-4.sav");
-file_delete("Level-5.sav");
-file_delete("Level-6.sav");
-file_delete("Level-7.sav");
-file_delete("Level-8.sav");
-file_delete("Level-9.sav");
-file_delete("Level-10.sav");
-file_delete("Level-11.sav");
-file_delete("Level-12.sav");
-file_delete("Tutorial.sav");
+global.Attempts = 0;
 </string>
           </argument>
         </arguments>

@@ -33,25 +33,39 @@ if (!instance_exists(obj_UI_ProgressResetInfo))
 }
 
 //Reset variables
+global.Attempts = 0; 
 global.points = 0;
 global.bullets = 1000000000;
 
 //Delete save files
 file_delete("Save.sav");
-
-file_delete("Level-1.sav");
-file_delete("Level-2.sav");
-file_delete("Level-3.sav");
-file_delete("Level-4.sav");
-file_delete("Level-5.sav");
-file_delete("Level-6.sav");
-file_delete("Level-7.sav");
-file_delete("Level-8.sav");
-file_delete("Level-9.sav");
-file_delete("Level-10.sav");
-file_delete("Level-11.sav");
-file_delete("Level-12.sav");
 file_delete("Tutorial.sav");
+
+file_delete("Level-E1.sav");
+file_delete("Level-E2.sav");
+file_delete("Level-E3.sav");
+file_delete("Level-E4.sav");
+file_delete("Level-E5.sav");
+file_delete("Level-E6.sav");
+file_delete("Level-E7.sav");
+file_delete("Level-E8.sav");
+file_delete("Level-E9.sav");
+file_delete("Level-E10.sav");
+file_delete("Level-E11.sav");
+file_delete("Level-E12.sav");
+
+file_delete("Level-M1.sav");
+file_delete("Level-M2.sav");
+file_delete("Level-M3.sav");
+file_delete("Level-M4.sav");
+file_delete("Level-M5.sav");
+file_delete("Level-M6.sav");
+file_delete("Level-M7.sav");
+file_delete("Level-M8.sav");
+file_delete("Level-M9.sav");
+file_delete("Level-M10.sav");
+file_delete("Level-M11.sav");
+file_delete("Level-M12.sav");
 </string>
           </argument>
         </arguments>

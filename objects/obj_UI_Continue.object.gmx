@@ -11,49 +11,26 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>408</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>-1</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>file_exists("Save-easy.sav")</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>541</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_sprite_set</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>5</kind>
-            <sprite>spr_UI_Continue_OFF</sprite>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1</string>
+            <kind>1</kind>
+            <string>if !file_exists("Save.sav")
+{
+        sprite_index = spr_UI_Continue_OFF;
+}
+
+</string>
           </argument>
         </arguments>
       </action>
@@ -75,7 +52,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>scr_SaveGane_easy</script>
+            <script>scr_SaveGame</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -115,7 +92,7 @@
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>file_exists("Save-easy.sav")</string>
+            <string>file_exists("Save.sav")</string>
           </argument>
         </arguments>
       </action>
@@ -190,6 +167,36 @@
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/* 
+if ((file_exists("Save-easy.sav")) or (file_exists("Save-medium.sav")))
+{
+instance_destroy(obj_arrow);
+instance_create(352,212,obj_arrow);
+instance_create(415,208,obj_Continue_Easy);
+instance_create(415,300,obj_Continue_Medium);
+instance_destroy(obj_UI_Easy_NEWGame);
+instance_destroy(obj_UI_Medium_NewGame);
+}
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
     <event eventtype="8" enumb="0">

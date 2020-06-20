@@ -25,25 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.LevelNumber = 11)
+            <string>if ((global.difficulty = "Easy") and (global.EM_Number = 11) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
 {
-if (!instance_exists(obj_gate))
-{
-    if (!instance_exists(obj_key))
-    {
-        instance_create(640,100,obj_gate);
-    }
-}
+    instance_create(640,100,obj_gate);
 }
 else
 {
-if (!instance_exists(obj_gate))
-{
-    if (!instance_exists(obj_key))
+    if ((!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
     {
         instance_create(640,128,obj_gate);
     }
-}
 }
 </string>
           </argument>

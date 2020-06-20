@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>myTime=1.0
+            <string>myTime=0.5
 showTime=myTime
 
-depth = -100; 
+depth = -1000; 
 </string>
           </argument>
         </arguments>

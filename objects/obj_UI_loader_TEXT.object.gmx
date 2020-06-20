@@ -54,10 +54,12 @@ global.scrnum = 0;
 global.Sound = 1;
 global.Music = 1;
 global.points = 0;
-global.MaxLevel = 12;
+global.MaxLevel = 2.12;
 global.bullets = 1000000000;
 global.Cheats = 0;
 global.Attempts = 0;
+global.GameVersion = "1.3 Test Build 2";
+global.LastLevel = false;
 
 global.ScreenShakeX = -2;
 global.ScreenShakeY = 2;
