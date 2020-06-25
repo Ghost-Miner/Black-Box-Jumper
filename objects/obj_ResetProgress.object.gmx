@@ -66,6 +66,11 @@ file_delete("Level-M9.sav");
 file_delete("Level-M10.sav");
 file_delete("Level-M11.sav");
 file_delete("Level-M12.sav");
+
+file_delete("Level-H1.sav");
+file_delete("Level-H2.sav");
+file_delete("Level-H3.sav");
+file_delete("Level-H4.sav");
 </string>
           </argument>
         </arguments>

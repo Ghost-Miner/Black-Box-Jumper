@@ -70,6 +70,7 @@ global.difficulty = "Medium";</code>
     <instance objName="obj_Easy_LevelSelectr" x="32" y="592" name="inst_217AA63F" locked="0" code="" scaleX="0.643678188323975" scaleY="0.600000023841858" colour="4294967295" rotation="0"/>
     <instance objName="obj_Medium_lvl_select" x="160" y="592" name="inst_70D711CA" locked="0" code="" scaleX="0.648148119449615" scaleY="0.639999985694885" colour="4294967295" rotation="0"/>
     <instance objName="obj_mus_play_Decisions" x="48" y="48" name="inst_3AC448C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Hard_lvl_select" x="352" y="592" name="inst_24287B09" locked="0" code="" scaleX="0.720000028610229" scaleY="0.685185194015503" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

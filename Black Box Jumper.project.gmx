@@ -7,7 +7,6 @@
   <sounds name="sound">
     <sound>sound\mus_TheComplex_Kevin</sound>
     <sound>sound\mus_Decisions_Kevin</sound>
-    <sound>sound\mus_CareFree_Kevin</sound>
     <sound>sound\mus_Breaktime_Kevin</sound>
     <sound>sound\sfx_death</sound>
     <sound>sound\sfx_key</sound>
@@ -226,8 +225,15 @@
             <object>objects\obj_LEvelSelect_M_11</object>
             <object>objects\obj_LEvelSelect_M_12</object>
           </objects>
+          <objects name="Hard">
+            <object>objects\obj_LevelSelect_H_1</object>
+            <object>objects\obj_LevelSelect_H_2</object>
+            <object>objects\obj_LevelSelect_H_3</object>
+            <object>objects\obj_LevelSelect_H_4</object>
+          </objects>
           <object>objects\obj_Easy_LevelSelectr</object>
           <object>objects\obj_Medium_lvl_select</object>
+          <object>objects\obj_Hard_lvl_select</object>
           <object>objects\obj_UI_UnlockTheLevelFirst</object>
         </objects>
         <objects name="Advanced options">
@@ -289,6 +295,7 @@
       <room>rooms\room_UI_controls</room>
       <room>rooms\room_UI_Easy_Level_select</room>
       <room>rooms\room_UI_Medium_Level_select</room>
+      <room>rooms\room_UI_Hard_level_Select</room>
       <room>rooms\room_UI_Options</room>
       <room>rooms\room_Options_Advanced</room>
       <room>rooms\room_Game_Finished</room>
@@ -299,6 +306,7 @@
       <room>rooms\room_TUT_3</room>
       <room>rooms\room_TUT_4</room>
       <room>rooms\room_TUT_Finished</room>
+      <room>rooms\room_tutorial</room>
     </rooms>
     <rooms name="Levels">
       <rooms name="Easy">
