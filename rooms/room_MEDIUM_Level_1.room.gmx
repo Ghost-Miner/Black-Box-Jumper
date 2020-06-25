@@ -67,7 +67,6 @@ global.MM_Number = 1;</code>
     <instance objName="obj_key" x="960" y="416" name="inst_25C4FD82" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike" x="992" y="432" name="inst_C9709C4A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike" x="1024" y="416" name="inst_0F168D52" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_TUT_SAVE" x="32" y="32" name="inst_AE6034CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_border_hor" x="1" y="8" name="inst_3A3D4D45" locked="0" code="" scaleX="0.9375" scaleY="44" colour="4294967295" rotation="0"/>
     <instance objName="obj_borderr_vert" x="8" y="704" name="inst_1793BADA" locked="0" code="" scaleX="79" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_border_hor" x="1264" y="7" name="inst_5E1AA069" locked="0" code="" scaleX="1" scaleY="44.0625" colour="4294967295" rotation="0"/>

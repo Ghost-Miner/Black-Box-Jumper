@@ -29,6 +29,7 @@
 instance_create(384,312,obj_arrow);
 instance_create(450,304,obj_UI_Easy_NEWGame);
 instance_create(450,395,obj_UI_Medium_NewGame);
+instance_create(450,475,obj_UI_Hard_NEWGane);
 instance_destroy(obj_Continue_Easy);
 instance_destroy(obj_Continue_Medium);
 

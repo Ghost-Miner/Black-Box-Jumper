@@ -22,8 +22,8 @@
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_platform_1x1</sprite>
       <sprite>sprites\spr_platofrm_2x1</sprite>
-      <sprite>sprites\spr_platform_4x1</sprite>
       <sprite>sprites\spr_platform_3x1</sprite>
+      <sprite>sprites\spr_platform_4x1</sprite>
       <sprite>sprites\spr_platform_5x1</sprite>
     </sprites>
     <sprite>sprites\spr_border</sprite>
@@ -33,8 +33,11 @@
     <sprite>sprites\spr_border_vert</sprite>
     <sprite>sprites\spr_Border_hor</sprite>
     <sprite>sprites\spr_Star</sprite>
-    <sprite>sprites\spr_Skip_tutorial</sprite>
     <sprite>sprites\spr_spike</sprite>
+    <sprite>sprites\spr_spike_left</sprite>
+    <sprite>sprites\spr_spike_right</sprite>
+    <sprite>sprites\spr_spike_down</sprite>
+    <sprite>sprites\spr_Skip_tutorial</sprite>
     <sprite>sprites\spr_ENEMY_border</sprite>
     <sprite>sprites\spr_TUT_NextLevel</sprite>
     <sprites name="GUI">
@@ -60,18 +63,18 @@
           <sprite>sprites\spt_UI_Reset</sprite>
         </sprites>
         <sprite>sprites\spr_UI_play</sprite>
-        <sprite>sprites\spr_UI_NewGame</sprite>
-        <sprite>sprites\spr_UI_Continue</sprite>
-        <sprite>sprites\spr_UI_Continue_OFF</sprite>
         <sprite>sprites\spr_UI_Options</sprite>
         <sprite>sprites\spr_UI_End</sprite>
-        <sprite>sprites\spr_UI_back</sprite>
-        <sprite>sprites\spr_UI_playtesters</sprite>
         <sprite>sprites\spr_UI_credits</sprite>
         <sprite>sprites\spr_UI_Level_Select</sprite>
         <sprite>sprites\spr_UI_LevelSelectOFF</sprite>
         <sprite>sprites\spr_UI_controls</sprite>
+        <sprite>sprites\spr_UI_back</sprite>
         <sprite>sprites\spr_UI_Play_Tutorial</sprite>
+        <sprite>sprites\spr_UI_playtesters</sprite>
+        <sprite>sprites\spr_UI_Continue</sprite>
+        <sprite>sprites\spr_UI_Continue_OFF</sprite>
+        <sprite>sprites\spr_UI_NewGame</sprite>
       </sprites>
       <sprite>sprites\spr_UI_Death</sprite>
       <sprite>sprites\spr_UI_TimesUp</sprite>
@@ -85,8 +88,10 @@
       <sprite>sprites\spr_Hard_off</sprite>
     </sprites>
     <sprite>sprites\spr_UI_loading</sprite>
+    <sprite>sprites\spr_UI_loading_old</sprite>
     <sprite>sprites\spr_arrow</sprite>
     <sprite>sprites\spr_IncompatibleFiles</sprite>
+    <sprite>sprites\sprite65</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -97,6 +102,9 @@
     <background>background\bgr_TUT_2</background>
     <background>background\bgr_TUT_3</background>
     <background>background\bgr_TUT_4</background>
+    <background>background\bgr_hard_lvl_1</background>
+    <background>background\bgr_hard_lvl_2</background>
+    <background>background\bgr_hard_lvl3</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -105,7 +113,7 @@
     <script>scripts\scr_timer.gml</script>
     <script>scripts\scr_DisplayTime.gml</script>
     <script>scripts\scr_btn_highlight.gml</script>
-    <script>scripts\scr_btn_move.gml</script>
+    <script>scripts\scr_btn_rectangle.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_small</font>
@@ -147,6 +155,7 @@
     <object>objects\obj_DEATH_GAMEOVER</object>
     <objects name="Statisctics">
       <object>objects\obj_score</object>
+      <object>objects\obj_FPS_meter</object>
       <object>objects\obj_score_check</object>
       <object>objects\obj_DEATH_COUNT</object>
       <object>objects\obj_level_bgr_mus_play</object>
@@ -167,16 +176,16 @@
         <object>objects\obj_Skip_Tutorial</object>
         <objects name="Menu">
           <object>objects\obj_UI_PLAY</object>
-          <object>objects\obj_UI_NewGame</object>
-          <object>objects\obj_UI_Continue</object>
           <object>objects\obj_UI_END</object>
-          <object>objects\obj_UI_PlayTutorial</object>
           <object>objects\obj_UI_Controls</object>
-          <object>objects\obj_UI_back</object>
-          <object>objects\obj_UI_playtesters</object>
-          <object>objects\oj_UI_Level_select</object>
           <object>objects\obj_UI_Credits</object>
+          <object>objects\obj_UI_playtesters</object>
           <object>objects\obj_UI_options</object>
+          <object>objects\oj_UI_Level_select</object>
+          <object>objects\obj_UI_back</object>
+          <object>objects\obj_UI_PlayTutorial</object>
+          <object>objects\obj_UI_Continue</object>
+          <object>objects\obj_UI_NewGame</object>
           <object>objects\obj_UI_Options_Advanced</object>
         </objects>
         <objects name="Options">
@@ -223,16 +232,14 @@
         </objects>
         <objects name="Advanced options">
           <object>objects\obj_Opt_ScrShake</object>
-          <object>objects\obj_Opt_PlayerSpeed</object>
           <object>objects\obj_UI_ScrShake_pluss</object>
           <object>objects\obj_ScrShake_Reset</object>
           <object>objects\obj_UI_ScrShake_minus</object>
-          <object>objects\obj_UI_Playerspeed_plus</object>
-          <object>objects\obj_UI_PlayerSpeed_minus</object>
           <object>objects\obj_PlayerSpeed_Reset</object>
         </objects>
         <object>objects\obj_UI_Easy_NEWGame</object>
         <object>objects\obj_UI_Medium_NewGame</object>
+        <object>objects\obj_UI_Hard_NEWGane</object>
         <object>objects\obj_Continue_Easy</object>
         <object>objects\obj_Continue_Medium</object>
       </objects>
@@ -242,6 +249,7 @@
         <object>objects\obj_UI_title_Level_select</object>
         <object>objects\obj_UI_EM_Number</object>
         <object>objects\obj_UI_MM_Number</object>
+        <object>objects\obj_UI_HM_Number</object>
         <object>objects\obj_UI_text_credits</object>
         <object>objects\obj_UI_text_credits_playtesters</object>
         <object>objects\obj_UI_text_controls</object>
@@ -267,7 +275,6 @@
     <object>objects\obj_TestBuild_notice</object>
     <object>objects\obj_arrow</object>
     <object>objects\obj_SpeedRun_timer</object>
-    <object>objects\obj_FPS_meter</object>
     <object>objects\obj_IncomatibleFiles</object>
   </objects>
   <rooms name="rooms">
@@ -321,6 +328,12 @@
         <room>rooms\room_MEDIUM_Level_10</room>
         <room>rooms\room_MEDIUM_Level_11</room>
         <room>rooms\room_MEDIUM_Level_12</room>
+      </rooms>
+      <rooms name="Hard">
+        <room>rooms\room_HARD_Level_1</room>
+        <room>rooms\room_HARD_Level_2</room>
+        <room>rooms\room_HARD_Level_3</room>
+        <room>rooms\room_HARD_Level_4</room>
       </rooms>
     </rooms>
   </rooms>
