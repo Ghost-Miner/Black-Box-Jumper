@@ -25,7 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if ((global.difficulty = "Easy") and (global.EM_Number = 11) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
+            <string>if ((global.difficulty = "Tutorial") and (global.TUTNumber = 1) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
+{
+    instance_create(2784,256,obj_gate);
+}
+if ((global.difficulty = "Tutorial") and (global.TUTNumber = 2) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
+{
+    instance_create(2784,256,obj_gate);
+}
+if ((global.difficulty = "Easy") and (global.EM_Number = 11) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
 {
     instance_create(640,100,obj_gate);
 }
@@ -49,45 +57,6 @@ else
     }
 }
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/*if ((global.difficulty = "Hard") and (global.HM_Number = 1) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
-{
-    instance_create(1216, 640,obj_gate);
-}
-if ((global.difficulty = "Hard") and (global.HM_Number = 2) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
-{
-    instance_create(1216, 640,obj_gate);
-}
-if ((global.difficulty = "Hard") and (global.HM_Number = 3) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
-{
-    instance_create(1152,608,obj_gate);
-}
-else
-{
-    if ((!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
-    {
-        instance_create(32,320,obj_gate);
-    }
-}
 </string>
           </argument>
         </arguments>

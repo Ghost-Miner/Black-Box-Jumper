@@ -10,8 +10,8 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>global.TUTONumber = 2;
-global.difficulty = "Tutorial-old";</code>
+  <code>global.TUTNumber = 3;
+global.difficulty = "Tutorial";</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -32,7 +32,7 @@ global.difficulty = "Tutorial-old";</code>
     <yoffset>0</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="-1" foreground="0" name="bgr_TUT_2" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="bgr_TUT_4" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -56,14 +56,20 @@ global.difficulty = "Tutorial-old";</code>
     <instance objName="obj_border_hor" x="0" y="8" name="inst_9B97F2E5" locked="0" code="" scaleX="1" scaleY="44" colour="4294967295" rotation="0"/>
     <instance objName="obj_border_hor" x="1264" y="8" name="inst_30591384" locked="0" code="" scaleX="1" scaleY="44" colour="4294967295" rotation="0"/>
     <instance objName="obj_borderr_vert" x="8" y="0" name="inst_F9D52452" locked="0" code="" scaleX="78.9333343505859" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_borderr_vert" x="8" y="704" name="inst_D7850419" locked="0" code="" scaleX="78.9333343505859" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="224" y="576" name="inst_E4B27DDD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="544" y="512" name="inst_A2DC8DF9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="864" y="448" name="inst_74293A8F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="gate_spawner_TUT" x="32" y="128" name="inst_989A7000" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_key_TUT" x="320" y="544" name="inst_FAB34547" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Skip_Tutorial" x="483" y="139" name="inst_B5D2DBE2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mus_play_BreakTime" x="32" y="224" name="inst_30FC465C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_borderr_vert" x="8" y="704" name="inst_D7850419" locked="0" code="" scaleX="80.533332824707" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="192" y="352" name="inst_73C1A520" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="192" y="576" name="inst_C9ED734C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="544" y="480" name="inst_FA89FAF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="544" y="256" name="inst_ED837260" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="928" y="384" name="inst_3279647A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="928" y="576" name="inst_5577F272" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="gate_spawner" x="32" y="32" name="inst_5B550AD5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_key" x="288" y="320" name="inst_89EDC0BD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_key" x="1024" y="352" name="inst_FB293D37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_key" x="640" y="448" name="inst_6393B2A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_20sec_spawn" x="0" y="0" name="inst_54433E4D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Skip_Tutorial" x="17" y="16" name="inst_1B0F265B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mus_play_BreakTime" x="64" y="192" name="inst_51E42120" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

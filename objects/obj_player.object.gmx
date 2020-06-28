@@ -218,10 +218,10 @@ if (keyboard_check(vk_left) or keyboard_check(vk_right) or keyboard_check(vk_up)
             <string>///Debug keys
 if (debug_mode or (global.Cheats = 1))
 {
-    if (keyboard_check_pressed(ord("3")))
+    /* if (keyboard_check_pressed(ord("3")))
     {
         room_goto(room_tutorial);
-    }
+    } */
     if (keyboard_check_pressed(ord("4")))
     {
         instance_destroy(obj_key);
@@ -266,7 +266,83 @@ global.Cheats =1;
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_tut_death">
+      <action>
+        <libid>1</libid>
+        <id>109</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_move_to</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>1184</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>224</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_TUT_5_enemy">
+      <action>
+        <libid>1</libid>
+        <id>201</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_create_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>10</kind>
+            <object>obj_TUT_enemy</object>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1152</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>64</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_gate">
+      <action>
+        <libid>1</libid>
+        <id>408</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>global.Sound = 1</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>422</id>
@@ -327,26 +403,6 @@ global.Cheats =1;
       </action>
       <action>
         <libid>1</libid>
-        <id>408</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>global.Sound = 1</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>424</id>
         <kind>2</kind>
         <userelative>0</userelative>
@@ -377,7 +433,7 @@ global.Cheats =1;
             <kind>1</kind>
             <string>if (global.LastLevel = true)
     {
-    room_goto(room_Game_Finished);
+    room_goto(room_credits);
     }
 else
 {
@@ -1075,6 +1131,12 @@ if (!instance_exists(obj_score))
 if (!instance_exists(obj_FPS_meter))
 {
     instance_create(1248,96,obj_FPS_meter);
+}
+
+if global.difficulty = "Tutorial"
+{
+    instance_destroy(obj_score);
+    instance_destroy(obj_FPS_meter);
 }
 </string>
           </argument>

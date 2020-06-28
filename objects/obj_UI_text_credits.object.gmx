@@ -40,8 +40,6 @@ draw_text(x,y+50,"for GameDev.tv Community Jam 2020");
 draw_text(x,y+150,"Design: GhostMiner");
 draw_text(x,y+200,"Music: Kevin MacLeod");
 draw_text(x,y+250,"Sound effects: freesound.org");
-
-draw_text(x,y+325,"Button hoover effect: OliverTCX");
 </string>
           </argument>
         </arguments>

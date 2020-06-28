@@ -10,9 +10,8 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>global.LevelNumber = "T1";
-global.TUTNumber = 1;
-global.difficulty = "Tutorial";
+  <code>global.TUTONumber = 1;
+global.difficulty = "Tutorial-old";
 global.Attempts = 0;</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>

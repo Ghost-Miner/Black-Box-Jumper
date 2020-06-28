@@ -8,6 +8,7 @@
     <sound>sound\mus_TheComplex_Kevin</sound>
     <sound>sound\mus_Decisions_Kevin</sound>
     <sound>sound\mus_Breaktime_Kevin</sound>
+    <sound>sound\mus_AN_lately</sound>
     <sound>sound\sfx_death</sound>
     <sound>sound\sfx_key</sound>
     <sound>sound\sfx_LevelComplete</sound>
@@ -90,7 +91,15 @@
     <sprite>sprites\spr_UI_loading_old</sprite>
     <sprite>sprites\spr_arrow</sprite>
     <sprite>sprites\spr_IncompatibleFiles</sprite>
-    <sprite>sprites\sprite65</sprite>
+    <sprite>sprites\spr_arrow_tut</sprite>
+    <sprite>sprites\spr_arrow_tut_2</sprite>
+    <sprite>sprites\spr_Arrow_tut_3</sprite>
+    <sprite>sprites\spr_trigger</sprite>
+    <sprite>sprites\spr_credits</sprite>
+    <sprite>sprites\spr_tut_death</sprite>
+    <sprite>sprites\spr_TUT_N_spike</sprite>
+    <sprite>sprites\spr_TUT_N_enemy</sprite>
+    <sprite>sprites\spr_TUT_N_void</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -282,6 +291,21 @@
     <object>objects\obj_arrow</object>
     <object>objects\obj_SpeedRun_timer</object>
     <object>objects\obj_IncomatibleFiles</object>
+    <object>objects\obj_arrow_tut</object>
+    <object>objects\obj_arrow_tut_2</object>
+    <object>objects\obj_arrow_tut_3</object>
+    <objects name="Tutorial New">
+      <object>objects\obj_TUT_1_movement</object>
+      <object>objects\obj_TUT_2_jumping</object>
+      <object>objects\obj_TUT_3_double_jump</object>
+      <object>objects\obj_TUT_4_keys</object>
+      <object>objects\obj_TUT_5_enemy</object>
+    </objects>
+    <object>objects\obj_credits</object>
+    <object>objects\obj_tut_death</object>
+    <object>objects\obj_TUT_spike</object>
+    <object>objects\obj_TUT_enemy</object>
+    <object>objects\obj_TUT_void</object>
   </objects>
   <rooms name="rooms">
     <rooms name="Menu and GUI">
@@ -299,14 +323,20 @@
       <room>rooms\room_UI_Options</room>
       <room>rooms\room_Options_Advanced</room>
       <room>rooms\room_Game_Finished</room>
+      <room>rooms\room_credits</room>
     </rooms>
-    <rooms name="Tutorial">
+    <rooms name="Tutorial NEW">
+      <room>rooms\room_TUT_1_N</room>
+      <room>rooms\room_TUT_2_N</room>
+      <room>rooms\room_TUT_3_N</room>
+      <room>rooms\room_TUT_Finished_N</room>
+    </rooms>
+    <rooms name="Tutorial OLD">
       <room>rooms\room_TUT_1</room>
       <room>rooms\room_TUT_2</room>
       <room>rooms\room_TUT_3</room>
       <room>rooms\room_TUT_4</room>
       <room>rooms\room_TUT_Finished</room>
-      <room>rooms\room_tutorial</room>
     </rooms>
     <rooms name="Levels">
       <rooms name="Easy">
