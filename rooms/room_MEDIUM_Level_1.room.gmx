@@ -10,8 +10,7 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>global.difficulty = "Medium";
-global.MM_Number = 1;</code>
+  <code>global.LevelNumber = 2.01</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -72,6 +71,7 @@ global.MM_Number = 1;</code>
     <instance objName="obj_border_hor" x="1264" y="7" name="inst_5E1AA069" locked="0" code="" scaleX="1" scaleY="44.0625" colour="4294967295" rotation="0"/>
     <instance objName="obj_COUNTDOWN_10sec" x="32" y="64" name="inst_93263787" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_UI_MM_Number" x="64" y="32" name="inst_753C1243" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_SpeedRun_timer" x="96" y="96" name="inst_EC237FE6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

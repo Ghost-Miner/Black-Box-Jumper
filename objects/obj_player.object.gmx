@@ -30,7 +30,7 @@ grav = 0.55;
 hsp = 0;
 vsp = 0;
 jumpspeed = 12.5;
-movespeed = 6;
+movespeed = -6;
 ImageAngle = 0;
 global.TimerActive = 0;
 grounded = false;
@@ -128,11 +128,11 @@ bullet.speed = 15;
             <string>///controls and gravity 
 //Get player's input
 key_right = (keyboard_check(vk_right) or keyboard_check(ord("D")));
-key_left = -(keyboard_check(vk_left) or keyboard_check(ord("A")));
+key_left = (keyboard_check(vk_left) or keyboard_check(ord("A")));
 key_jump = (keyboard_check_pressed(vk_up) or keyboard_check_pressed(ord("W")));
 
 //React to inputs
-move = key_left + key_right;
+move = key_left - key_right;
 hsp = move * movespeed;
 if (vsp &lt; 10) vsp += grav;
 
@@ -228,7 +228,14 @@ if (debug_mode or (global.Cheats = 1))
     }
     if (keyboard_check_pressed(ord("2")))
     {
-        room_goto_next();
+        if (global.LevelNumber &lt; 3.04)
+        {
+            room_goto_next();
+        }
+        else
+        {
+            room_goto(room_UI_menu)
+        }
     }
 
     if (keyboard_check_pressed(ord("1")))
@@ -266,7 +273,7 @@ global.Cheats =1;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_tut_death">
+    <event eventtype="4" ename="obj_tut_death_void">
       <action>
         <libid>1</libid>
         <id>109</id>
@@ -978,130 +985,122 @@ global.points += 20;
             <kind>1</kind>
             <string>///Save levels
 //Easy
-if global.difficulty = "Easy"
-{
-    if global.EM_Number = 1
+    if global.LevelNumber = 1.01
     {
         game_save("Level-E1.sav")
     }
-    if global.EM_Number = 2
+    if global.LevelNumber = 1.02
     {
         game_save("Level-E2.sav")
     }
-    if global.EM_Number = 3
+    if global.LevelNumber = 1.03
     {
         game_save("Level-E3.sav")
     }
-    if global.EM_Number = 4
+    if global.LevelNumber = 1.04
     {
         game_save("Level-E4.sav")
     }
-    if global.EM_Number = 5
+    if global.LevelNumber = 1.05
     {
         game_save("Level-E5.sav")
     }
-    if global.EM_Number = 6
+    if global.LevelNumber = 1.06
     {
         game_save("Level-E6.sav")
     }
-    if global.EM_Number = 7
+    if global.LevelNumber = 1.07
     {
         game_save("Level-E7.sav")
     }
-    if global.EM_Number = 8
+    if global.LevelNumber = 1.08
     {
         game_save("Level-E8.sav")
     }
-    if global.EM_Number = 9
+    if global.LevelNumber = 1.09
     {
         game_save("Level-E9.sav")
     }
-    if global.EM_Number = 10
+    if global.LevelNumber = 1.10
     {
         game_save("Level-E10.sav")
     }
-    if global.EM_Number = 11
+    if global.LevelNumber = 1.11
     {
         game_save("Level-E11.sav")
     }
-    if global.EM_Number = 12
+    if global.LevelNumber = 1.12
     {
         game_save("Level-E12.sav")
     }
-}
 
 //Medium
-if global.difficulty = "Medium"
-{
-    if global.MM_Number = 1
+    if global.LevelNumber = 2.01
     {
         game_save("Level-M1.sav")
     }
-    if global.MM_Number = 2
+    if global.LevelNumber = 2.02
     {
         game_save("Level-M2.sav")
     }
-    if global.MM_Number = 3
+    if global.LevelNumber = 2.03
     {
         game_save("Level-M3.sav")
     }
-    if global.MM_Number = 4
+    if global.LevelNumber = 2.04
     {
         game_save("Level-M4.sav")
     }
-    if global.MM_Number = 5
+    if global.LevelNumber = 2.05
     {
         game_save("Level-M5.sav")
     }
-    if global.MM_Number = 6
+    if global.LevelNumber = 2.06
     {
         game_save("Level-M6.sav")
     }
-    if global.MM_Number = 7
+    if global.LevelNumber = 2.07
     {
         game_save("Level-M7.sav")
     }
-    if global.MM_Number = 8
+    if global.LevelNumber = 2.08
     {
         game_save("Level-M8.sav")
     }
-    if global.MM_Number = 9
+    if global.LevelNumber = 2.09
     {
         game_save("Level-M9.sav")
     }
-    if global.MM_Number = 10
+    if global.LevelNumber = 2.10
     {
         game_save("Level-M10.sav")
     }
-    if global.MM_Number = 11
+    if global.LevelNumber = 2.11
     {
         game_save("Level-M11.sav")
     }
-    if global.MM_Number = 12
+    if global.LevelNumber = 2.12
     {
         game_save("Level-M12.sav")
     }
-}
 //Hard
-if global.difficulty = "Hard"
-{
-    if global.HM_Number = 1
+  if global.LevelNumber = 3.01
     {
         game_save("Level-H1.sav")
     }
-    if global.HM_Number = 2
+    if global.LevelNumber = 3.02
     {
         game_save("Level-H2.sav")
     }
-    if global.HM_Number = 3
+    if global.LevelNumber = 3.03
     {
         game_save("Level-H3.sav")
     }
-    if global.HM_Number = 4
+    if global.LevelNumber = 3.04
     {
         game_save("Level-H4.sav")
     }
-}
+
 </string>
           </argument>
         </arguments>
@@ -1133,7 +1132,7 @@ if (!instance_exists(obj_FPS_meter))
     instance_create(1248,96,obj_FPS_meter);
 }
 
-if global.difficulty = "Tutorial"
+if global.LevelNumber &lt;= 0.5
 {
     instance_destroy(obj_score);
     instance_destroy(obj_FPS_meter);
@@ -1458,7 +1457,6 @@ if global.difficulty = "Tutorial"
 bullet.direction = ImageAngle;
 bullet.image_angle = image_angle;
 bullet.speed = 15;
-
 </string>
           </argument>
         </arguments>

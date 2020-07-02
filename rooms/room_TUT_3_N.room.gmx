@@ -10,8 +10,8 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>global.TUTNumber = 3;
-global.difficulty = "Tutorial";</code>
+  <code>global.LevelNumber = 0.3;
+global.TUTNumber = 3;</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

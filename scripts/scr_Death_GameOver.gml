@@ -1,4 +1,4 @@
-if global.difficulty = "Tutorial"
+if global.LevelNumber <= 0.5
 {
     room_restart();
 }

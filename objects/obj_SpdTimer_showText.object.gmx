@@ -8,6 +8,32 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if global.ShowSpdTimer = false
+{
+    instance_destroy();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -26,13 +52,16 @@
           <argument>
             <kind>1</kind>
             <string>draw_set_halign(fa_left);
-draw_set_valign(fa_top);
-draw_set_font(fnt_xsmall)
-draw_set_color(c_white)
-draw_text(16,16,"Difficulty: Hard");
-draw_text(16,48,"Level: " + string(global.LevelNumber));
-draw_set_font(fnt_xxsmall)
-draw_text(16,80,string(global.GameVersion));
+draw_set_valign(fa_middle);
+draw_set_font(fnt_small_bold);
+draw_set_color(c_white);
+draw_text(x,y-32,"Speedrun statistics:");
+draw_set_font(fnt_small);
+draw_text(x,y,"Easy Mode: " + string(global.SpdTimeMinEasy) + ":" + string(global.SpdTimeSecEasy));
+draw_text(x,y+32,"Medium Mode: " + string(global.SpdTimeMinMedium) + ":" + string(global.SpdTimeSecMedium));
+draw_text(x,y+64,"Hard Mode: " + string(global.SpdTimeMinHard) + ":" + string(global.SpdTimeSecHard));
+
+
 </string>
           </argument>
         </arguments>

@@ -10,8 +10,7 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>global.difficulty = "Hard";
-global.HM_Number = 4;
+  <code>global.LevelNumber = 3.04;
 global.LastLevel = true;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>

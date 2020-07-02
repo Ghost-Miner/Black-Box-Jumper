@@ -10,8 +10,7 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>global.difficulty = "Easy";
-global.EM_Number = 12;
+  <code>global.LevelNumber = 1.12
 global.LastLevel = true;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>

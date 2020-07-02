@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1000</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -27,7 +27,8 @@
             <kind>1</kind>
             <string>myTime=0.0
 
-showTim=myTime
+showTimeSec=myTime
+showTimeMin=myTime div 60
 </string>
           </argument>
         </arguments>
@@ -50,9 +51,79 @@ showTim=myTime
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>myTime=myTime+delta_time/1000000
+            <string>if (instance_exists(obj_player) or instance_exists(obj_player_DEAD_copy))
+{
+myTime=myTime+delta_time/1000000
+}
+showTimeSec=myTime mod 60
+showTimeMin=myTime div 60
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var file
+file= file_text_open_write("SpdTimerStats.txt");
 
-showTime=myTime
+if global.LevelNumber = global.EasyMax
+{
+        global.SpdTimeSecEasy = showTimeSec;
+        global.SpdTimeMinEasy = showTimeMin;
+        
+        var fileEasy;
+        fileEasy = file_text_open_write("SpdTimerStatsEasy.txt");
+        file_text_write_string(file, "Easy Mode: " + string(global.SpdTimeMinEasy) + ":" + string(global.SpdTimeSecEasy));
+        file_text_writeln(file);
+}
+if global.LevelNumber = global.MedMax
+{
+        global.SpdTimeSecMedium = showTimeSec;
+        global.SpdTimeMinMedium = showTimeMin;
+        
+        var fileMedium;
+        fileMedium = file_text_open_write("SpdTimerStatsMedium.txt");
+        file_text_write_string(file, "Easy Mode: " + string(global.SpdTimeMinEasy) + ":" + string(global.SpdTimeSecEasy));
+        file_text_writeln(file);
+        file_text_write_string(file, "Medium Mode: " + string(global.SpdTimeMinMedium) + ":" + string(global.SpdTimeSecMedium));
+}
+if global.LevelNumber = global.HardMax
+{
+        global.SpdTimeSecHard = showTimeSec;
+        global.SpdTimeMinHard = showTimeMin;
+        
+        var file        
+        var fileHard;
+        fileHard = file_text_open_write("SpdTimerStatsHard.txt");
+        file_text_write_string(file, "Easy Mode: " + string(global.SpdTimeMinEasy) + ":" + string(global.SpdTimeSecEasy));
+        file_text_writeln(file);
+        file_text_write_string(file, "Medium Mode: " + string(global.SpdTimeMinMedium) + ":" + string(global.SpdTimeSecMedium));
+        file_text_writeln(file);
+        file_text_write_string(file, "Hard Mode: " + string(showTimeMin) + ":" + string(showTimeSec));
+}
+file_text_close(file)
+
+if global.LastLevel = true
+{
+    instance_destroy();
+}
+
 </string>
           </argument>
         </arguments>
@@ -75,7 +146,10 @@ showTime=myTime
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>myTime=0.0
+            <string>if global.ShowSpdTimer = false
+{
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
@@ -98,11 +172,11 @@ showTime=myTime
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_halign(fa_right);
+            <string>draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_set_font(fnt_timer)
-draw_set_color(c_white)
-draw_text(1248,128,"TIME: " + string(showTime))
+draw_set_font(fnt_timer_normal);
+draw_set_color(c_white);
+draw_text(room_width/2,64,"Elapsed time: " + string(showTimeMin) + ":" + string(showTimeSec));
 </string>
           </argument>
         </arguments>

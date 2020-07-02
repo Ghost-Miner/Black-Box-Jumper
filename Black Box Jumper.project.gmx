@@ -34,9 +34,6 @@
     <sprite>sprites\spr_Border_hor</sprite>
     <sprite>sprites\spr_Star</sprite>
     <sprite>sprites\spr_spike</sprite>
-    <sprite>sprites\spr_spike_left</sprite>
-    <sprite>sprites\spr_spike_right</sprite>
-    <sprite>sprites\spr_spike_down</sprite>
     <sprite>sprites\spr_Skip_tutorial</sprite>
     <sprite>sprites\spr_ENEMY_border</sprite>
     <sprite>sprites\spr_TUT_NextLevel</sprite>
@@ -50,6 +47,8 @@
       <sprites name="Menu">
         <sprites name="Options">
           <sprite>sprites\spr_UI_ResetProgress</sprite>
+          <sprite>sprites\spr_UI_SpdTimer_hidden</sprite>
+          <sprite>sprites\spr_UI_SpdTimer_shown</sprite>
           <sprite>sprites\spr_UI_Opt_advanced</sprite>
           <sprite>sprites\spr_UI_OpenSCREENSHOTfolder</sprite>
           <sprite>sprites\spr_UI_Progress_Reset_title</sprite>
@@ -76,6 +75,17 @@
         <sprite>sprites\spr_UI_Continue_OFF</sprite>
         <sprite>sprites\spr_UI_NewGame</sprite>
       </sprites>
+      <sprites name="New tutorial">
+        <sprite>sprites\spr_trigger</sprite>
+        <sprite>sprites\spr_tut_death</sprite>
+        <sprite>sprites\spr_TUT_N_spike</sprite>
+        <sprite>sprites\spr_TUT_N_enemy</sprite>
+        <sprite>sprites\spr_TUT_N_keys</sprite>
+        <sprite>sprites\spr_TUT_N_void</sprite>
+        <sprite>sprites\spr_arrow_tut_2</sprite>
+        <sprite>sprites\spr_arrow_tut</sprite>
+        <sprite>sprites\spr_Arrow_tut_3</sprite>
+      </sprites>
       <sprite>sprites\spr_UI_Death</sprite>
       <sprite>sprites\spr_UI_TimesUp</sprite>
       <sprite>sprites\spr_CURSOR</sprite>
@@ -91,15 +101,7 @@
     <sprite>sprites\spr_UI_loading_old</sprite>
     <sprite>sprites\spr_arrow</sprite>
     <sprite>sprites\spr_IncompatibleFiles</sprite>
-    <sprite>sprites\spr_arrow_tut</sprite>
-    <sprite>sprites\spr_arrow_tut_2</sprite>
-    <sprite>sprites\spr_Arrow_tut_3</sprite>
-    <sprite>sprites\spr_trigger</sprite>
     <sprite>sprites\spr_credits</sprite>
-    <sprite>sprites\spr_tut_death</sprite>
-    <sprite>sprites\spr_TUT_N_spike</sprite>
-    <sprite>sprites\spr_TUT_N_enemy</sprite>
-    <sprite>sprites\spr_TUT_N_void</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -117,8 +119,8 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_Death_GameOver.gml</script>
-    <script>scripts\scr_SaveGame.gml</script>
     <script>scripts\scr_timer.gml</script>
+    <script>scripts\scr_SaveGame.gml</script>
     <script>scripts\scr_DisplayTime.gml</script>
     <script>scripts\scr_btn_highlight.gml</script>
     <script>scripts\scr_btn_rectangle.gml</script>
@@ -127,13 +129,14 @@
     <font>fonts\fnt_small</font>
     <font>fonts\fnt_small_bold</font>
     <font>fonts\fnt_xsmall</font>
+    <font>fonts\fnt_xxsmall</font>
     <font>fonts\fnt_LevelSelect</font>
     <font>fonts\fnt_40_bold</font>
     <font>fonts\fnt_large</font>
     <font>fonts\fnt_UI_title</font>
     <font>fonts\fnt_timer</font>
+    <font>fonts\fnt_timer_normal</font>
     <font>fonts\fnt_lvl_start_timer</font>
-    <font>fonts\font8</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
@@ -204,6 +207,7 @@
           <object>objects\obj_UI_Opt_Sound</object>
           <object>objects\obj_UI_ProgressResetInfo</object>
           <object>objects\obj_UI_OpenSCREENSHOTfolder</object>
+          <object>objects\obj_SpdTimer</object>
         </objects>
         <objects name="Level Select">
           <objects name="Easy">
@@ -282,19 +286,22 @@
     <objects name="Miscellaneous">
       <object>objects\obj_UI_loading</object>
       <object>objects\obj_UI_loader_TEXT</object>
-      <object>objects\obj_BULLET_counter</object>
       <object>objects\obj_screenShake</object>
+      <object>objects\obj_arrow</object>
       <object>objects\obj_UI_ESC_F11</object>
+      <object>objects\obj_TUT_SAVE</object>
+      <object>objects\obj_TestBuild_notice</object>
     </objects>
-    <object>objects\obj_TUT_SAVE</object>
-    <object>objects\obj_TestBuild_notice</object>
-    <object>objects\obj_arrow</object>
     <object>objects\obj_SpeedRun_timer</object>
+    <object>objects\obj_SpdTimer_showText</object>
     <object>objects\obj_IncomatibleFiles</object>
     <object>objects\obj_arrow_tut</object>
     <object>objects\obj_arrow_tut_2</object>
     <object>objects\obj_arrow_tut_3</object>
     <objects name="Tutorial New">
+      <object>objects\obj_TUT_spike</object>
+      <object>objects\obj_TUT_enemy</object>
+      <object>objects\obj_TUT_void</object>
       <object>objects\obj_TUT_1_movement</object>
       <object>objects\obj_TUT_2_jumping</object>
       <object>objects\obj_TUT_3_double_jump</object>
@@ -302,26 +309,23 @@
       <object>objects\obj_TUT_5_enemy</object>
     </objects>
     <object>objects\obj_credits</object>
-    <object>objects\obj_tut_death</object>
-    <object>objects\obj_TUT_spike</object>
-    <object>objects\obj_TUT_enemy</object>
-    <object>objects\obj_TUT_void</object>
+    <object>objects\obj_tut_death_void</object>
+    <object>objects\obj_TUT_4_2_gate</object>
   </objects>
   <rooms name="rooms">
     <rooms name="Menu and GUI">
       <room>rooms\room_LOAD_GAME</room>
       <room>rooms\room_UI_menu</room>
-      <room>rooms\room_UI_OldFiles_Notice</room>
       <room>rooms\room_UI_PlayOptions</room>
-      <room>rooms\room_NEWGame_Diff_Opt</room>
       <room>rooms\room_UI_credits</room>
       <room>rooms\room_UI_Credits_playtesters</room>
       <room>rooms\room_UI_controls</room>
+      <room>rooms\room_UI_Options</room>
+      <room>rooms\room_Options_Advanced</room>
       <room>rooms\room_UI_Easy_Level_select</room>
       <room>rooms\room_UI_Medium_Level_select</room>
       <room>rooms\room_UI_Hard_level_Select</room>
-      <room>rooms\room_UI_Options</room>
-      <room>rooms\room_Options_Advanced</room>
+      <room>rooms\room_UI_OldFiles_Notice</room>
       <room>rooms\room_Game_Finished</room>
       <room>rooms\room_credits</room>
     </rooms>
