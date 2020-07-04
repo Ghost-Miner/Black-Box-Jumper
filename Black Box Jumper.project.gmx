@@ -47,7 +47,7 @@
       <sprites name="Menu">
         <sprites name="Options">
           <sprite>sprites\spr_UI_ResetProgress</sprite>
-          <sprite>sprites\spr_UI_SpdTimer_hidden</sprite>
+          <sprite>sprites\spr_UI_SpdTimer</sprite>
           <sprite>sprites\spr_UI_SpdTimer_shown</sprite>
           <sprite>sprites\spr_UI_Opt_advanced</sprite>
           <sprite>sprites\spr_UI_OpenSCREENSHOTfolder</sprite>
@@ -188,6 +188,8 @@
         <objects name="Menu">
           <object>objects\obj_UI_PLAY</object>
           <object>objects\obj_UI_END</object>
+          <object>objects\obj_UI_NewGame</object>
+          <object>objects\obj_UI_Continue</object>
           <object>objects\obj_UI_Controls</object>
           <object>objects\obj_UI_Credits</object>
           <object>objects\obj_UI_playtesters</object>
@@ -195,8 +197,6 @@
           <object>objects\oj_UI_Level_select</object>
           <object>objects\obj_UI_back</object>
           <object>objects\obj_UI_PlayTutorial</object>
-          <object>objects\obj_UI_Continue</object>
-          <object>objects\obj_UI_NewGame</object>
           <object>objects\obj_UI_Options_Advanced</object>
         </objects>
         <objects name="Options">
@@ -207,7 +207,6 @@
           <object>objects\obj_UI_Opt_Sound</object>
           <object>objects\obj_UI_ProgressResetInfo</object>
           <object>objects\obj_UI_OpenSCREENSHOTfolder</object>
-          <object>objects\obj_SpdTimer</object>
         </objects>
         <objects name="Level Select">
           <objects name="Easy">
@@ -292,11 +291,12 @@
       <object>objects\obj_TUT_SAVE</object>
       <object>objects\obj_TestBuild_notice</object>
     </objects>
-    <object>objects\obj_SpeedRun_timer</object>
+    <object>objects\obj_SpdTimer</object>
+    <object>objects\obj_SpeedrunButtom</object>
     <object>objects\obj_SpdTimer_showText</object>
     <object>objects\obj_IncomatibleFiles</object>
-    <object>objects\obj_arrow_tut</object>
     <object>objects\obj_arrow_tut_2</object>
+    <object>objects\obj_arrow_tut</object>
     <object>objects\obj_arrow_tut_3</object>
     <objects name="Tutorial New">
       <object>objects\obj_TUT_spike</object>

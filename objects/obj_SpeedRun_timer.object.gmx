@@ -146,7 +146,7 @@ if global.LastLevel = true
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.ShowSpdTimer = false
+            <string>if ((global.ShowSpdTimer = false) or (instance_exists(obj_SpdTimer)))
 {
     instance_destroy();
 }
