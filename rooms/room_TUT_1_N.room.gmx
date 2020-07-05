@@ -82,6 +82,7 @@ global.TUTNumber = 1;</code>
     <instance objName="obj_arrow_tut" x="1729" y="212" name="inst_B1052E44" locked="0" code="" scaleX="1.15384614467621" scaleY="1.02272725105286" colour="4294967295" rotation="-45"/>
     <instance objName="obj_arrow_tut" x="1273" y="224" name="inst_D528ECD9" locked="0" code="" scaleX="1.15384614467621" scaleY="1.18181812763214" colour="4294967295" rotation="20"/>
     <instance objName="obj_arrow_tut" x="2511" y="137" name="inst_568D922E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="-30"/>
+    <instance objName="obj_tut_death_void" x="1248" y="704" name="inst_38480977" locked="0" code="" scaleX="54.875" scaleY="0.53125" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

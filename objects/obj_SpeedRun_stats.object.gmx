@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1000</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,15 +25,40 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.ShowFPS = true)
-{
-    draw_set_halign(fa_right);
-    draw_set_valign(fa_middle);
-    draw_set_font(fnt_xsmall);
-    draw_set_color(c_white);
-    draw_text(1248, 100, "FPS: " + string(fps));
-}
+            <string>draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+draw_set_color(c_white);
+draw_set_font(fnt_40_bold)
+draw_text(room_width/2,room_height/2-128,"Speedrun statistics");
+draw_set_font(fnt_small)
+draw_text(room_width/2,room_height/2-64,"Total time: " + string(global.TotalTimeMin) + ":" + string(global.TotalTimeSec));
+draw_text(room_width/2,room_height/2,"Easy: " + string(global.SpdTimeMinEasy) + ":" + string(global.SpdTimeSecEasy));
+draw_text(room_width/2,room_height/2+40,"Medium: " + string(global.SpdTimeMinMedium) + ":" + string(global.SpdTimeSecMedium));
+draw_text(room_width/2,room_height/2+80,"Hard: " + string(global.SpdTimeMinHard) + ":" + string(global.SpdTimeSecHard));
+draw_text(room_width/2,room_height/2+150,"Press SPACE to return to main menu");
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="32">
+      <action>
+        <libid>1</libid>
+        <id>224</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_another_room</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>11</kind>
+            <room>room_UI_menu</room>
           </argument>
         </arguments>
       </action>

@@ -72,13 +72,12 @@ global.TUTNumber = 2;</code>
     <instance objName="obj_spike" x="845" y="460" name="inst_8A0388A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike" x="831" y="458" name="inst_0098FD41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_TUT_spike" x="352" y="416" name="inst_CB33CB00" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform_4x1" x="1248" y="295" name="inst_EB3D8264" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_4x1" x="1248" y="296" name="inst_EB3D8264" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy" x="1377" y="262" name="inst_A7208EC5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_TUT_void" x="1472" y="384" name="inst_8B9B4A3D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform_4x1" x="1376" y="295" name="inst_4388B986" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_TUT_void" x="1344" y="384" name="inst_8B9B4A3D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_4x1" x="1376" y="296" name="inst_4388B986" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ENEMY_border" x="1280" y="256" name="inst_B08A0BA7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ENEMY_border" x="1536" y="256" name="inst_786D0279" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform_4x1" x="1088" y="296" name="inst_48776708" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tut_death_void" x="1248" y="704" name="inst_F7BEDFF7" locked="0" code="" scaleX="59" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_TUT_5_enemy" x="1088" y="160" name="inst_900EF131" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Skip_Tutorial" x="18" y="20" name="inst_D0D9E343" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -88,6 +87,7 @@ global.TUTNumber = 2;</code>
     <instance objName="obj_border" x="1088" y="520" name="inst_BD749D88" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_border" x="1088" y="584" name="inst_70091AB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_border" x="1088" y="648" name="inst_01CB9B66" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_3x1" x="1088" y="296" name="inst_B66F7390" locked="0" code="" scaleX="1.05208337306976" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

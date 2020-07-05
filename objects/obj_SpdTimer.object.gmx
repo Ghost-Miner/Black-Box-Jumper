@@ -51,12 +51,18 @@ showTimeMin=myTime div 60
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (instance_exists(obj_player) or instance_exists(obj_player_DEAD_copy))
+            <string>if ((global.LevelNumber = 5) or (global.Speedrun = false))
+{
+    instance_destroy();
+}
+
+if (instance_exists(obj_player) or instance_exists(obj_player_DEAD_copy))
 {
 myTime=myTime+delta_time/1000000
 }
 showTimeSec=myTime mod 60
 showTimeMin=myTime div 60
+
 </string>
           </argument>
         </arguments>
@@ -79,8 +85,10 @@ showTimeMin=myTime div 60
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var file
-file= file_text_open_write("SpdTimerStats.txt");
+            <string>var file;
+var date;
+date = string(current_day) + "_" + string(current_month) + "_" + string(current_year)  + "__" + string(current_hour) + "_" + string(current_minute);
+file= file_text_open_write("SpdTimerStats" + string(date) + ".txt");
 
 if global.LevelNumber = global.EasyMax
 {
@@ -89,67 +97,52 @@ if global.LevelNumber = global.EasyMax
         
         var fileEasy;
         fileEasy = file_text_open_write("SpdTimerStatsEasy.txt");
+        
+        file_text_write_string(file, "Date: " + string(date));
+        file_text_writeln(file);
+        file_text_write_string(file, "Speedrun statistics: ");
+        file_text_writeln(file);
         file_text_write_string(file, "Easy Mode: " + string(global.SpdTimeMinEasy) + ":" + string(global.SpdTimeSecEasy));
         file_text_writeln(file);
 }
 if global.LevelNumber = global.MedMax
 {
-        global.SpdTimeSecMedium = showTimeSec;
-        global.SpdTimeMinMedium = showTimeMin;
+        global.SpdTimeSecMedium = showTimeSec - global.SpdTimeSecEasy;
+        global.SpdTimeMinMedium = showTimeMin - global.SpdTimeMinEasy;
         
         var fileMedium;
         fileMedium = file_text_open_write("SpdTimerStatsMedium.txt");
+        
+        file_text_write_string(file, "Speedrun statistics: ");
+        file_text_writeln(file);
+        file_text_write_string(file, string(date));
+        
         file_text_write_string(file, "Easy Mode: " + string(global.SpdTimeMinEasy) + ":" + string(global.SpdTimeSecEasy));
         file_text_writeln(file);
         file_text_write_string(file, "Medium Mode: " + string(global.SpdTimeMinMedium) + ":" + string(global.SpdTimeSecMedium));
 }
 if global.LevelNumber = global.HardMax
 {
-        global.SpdTimeSecHard = showTimeSec;
-        global.SpdTimeMinHard = showTimeMin;
+        global.TotalTimeSec = showTimeSec;
+        global.TotalTimeMin = showTimeMin;
+        global.SpdTimeSecHard = showTimeSec - (global.SpdTimeSecMedium + global.SpdTimeSecEasy);
+        global.SpdTimeMinHard = showTimeMin - (global.SpdTimeMinMedium + global.SpdTimeMinEasy);
         
         var file        
         var fileHard;
         fileHard = file_text_open_write("SpdTimerStatsHard.txt");
+        
+        file_text_write_string(file, "Speedrun statistics: ");
+        file_text_writeln(file);
+        file_text_write_string(file, string(date));
+        file_text_writeln(file);
         file_text_write_string(file, "Easy Mode: " + string(global.SpdTimeMinEasy) + ":" + string(global.SpdTimeSecEasy));
         file_text_writeln(file);
         file_text_write_string(file, "Medium Mode: " + string(global.SpdTimeMinMedium) + ":" + string(global.SpdTimeSecMedium));
         file_text_writeln(file);
-        file_text_write_string(file, "Hard Mode: " + string(showTimeMin) + ":" + string(showTimeSec));
+        file_text_write_string(file, "Hard Mode: " + string(global.SpdTimeMinHard) + ":" + string(global.SpdTimeSecHard));
 }
 file_text_close(file)
-
-if global.LastLevel = true
-{
-    instance_destroy();
-}
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="4">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/*if ((global.ShowSpdTimer = false) or (instance_exists(obj_SpdTimer)))
-{
-    instance_destroy();
-}
 </string>
           </argument>
         </arguments>

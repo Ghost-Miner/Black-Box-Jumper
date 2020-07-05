@@ -36,19 +36,11 @@
     <sprite>sprites\spr_spike</sprite>
     <sprite>sprites\spr_Skip_tutorial</sprite>
     <sprite>sprites\spr_ENEMY_border</sprite>
-    <sprite>sprites\spr_TUT_NextLevel</sprite>
     <sprites name="GUI">
-      <sprites name="Level buttons">
-        <sprite>sprites\spr_UnlockTheLevel</sprite>
-        <sprite>sprites\spr_UI_LevelLocked</sprite>
-        <sprite>sprites\spr_LevelSelectButton</sprite>
-        <sprite>sprites\sprlock</sprite>
-      </sprites>
       <sprites name="Menu">
         <sprites name="Options">
           <sprite>sprites\spr_UI_ResetProgress</sprite>
           <sprite>sprites\spr_UI_SpdTimer</sprite>
-          <sprite>sprites\spr_UI_SpdTimer_shown</sprite>
           <sprite>sprites\spr_UI_Opt_advanced</sprite>
           <sprite>sprites\spr_UI_OpenSCREENSHOTfolder</sprite>
           <sprite>sprites\spr_UI_Progress_Reset_title</sprite>
@@ -74,8 +66,13 @@
         <sprite>sprites\spr_UI_Continue</sprite>
         <sprite>sprites\spr_UI_Continue_OFF</sprite>
         <sprite>sprites\spr_UI_NewGame</sprite>
+        <sprites name="Level buttons">
+          <sprite>sprites\spr_UnlockTheLevel</sprite>
+          <sprite>sprites\spr_UI_LevelLocked</sprite>
+          <sprite>sprites\spr_LevelSelectButton</sprite>
+        </sprites>
       </sprites>
-      <sprites name="New tutorial">
+      <sprites name="Tutorial">
         <sprite>sprites\spr_trigger</sprite>
         <sprite>sprites\spr_tut_death</sprite>
         <sprite>sprites\spr_TUT_N_spike</sprite>
@@ -90,28 +87,32 @@
       <sprite>sprites\spr_UI_TimesUp</sprite>
       <sprite>sprites\spr_CURSOR</sprite>
       <sprite>sprites\spr_CURSOR_hidden</sprite>
-      <sprite>sprites\spr_UI_Easy</sprite>
-      <sprite>sprites\spr_Easy_off</sprite>
-      <sprite>sprites\spr_UI_Medium</sprite>
-      <sprite>sprites\spr_Medium_off</sprite>
-      <sprite>sprites\spr_UI_Hard</sprite>
-      <sprite>sprites\spr_Hard_off</sprite>
+      <sprites name="Difficulty">
+        <sprite>sprites\spr_UI_Easy</sprite>
+        <sprite>sprites\spr_Easy_off</sprite>
+        <sprite>sprites\spr_UI_Medium</sprite>
+        <sprite>sprites\spr_UI_speedrun</sprite>
+        <sprite>sprites\spr_Medium_off</sprite>
+        <sprite>sprites\spr_Hard_off</sprite>
+        <sprite>sprites\spr_UI_Hard</sprite>
+      </sprites>
     </sprites>
-    <sprite>sprites\spr_UI_loading</sprite>
-    <sprite>sprites\spr_UI_loading_old</sprite>
-    <sprite>sprites\spr_arrow</sprite>
-    <sprite>sprites\spr_IncompatibleFiles</sprite>
-    <sprite>sprites\spr_credits</sprite>
+    <sprites name="Misc">
+      <sprite>sprites\spr_UI_loading</sprite>
+      <sprite>sprites\spr_UI_loading_old</sprite>
+      <sprite>sprites\spr_arrow</sprite>
+      <sprite>sprites\spr_IncompatibleFiles</sprite>
+      <sprite>sprites\spr_credits</sprite>
+    </sprites>
+    <sprite>sprites\spr_UI_toggler_ON</sprite>
+    <sprite>sprites\spr_UI_toggler_OFF</sprite>
+    <sprite>sprites\spr_UI_ShowFPS</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
-    <background>background\bgr_empty</background>
     <background>background\bgr_UI_background</background>
     <background>background\bgr_game_fiished</background>
-    <background>background\bgr_TUT_1</background>
-    <background>background\bgr_TUT_2</background>
-    <background>background\bgr_TUT_3</background>
-    <background>background\bgr_TUT_4</background>
+    <background>background\bgr_TUT_Timer</background>
     <background>background\bgr_hard_lvl_1</background>
     <background>background\bgr_hard_lvl_2</background>
     <background>background\bgr_hard_lvl3</background>
@@ -155,12 +156,9 @@
     <object>objects\obj_enemy</object>
     <object>objects\obj_ENEMY_border</object>
     <object>objects\obj_gate</object>
-    <object>objects\obj_TUT1_nextlevel</object>
     <object>objects\obj_border_hor</object>
     <object>objects\obj_borderr_vert</object>
     <object>objects\obj_key</object>
-    <object>objects\obj_key_TUT</object>
-    <object>objects\gate_spawner_TUT</object>
     <object>objects\gate_spawner</object>
     <object>objects\obj_GAMEOVER</object>
     <object>objects\obj_DEATH_GAMEOVER</object>
@@ -190,6 +188,7 @@
           <object>objects\obj_UI_END</object>
           <object>objects\obj_UI_NewGame</object>
           <object>objects\obj_UI_Continue</object>
+          <object>objects\obj_SpeedrunButtom</object>
           <object>objects\obj_UI_Controls</object>
           <object>objects\obj_UI_Credits</object>
           <object>objects\obj_UI_playtesters</object>
@@ -291,14 +290,7 @@
       <object>objects\obj_TUT_SAVE</object>
       <object>objects\obj_TestBuild_notice</object>
     </objects>
-    <object>objects\obj_SpdTimer</object>
-    <object>objects\obj_SpeedrunButtom</object>
-    <object>objects\obj_SpdTimer_showText</object>
-    <object>objects\obj_IncomatibleFiles</object>
-    <object>objects\obj_arrow_tut_2</object>
-    <object>objects\obj_arrow_tut</object>
-    <object>objects\obj_arrow_tut_3</object>
-    <objects name="Tutorial New">
+    <objects name="Tutorial">
       <object>objects\obj_TUT_spike</object>
       <object>objects\obj_TUT_enemy</object>
       <object>objects\obj_TUT_void</object>
@@ -306,11 +298,20 @@
       <object>objects\obj_TUT_2_jumping</object>
       <object>objects\obj_TUT_3_double_jump</object>
       <object>objects\obj_TUT_4_keys</object>
+      <object>objects\obj_TUT_4_2_gate</object>
       <object>objects\obj_TUT_5_enemy</object>
     </objects>
+    <object>objects\obj_SpdTimer</object>
+    <object>objects\obj_SpdTimer_showText</object>
+    <object>objects\obj_IncomatibleFiles</object>
+    <object>objects\obj_arrow_tut_2</object>
+    <object>objects\obj_arrow_tut</object>
+    <object>objects\obj_arrow_tut_3</object>
     <object>objects\obj_credits</object>
     <object>objects\obj_tut_death_void</object>
-    <object>objects\obj_TUT_4_2_gate</object>
+    <object>objects\obj_SpeedRun_stats</object>
+    <object>objects\obj_ShowFPS</object>
+    <object>objects\obj_ShowFPS_toggler</object>
   </objects>
   <rooms name="rooms">
     <rooms name="Menu and GUI">
@@ -326,7 +327,6 @@
       <room>rooms\room_UI_Medium_Level_select</room>
       <room>rooms\room_UI_Hard_level_Select</room>
       <room>rooms\room_UI_OldFiles_Notice</room>
-      <room>rooms\room_Game_Finished</room>
       <room>rooms\room_credits</room>
     </rooms>
     <rooms name="Tutorial NEW">
@@ -334,13 +334,6 @@
       <room>rooms\room_TUT_2_N</room>
       <room>rooms\room_TUT_3_N</room>
       <room>rooms\room_TUT_Finished_N</room>
-    </rooms>
-    <rooms name="Tutorial OLD">
-      <room>rooms\room_TUT_1</room>
-      <room>rooms\room_TUT_2</room>
-      <room>rooms\room_TUT_3</room>
-      <room>rooms\room_TUT_4</room>
-      <room>rooms\room_TUT_Finished</room>
     </rooms>
     <rooms name="Levels">
       <rooms name="Easy">
@@ -378,6 +371,7 @@
         <room>rooms\room_HARD_Level_4</room>
       </rooms>
     </rooms>
+    <room>rooms\room_Speedrun_Finished</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

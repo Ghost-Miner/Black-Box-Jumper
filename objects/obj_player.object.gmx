@@ -33,7 +33,6 @@ jumpspeed = 12.5;
 movespeed = -6;
 ImageAngle = 0;
 global.TimerActive = 0;
-grounded = false;
 
 jumps = 0;
 jumpsmax = 2;
@@ -346,14 +345,15 @@ global.Cheats =1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.LastLevel = true
+            <string>if (global.LastLevel = true and global.Speedrun = false)
 {
     room_goto(room_credits);
 }
-else
+else 
 {
     room_goto_next();    
 }
+    
 global.points += 20;
 </string>
           </argument>
