@@ -156,8 +156,8 @@
     <object>objects\obj_enemy</object>
     <object>objects\obj_ENEMY_border</object>
     <object>objects\obj_gate</object>
-    <object>objects\obj_border_hor</object>
-    <object>objects\obj_borderr_vert</object>
+    <object>objects\obj_borderr_hor</object>
+    <object>objects\obj_border_vert</object>
     <object>objects\obj_key</object>
     <object>objects\gate_spawner</object>
     <object>objects\obj_GAMEOVER</object>
@@ -178,7 +178,6 @@
       <object>objects\obj_15sec_spawn</object>
       <object>objects\obj_20sec_spawn</object>
       <object>objects\obj_25sec_spawn</object>
-      <object>objects\obj_LOAD_timer</object>
     </objects>
     <objects name="G U I">
       <objects name="Buttons">
@@ -302,15 +301,16 @@
       <object>objects\obj_TUT_5_enemy</object>
     </objects>
     <object>objects\obj_SpdTimer</object>
-    <object>objects\obj_SpdTimer_showText</object>
+    <object>objects\objSpdTimer_TotalTime</object>
+    <object>objects\obj_SpeedRun_stats</object>
     <object>objects\obj_IncomatibleFiles</object>
     <object>objects\obj_arrow_tut_2</object>
     <object>objects\obj_arrow_tut</object>
     <object>objects\obj_arrow_tut_3</object>
     <object>objects\obj_credits</object>
     <object>objects\obj_tut_death_void</object>
-    <object>objects\obj_SpeedRun_stats</object>
     <object>objects\obj_ShowFPS</object>
+    <object>objects\obj_SpdTimer_showText</object>
     <object>objects\obj_ShowFPS_toggler</object>
   </objects>
   <rooms name="rooms">
@@ -329,7 +329,7 @@
       <room>rooms\room_UI_OldFiles_Notice</room>
       <room>rooms\room_credits</room>
     </rooms>
-    <rooms name="Tutorial NEW">
+    <rooms name="Tutorial">
       <room>rooms\room_TUT_1_N</room>
       <room>rooms\room_TUT_2_N</room>
       <room>rooms\room_TUT_3_N</room>
@@ -369,6 +369,7 @@
         <room>rooms\room_HARD_Level_2</room>
         <room>rooms\room_HARD_Level_3</room>
         <room>rooms\room_HARD_Level_4</room>
+        <room>rooms\room_HARD_Level_5</room>
       </rooms>
     </rooms>
     <room>rooms\room_Speedrun_Finished</room>

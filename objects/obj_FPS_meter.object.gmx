@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1000</depth>
+  <depth>-100</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -29,9 +29,9 @@
 {
     draw_set_halign(fa_right);
     draw_set_valign(fa_middle);
-    draw_set_font(fnt_xsmall);
+    draw_set_font(fnt_xxsmall);
     draw_set_color(c_white);
-    draw_text(1248, 100, "FPS: " + string(fps));
+    draw_text(1248, 80, "FPS: " + string(fps));
 }
 </string>
           </argument>

@@ -66,9 +66,9 @@
     <instance objName="obj_platform_4x1" x="800" y="608" name="inst_FE619F61" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_platform_3x1" x="160" y="640" name="inst_B90FA3E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_platform_2x1" x="320" y="529" name="inst_C58C93E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_border_hor" x="1" y="8" name="inst_3A3D4D45" locked="0" code="" scaleX="0.9375" scaleY="44" colour="4294967295" rotation="0"/>
-    <instance objName="obj_border_hor" x="1264" y="7" name="inst_5E1AA069" locked="0" code="" scaleX="1" scaleY="44.0625" colour="4294967295" rotation="0"/>
-    <instance objName="obj_borderr_vert" x="7" y="1" name="inst_F9D52452" locked="0" code="" scaleX="79.1999969482422" scaleY="0.733333349227905" colour="4294967295" rotation="0"/>
+    <instance objName="obj_border_vert" x="1" y="8" name="inst_3A3D4D45" locked="0" code="" scaleX="0.9375" scaleY="45.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_border_vert" x="1264" y="7" name="inst_5E1AA069" locked="0" code="" scaleX="1.0625" scaleY="45.3125" colour="4294967295" rotation="0"/>
+    <instance objName="obj_borderr_hor" x="7" y="1" name="inst_F9D52452" locked="0" code="" scaleX="79.1999969482422" scaleY="0.733333349227905" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="97" y="122" name="inst_402F4513" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy" x="111" y="222" name="inst_32E0C089" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_key" x="129" y="228" name="inst_F9760E08" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

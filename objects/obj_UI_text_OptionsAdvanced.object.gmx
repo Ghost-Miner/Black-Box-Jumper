@@ -30,8 +30,8 @@ draw_set_valign(fa_top);
 draw_set_font(fnt_UI_title)
 draw_set_color(c_white)
 draw_text(16,16,"Advanced options");
-draw_set_font(fnt_small)
-draw_text(16,96,"Experimental features. May cause issues!");
+//draw_set_font(fnt_small)
+//draw_text(16,96,"Experimental features. May cause issues!");
 
 </string>
           </argument>

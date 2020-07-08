@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="4" ename="obj_borderr_vert">
+    <event eventtype="4" ename="obj_border_vert">
       <action>
         <libid>1</libid>
         <id>201</id>
@@ -52,7 +52,7 @@
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="4" ename="obj_border_hor">
+    <event eventtype="4" ename="obj_borderr_hor">
       <action>
         <libid>1</libid>
         <id>201</id>

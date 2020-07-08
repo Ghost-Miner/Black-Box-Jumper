@@ -51,7 +51,7 @@ showTimeMin=myTime div 60
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if ((global.LevelNumber = 5) or (global.Speedrun = false))
+            <string>if ((global.LevelNumber = 5) or (global.Speedrun = false) or (global.Difficulty = "NotALevel"))
 {
     instance_destroy();
 }
@@ -62,7 +62,6 @@ myTime=myTime+delta_time/1000000
 }
 showTimeSec=myTime mod 60
 showTimeMin=myTime div 60
-
 </string>
           </argument>
         </arguments>
@@ -85,64 +84,57 @@ showTimeMin=myTime div 60
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var file;
-var date;
-date = string(current_day) + "_" + string(current_month) + "_" + string(current_year)  + "__" + string(current_hour) + "_" + string(current_minute);
-file= file_text_open_write("SpdTimerStats" + string(date) + ".txt");
-
-if global.LevelNumber = global.EasyMax
+            <string>if global.LevelNumber = global.EasyMax
 {
         global.SpdTimeSecEasy = showTimeSec;
-        global.SpdTimeMinEasy = showTimeMin;
-        
-        var fileEasy;
-        fileEasy = file_text_open_write("SpdTimerStatsEasy.txt");
-        
-        file_text_write_string(file, "Date: " + string(date));
-        file_text_writeln(file);
-        file_text_write_string(file, "Speedrun statistics: ");
-        file_text_writeln(file);
-        file_text_write_string(file, "Easy Mode: " + string(global.SpdTimeMinEasy) + ":" + string(global.SpdTimeSecEasy));
-        file_text_writeln(file);
+        global.SpdTimeMinEasy = showTimeMin;      
 }
+
 if global.LevelNumber = global.MedMax
 {
-        global.SpdTimeSecMedium = showTimeSec - global.SpdTimeSecEasy;
-        global.SpdTimeMinMedium = showTimeMin - global.SpdTimeMinEasy;
-        
-        var fileMedium;
-        fileMedium = file_text_open_write("SpdTimerStatsMedium.txt");
-        
-        file_text_write_string(file, "Speedrun statistics: ");
-        file_text_writeln(file);
-        file_text_write_string(file, string(date));
-        
-        file_text_write_string(file, "Easy Mode: " + string(global.SpdTimeMinEasy) + ":" + string(global.SpdTimeSecEasy));
-        file_text_writeln(file);
-        file_text_write_string(file, "Medium Mode: " + string(global.SpdTimeMinMedium) + ":" + string(global.SpdTimeSecMedium));
+        global.SpdTimeSecMedium = showTimeSec;
+        global.SpdTimeMinMedium = showTimeMin;
 }
+
 if global.LevelNumber = global.HardMax
-{
-        global.TotalTimeSec = showTimeSec;
-        global.TotalTimeMin = showTimeMin;
-        global.SpdTimeSecHard = showTimeSec - (global.SpdTimeSecMedium + global.SpdTimeSecEasy);
-        global.SpdTimeMinHard = showTimeMin - (global.SpdTimeMinMedium + global.SpdTimeMinEasy);
-        
-        var file        
-        var fileHard;
-        fileHard = file_text_open_write("SpdTimerStatsHard.txt");
-        
-        file_text_write_string(file, "Speedrun statistics: ");
-        file_text_writeln(file);
-        file_text_write_string(file, string(date));
-        file_text_writeln(file);
-        file_text_write_string(file, "Easy Mode: " + string(global.SpdTimeMinEasy) + ":" + string(global.SpdTimeSecEasy));
-        file_text_writeln(file);
-        file_text_write_string(file, "Medium Mode: " + string(global.SpdTimeMinMedium) + ":" + string(global.SpdTimeSecMedium));
-        file_text_writeln(file);
-        file_text_write_string(file, "Hard Mode: " + string(global.SpdTimeMinHard) + ":" + string(global.SpdTimeSecHard));
+{        
+        global.SpdTimeSecHard = showTimeSec;
+        global.SpdTimeMinHard = showTimeMin;
+
 }
-file_text_close(file)
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Reset timer
+if ((global.LevelNumber = global.EasyMax) and (instance_exists(obj_player)))
+{
+    myTime = 0;
+}
+if ((global.LevelNumber = global.MedMax) and (instance_exists(obj_player)))
+{
+    myTime = 0;
+}
+if ((global.LevelNumber = global.HardMax) and (instance_exists(obj_player)))
+{
+    myTime = 0;
+}
 </string>
           </argument>
         </arguments>
@@ -165,11 +157,18 @@ file_text_close(file)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_halign(fa_center);
+            <string>/*draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_font(fnt_timer_normal);
 draw_set_color(c_white);
-draw_text(room_width/2,64,"Elapsed time: " + string(showTimeMin) + ":" + string(showTimeSec));
+if (showTimeSec &lt; 10)
+{
+        draw_text(room_width/2,64,"Elapsed time: " + string(showTimeMin) + ":" + "0" + string(showTimeSec));
+}
+else
+{
+    draw_text(room_width/2,64,"Elapsed time: " + string(showTimeMin) + ":" + string(showTimeSec));
+}
 </string>
           </argument>
         </arguments>

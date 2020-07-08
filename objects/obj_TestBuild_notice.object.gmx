@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_halign(fa_right);
+            <string>if global.Unfinished = true {
+draw_set_halign(fa_right);
 draw_set_valign(fa_middle);
 draw_set_font(fnt_timer);
 draw_set_color(c_yellow);
@@ -42,7 +43,7 @@ draw_set_valign(fa_middle);
 draw_set_font(fnt_small_bold);
 draw_set_color(c_yellow);
 draw_text(x,y+85,"Expect to encounter bugs.");
-
+}
 </string>
           </argument>
         </arguments>

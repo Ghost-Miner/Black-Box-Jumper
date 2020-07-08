@@ -32,7 +32,7 @@ draw_set_color(c_white)
 draw_text(16,16,"Difficulty: Hard");
 draw_text(16,40,"Level: " + string(global.LevelNumber));
 draw_set_font(fnt_xxsmall)
-draw_text(16,64,"v. " + string(global.GameVersion));
+draw_text(16,64,"v. " + string(global.GameVersionShort));
 </string>
           </argument>
         </arguments>

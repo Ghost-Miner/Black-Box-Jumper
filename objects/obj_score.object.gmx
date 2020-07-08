@@ -25,11 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(c_white);
-draw_set_font(fnt_xsmall);
+            <string>ShowScore = global.LevelScore + global.TotalScore;
+draw_set_color(c_white);
+draw_set_font(fnt_xxsmall);
 draw_set_valign(fa_middle);
 draw_set_halign(fa_right);
-draw_text(x,32,"Score: " + string(global.points));
+draw_text(x,32,"Score: " + string(ShowScore));
 </string>
           </argument>
         </arguments>

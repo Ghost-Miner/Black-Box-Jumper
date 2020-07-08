@@ -28,14 +28,33 @@
             <string>draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_color(c_white);
-draw_set_font(fnt_40_bold)
-draw_text(room_width/2,room_height/2-128,"Speedrun statistics");
-draw_set_font(fnt_small)
-draw_text(room_width/2,room_height/2-64,"Total time: " + string(global.TotalTimeMin) + ":" + string(global.TotalTimeSec));
-draw_text(room_width/2,room_height/2,"Easy: " + string(global.SpdTimeMinEasy) + ":" + string(global.SpdTimeSecEasy));
-draw_text(room_width/2,room_height/2+40,"Medium: " + string(global.SpdTimeMinMedium) + ":" + string(global.SpdTimeSecMedium));
-draw_text(room_width/2,room_height/2+80,"Hard: " + string(global.SpdTimeMinHard) + ":" + string(global.SpdTimeSecHard));
-draw_text(room_width/2,room_height/2+150,"Press SPACE to return to main menu");
+draw_set_font(fnt_40_bold);;
+draw_text(room_width/2,room_height/2-256,"Speedrun statistics");
+draw_set_font(fnt_small);
+draw_text(room_width/2,room_height/2-200,"Total time: " + string(global.SpdTotalTimeMin) + ":" + string(global.SpdTotalTimeSec));
+
+
+if (global.SpdTimeSecEasy &lt; 10)
+{ draw_text(room_width/2,room_height/2-95,"Easy: " + string(global.SpdTimeMinEasy) + ":" + "0" + string(global.SpdTimeSecEasy)); }
+else
+{ draw_text(room_width/2,room_height/2-95,"Easy: " + string(global.SpdTimeMinEasy) + ":" + string(global.SpdTimeSecEasy)); }
+
+if (global.SpdTimeSecMedium &lt; 10)
+{ draw_text(room_width/2,room_height/2-55,"Medium: " + string(global.SpdTimeMinMedium) + ":" + "0" + string(global.SpdTimeSecMedium)); }
+else
+{ draw_text(room_width/2,room_height/2-55,"Medium: " + string(global.SpdTimeMinMedium) + ":" + string(global.SpdTimeSecMedium)); }
+
+if (global.SpdTimeSecHard &lt; 10)
+{ draw_text(room_width/2,room_height/2-15,"Hard: " + string(global.SpdTimeMinHard) + ":" + "0" + string(global.SpdTimeSecHard)); }
+else
+{ draw_text(room_width/2,room_height/2-15,"Hard: " + string(global.SpdTimeMinHard) + ":" + string(global.SpdTimeSecHard)); }
+
+
+draw_text(room_width/2,room_height/2+64,"Attempts: " + string(global.Attempts));
+draw_text(room_width/2,room_height/2+100,"Score: " + string(global.TotalScore));
+draw_text(room_width/2,room_height/2+135,"Jumps: " + string(global.Jumps));
+
+draw_text(room_width/2,room_height/2+250,"Press SPACE to return to main menu");
 </string>
           </argument>
         </arguments>

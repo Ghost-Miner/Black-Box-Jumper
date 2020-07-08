@@ -144,6 +144,7 @@ if ((key_jump) and (jumps &gt; 0))
 {
     jumps -= 1;
     vsp = -jumpspeed;
+    global.Jumps += 1;
 }
 
 //Horizontal collision
@@ -348,13 +349,21 @@ global.Cheats =1;
             <string>if (global.LastLevel = true and global.Speedrun = false)
 {
     room_goto(room_credits);
+    global.LevelScore = 0;
+    global.TotalScore = 0;
 }
 else 
 {
     room_goto_next();    
 }
-    
-global.points += 20;
+
+if global.LastLevel = true
+{
+    file_delete("Save.sav");
+}
+
+global.LevelScore += 20;
+global.TotalScore = global.TotalScore + global.LevelScore;
 </string>
           </argument>
         </arguments>
@@ -1121,8 +1130,9 @@ global.points += 20;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//diplay score and FPS
+            <string>///diplay and reset score and FPS
 instance_destroy(obj_DEATH_GAMEOVER);
+global.LevelScore = 0;
 
 if (!instance_exists(obj_score))
 {
@@ -1251,56 +1261,122 @@ if global.LevelNumber &lt;= 0.5
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="113">
+    <event eventtype="9" enumb="87">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>408</id>
+        <kind>0</kind>
         <userelative>0</userelative>
-        <isquestion>0</isquestion>
+        <isquestion>-1</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_if</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>screen_save("BBJ_Screenshot_" + 
-            string(current_day) + "_" +
-            string(current_month) + "_" +
-            string(current_year) + "_" +
-            string(current_hour) + 
-            string(current_minute) +
-            string(current_second) +
-            ".png")
-</string>
+            <kind>0</kind>
+            <string>jumps = 1</string>
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="9" enumb="112">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>422</id>
+        <kind>1</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
         <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>401</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_empty</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>-1</relative>
+        <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string></string>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>+1</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>532</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_effect</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>-1</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>4</kind>
+            <string>2</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>+16</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>13</kind>
+            <string>16777215</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="9" enumb="82">

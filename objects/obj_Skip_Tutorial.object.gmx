@@ -47,6 +47,7 @@
             <kind>1</kind>
             <string>global.points = 0;
 global.Attempts = 0;
+global.Speedrun = false;
 </string>
           </argument>
         </arguments>
