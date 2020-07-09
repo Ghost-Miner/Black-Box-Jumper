@@ -8,17 +8,17 @@
   <sepmasks>-1</sepmasks>
   <bboxmode>1</bboxmode>
   <bbox_left>0</bbox_left>
-  <bbox_right>369</bbox_right>
+  <bbox_right>279</bbox_right>
   <bbox_top>0</bbox_top>
-  <bbox_bottom>74</bbox_bottom>
+  <bbox_bottom>54</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>370</width>
-  <height>75</height>
+  <width>280</width>
+  <height>55</height>
   <frames>
     <frame index="0">images\spr_Skip_tutorial_0.png</frame>
   </frames>

@@ -10,8 +10,8 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>global.LevelNumber = 0;
-global.TUTNumber = 3;</code>
+  <code>global.TUTONumber = 3;
+global.difficulty = "Tutorial-old";</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -56,23 +56,22 @@ global.TUTNumber = 3;</code>
     <instance objName="obj_border_hor" x="0" y="8" name="inst_9B97F2E5" locked="0" code="" scaleX="1" scaleY="44" colour="4294967295" rotation="0"/>
     <instance objName="obj_border_hor" x="1264" y="8" name="inst_30591384" locked="0" code="" scaleX="1" scaleY="44" colour="4294967295" rotation="0"/>
     <instance objName="obj_borderr_vert" x="8" y="0" name="inst_F9D52452" locked="0" code="" scaleX="78.9333343505859" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_borderr_vert" x="8" y="704" name="inst_D7850419" locked="0" code="" scaleX="39.5" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_borderr_vert" x="8" y="704" name="inst_D7850419" locked="0" code="" scaleX="37.4000015258789" scaleY="1.0625" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="224" y="336" name="inst_772E7369" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike" x="224" y="304" name="inst_253E4179" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike" x="256" y="304" name="inst_8A9254E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_key" x="336" y="304" name="inst_E7E67F6D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy" x="592" y="432" name="inst_14C07FE5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="224" y="576" name="inst_3C153402" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_spike" x="384" y="672" name="inst_E1EC6242" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_spike" x="416" y="672" name="inst_D9C1EEED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_spike" x="448" y="672" name="inst_3EE4C51B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_spike" x="480" y="672" name="inst_ECFE7518" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_spike" x="512" y="672" name="inst_7C8C2A37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_spike" x="544" y="672" name="inst_6895CF81" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_spike" x="576" y="672" name="inst_2A5DA102" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spike" x="384" y="683" name="inst_E1EC6242" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spike" x="415" y="683" name="inst_D9C1EEED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spike" x="448" y="683" name="inst_3EE4C51B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spike" x="480" y="683" name="inst_ECFE7518" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spike" x="512" y="683" name="inst_7C8C2A37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spike" x="544" y="682" name="inst_6895CF81" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spike" x="576" y="682" name="inst_2A5DA102" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1008" y="384" name="inst_86D08F47" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike" x="1152" y="352" name="inst_B89889E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Skip_Tutorial" x="976" y="88" name="inst_9FB40627" locked="0" code="" scaleX="0.735135138034821" scaleY="0.864864885807037" colour="4294967295" rotation="0"/>
     <instance objName="obj_ENEMY_border" x="512" y="456" name="inst_D3C50695" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ENEMY_border" x="880" y="432" name="inst_C3144BFA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_platform_3x1" x="768" y="464" name="inst_9FE08583" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -81,6 +80,8 @@ global.TUTNumber = 3;</code>
     <instance objName="obj_spike" x="1135" y="363" name="inst_CDCA7609" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike" x="1168" y="364" name="inst_8C5E3E05" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="gate_spawner_TUT" x="32" y="96" name="inst_204309EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mus_play_BreakTime" x="64" y="96" name="inst_DAC70FCC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Skip_Tutorial" x="122" y="81" name="inst_2D0AECD6" locked="0" code="" scaleX="0.806451618671417" scaleY="0.727272748947144" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

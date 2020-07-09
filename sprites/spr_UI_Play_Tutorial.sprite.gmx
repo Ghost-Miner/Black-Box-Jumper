@@ -6,9 +6,9 @@
   <colkind>1</colkind>
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
-  <bboxmode>0</bboxmode>
-  <bbox_left>2</bbox_left>
-  <bbox_right>279</bbox_right>
+  <bboxmode>1</bboxmode>
+  <bbox_left>0</bbox_left>
+  <bbox_right>289</bbox_right>
   <bbox_top>0</bbox_top>
   <bbox_bottom>44</bbox_bottom>
   <HTile>0</HTile>
@@ -17,7 +17,7 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>280</width>
+  <width>290</width>
   <height>45</height>
   <frames>
     <frame index="0">images\spr_UI_Play_Tutorial_0.png</frame>

@@ -40,6 +40,16 @@ draw_text(x,y+50,"ASecondGuy");
 draw_text(x,y+100,"(Kauna) Best_coolkitten747");
 draw_text(x,y+150,"Marshy");
 draw_text(x,y+200,"Ozzy");
+draw_text(x,y+250,"jchenCC");
+draw_text(x,y+300,"Lithium");
+draw_text(x,y+350,"klaefee");
+draw_text(x,y+400,"costicost1976");
+draw_text(x,y+450,"Smaugsbreath");
+draw_text(x,y+500,"Spatula lemmy");
+draw_text(x,y+550,"AsinusGtangus");
+draw_text(x,y+600,"OliverTCX");
+draw_text(x,y+650,"BlackSorcerer");
+
 </string>
           </argument>
         </arguments>

@@ -10,8 +10,8 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>global.LevelNumber = 0;
-global.TUTNumber = 2;</code>
+  <code>global.TUTONumber = 2;
+global.difficulty = "Tutorial-old";</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -57,12 +57,13 @@ global.TUTNumber = 2;</code>
     <instance objName="obj_border_hor" x="1264" y="8" name="inst_30591384" locked="0" code="" scaleX="1" scaleY="44" colour="4294967295" rotation="0"/>
     <instance objName="obj_borderr_vert" x="8" y="0" name="inst_F9D52452" locked="0" code="" scaleX="78.9333343505859" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_borderr_vert" x="8" y="704" name="inst_D7850419" locked="0" code="" scaleX="78.9333343505859" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Skip_Tutorial" x="520" y="152" name="inst_FDFE3D7E" locked="0" code="" scaleX="0.689999997615814" scaleY="0.756756782531738" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="224" y="576" name="inst_E4B27DDD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="544" y="512" name="inst_A2DC8DF9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="864" y="448" name="inst_74293A8F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="gate_spawner_TUT" x="32" y="128" name="inst_989A7000" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_key_TUT" x="320" y="544" name="inst_FAB34547" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Skip_Tutorial" x="483" y="139" name="inst_B5D2DBE2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mus_play_BreakTime" x="32" y="224" name="inst_30FC465C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

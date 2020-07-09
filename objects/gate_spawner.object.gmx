@@ -25,26 +25,38 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.LevelNumber = 11)
+            <string>if (global.LevelNumber &lt;= 0.2) and (!instance_exists(obj_gate) and (!instance_exists(obj_key)))
 {
-if (!instance_exists(obj_gate))
-{
-    if (!instance_exists(obj_key))
-    {
-        instance_create(640,100,obj_gate);
-    }
+    instance_create(2784,256,obj_gate);
 }
+/* if ((global.difficulty = "Tutorial") and (global.TUTNumber = 2) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
+{
+    instance_create(2784,256,obj_gate);
+} */
+if ((global.LevelNumber = 1.11) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
+{
+    instance_create(640,100,obj_gate);
+}
+if ((global.LevelNumber = 3.01) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
+{
+    instance_create(1216, 680,obj_gate);
+}
+if ((global.LevelNumber = 3.02) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
+{
+    instance_create(48,352,obj_gate);
+}
+if ((global.LevelNumber = 3.03) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
+{
+    instance_create(1184,608,obj_gate);
 }
 else
 {
-if (!instance_exists(obj_gate))
-{
-    if (!instance_exists(obj_key))
+    if ((!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
     {
         instance_create(640,128,obj_gate);
     }
 }
-}
+
 </string>
           </argument>
         </arguments>

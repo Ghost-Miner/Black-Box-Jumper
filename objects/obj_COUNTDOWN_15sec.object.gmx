@@ -35,84 +35,41 @@ showTime=myTime
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
-        <id>408</id>
+        <id>601</id>
         <kind>0</kind>
         <userelative>0</userelative>
-        <isquestion>-1</isquestion>
+        <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_if</functionname>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>scr_timer</script>
+          </argument>
           <argument>
             <kind>0</kind>
-            <string>myTime=0</string>
+            <string></string>
           </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
           <argument>
-            <kind>1</kind>
-            <string>global.points += 1;
-
-instance_create(x,y,obj_GAMEOVER);
-
-instance_destroy(obj_Skip_Tutorial);
-instance_destroy(obj_player);
-instance_destroy(obj_wall);
-instance_destroy(obj_bullet);
-instance_destroy(obj_spike);
-instance_destroy(obj_enemy);
-instance_destroy(obj_gate);
-instance_destroy(gate_spawner);
-instance_destroy(obj_key);
-instance_destroy(obj_COUNTDOWN_15sec);
-</string>
+            <kind>0</kind>
+            <string></string>
           </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
           <argument>
-            <kind>1</kind>
-            <string>if myTime &gt;= 0 
-{
-    myTime=myTime-delta_time/1000000
-}
-  else
-   {
-    myTime=0
-   }
-showTime=(myTime)
-</string>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -120,26 +77,41 @@ showTime=(myTime)
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>draw_set_halign(fa_center);
-draw_set_valign(fa_middle);
-draw_set_font(fnt_timer)
-draw_set_color(c_white)
-draw_text(room_width/2,32,"TIME LEFT: " + string(showTime) )
-</string>
+            <kind>9</kind>
+            <script>scr_DisplayTime</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
