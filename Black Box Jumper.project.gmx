@@ -55,6 +55,7 @@
         </sprites>
         <sprite>sprites\spr_UI_play</sprite>
         <sprite>sprites\spr_UI_Options</sprite>
+        <sprite>sprites\spr_ReeportBug</sprite>
         <sprite>sprites\spr_UI_End</sprite>
         <sprite>sprites\spr_UI_credits</sprite>
         <sprite>sprites\spr_UI_Level_Select</sprite>
@@ -312,6 +313,7 @@
     <object>objects\obj_ShowFPS</object>
     <object>objects\obj_SpdTimer_showText</object>
     <object>objects\obj_ShowFPS_toggler</object>
+    <object>objects\obj_UI_ReportBug</object>
   </objects>
   <rooms name="rooms">
     <rooms name="Menu and GUI">
