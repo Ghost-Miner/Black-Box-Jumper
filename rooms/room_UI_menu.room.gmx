@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1422</width>
   <height>800</height>
-  <vsnap>16</vsnap>
-  <hsnap>16</hsnap>
+  <vsnap>32</vsnap>
+  <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -53,17 +53,31 @@ global.Jumps = 0;</code>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
+    <instance objName="obj_UI_ICONS_contrls" x="56" y="476" name="inst_FD42476D" locked="0" code="" scaleX="0.873015880584717" scaleY="0.875" colour="4294967295" rotation="0"/>
     <instance objName="obj_UI_TITLE" x="0" y="0" name="inst_689651B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mus_play_Decisions" x="16" y="64" name="inst_2B310C66" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_UI_ESC_F11" x="80" y="120" name="inst_870AF0E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mus_play_Decisions" x="0" y="32" name="inst_2B310C66" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_UI_ESC_F11" x="32" y="32" name="inst_870AF0E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_version_menu" x="8" y="784" name="inst_D47A7216" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_UI_PLAY" x="32" y="208" name="inst_398E00A2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_UI_Credits" x="27" y="321" name="inst_D19BC323" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_UI_Controls" x="27" y="423" name="inst_7402F29B" locked="0" code="" scaleX="0.727272748947144" scaleY="0.666666686534882" colour="4294967295" rotation="0"/>
-    <instance objName="obj_UI_options" x="32" y="512" name="inst_AF5AEFB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_UI_END" x="32" y="656" name="inst_BD604B8C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_UI_PLAY" x="96" y="228" name="inst_398E00A2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_UI_Credits" x="96" y="340" name="inst_D19BC323" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_UI_Controls" x="96" y="436" name="inst_7402F29B" locked="0" code="" scaleX="0.727272748947144" scaleY="0.666666686534882" colour="4294967295" rotation="0"/>
+    <instance objName="obj_UI_options" x="96" y="524" name="inst_AF5AEFB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_UI_END" x="96" y="604" name="inst_BD604B8C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_TestBuild_notice" x="1376" y="32" name="inst_E678EC11" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_UI_ReportBug" x="32" y="593" name="inst_3860C21B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_UI_ReportBug" x="96" y="688" name="inst_3860C21B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_UI_ICONS_play" x="56" y="268" name="inst_728CE91C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_UI_ICONS_about" x="56" y="380" name="inst_7090DF3D" locked="0" code="" scaleX="0.873015880584717" scaleY="0.875" colour="4294967295" rotation="0"/>
+    <instance objName="obj_UI_ICONS_options" x="56" y="564" name="inst_FC6AA1B3" locked="0" code="" scaleX="0.904761910438538" scaleY="0.841269850730896" colour="4294967295" rotation="0"/>
+    <instance objName="obj_UI_ICONS_bugReport" x="64" y="716" name="inst_72E1F728" locked="0" code="" scaleX="0.615384638309479" scaleY="0.58730161190033" colour="4294967295" rotation="0"/>
+    <instance objName="obj_UI_ICONS_quit" x="56" y="644" name="inst_6C709A5A" locked="0" code="" scaleX="0.904761910438538" scaleY="0.904761910438538" colour="4294967295" rotation="0"/>
+    <instance objName="obj_debugModeText" x="32" y="0" name="inst_691E46BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ACC_menu" x="64" y="32" name="inst_D607FEF5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ACC_KeyNum_1" x="344" y="232" name="inst_B52766FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ACC_KeyNum_2" x="360" y="352" name="inst_B5C082A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ACC_KeyNum_3" x="432" y="440" name="inst_A587AB94" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ACC_KeyNum_4" x="360" y="528" name="inst_640D7AB8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ACC_KeyNum_5" x="264" y="608" name="inst_B1FD4DAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ACC_KeyNum_6" x="400" y="688" name="inst_75872D4B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

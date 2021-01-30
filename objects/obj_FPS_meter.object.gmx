@@ -25,13 +25,50 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.ShowFPS = true)
+            <string>if (fps &lt; 50)
 {
-    draw_set_halign(fa_right);
+    draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
+    draw_set_font(fnt_small);
+    draw_set_color(c_yellow);
+    
+    draw_text(room_width/2,room_height/2,"LOW FPS DETECTED");
+    draw_text(room_width/2,room_height/2+30,"Close or minimuze all open folder windows.");
+    //draw_text(room_width/2,125,"Close or minimuze all open folder windows.");
+}
+
+if (global.ShowFPS = true)
+{
+   draw_set_halign(fa_left);
+    draw_set_valign(fa_top);
     draw_set_font(fnt_xxsmall);
-    draw_set_color(c_white);
-    draw_text(1248, 80, "FPS: " + string(fps));
+    //draw_set_color(c_white);
+    //draw_text(16, 65, "FPS: " + string(fps));
+    
+    if (fps &gt; 55)
+    {
+        draw_set_color(c_gray);
+        draw_text(16, 65, "FPS: " + string(fps));
+    }
+    
+    if (fps &lt;= 55 and fps &gt; 50)
+    {
+        draw_set_color(c_white);
+        draw_text(16, 65, "FPS: " + string(fps));
+    }
+    
+    if (fps &lt;= 50 and fps &gt; 40)
+    {
+        draw_set_color(c_yellow);
+        draw_text(16, 65, "FPS: " + string(fps));
+    }
+    
+    if (fps &lt;= 40)
+    {
+        draw_set_color(c_red);
+        draw_text(16, 65, "FPS: " + string(fps));
+    }
+    
 }
 </string>
           </argument>

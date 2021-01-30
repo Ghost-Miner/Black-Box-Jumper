@@ -1,4 +1,4 @@
-if (global.TimerActive = 1) and (instance_exists(obj_player))
+if (global.TimerActive = 1) and (instance_exists(obj_player)) and (global.FreezeTime = false)
 {
     if myTime >= 0 
     {

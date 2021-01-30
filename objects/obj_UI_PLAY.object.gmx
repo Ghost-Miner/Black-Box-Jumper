@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!file_exists("Tutorial.sav"))
+            <string>if global.TutorialFinished = 0
 {
-    room_goto(room_TUT_1_N);
+    room_goto(room_TUT_1);
 }
 else
 {

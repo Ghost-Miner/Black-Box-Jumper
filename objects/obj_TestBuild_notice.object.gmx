@@ -26,23 +26,18 @@
           <argument>
             <kind>1</kind>
             <string>if global.Unfinished = true {
-draw_set_halign(fa_right);
-draw_set_valign(fa_middle);
-draw_set_font(fnt_timer);
-draw_set_color(c_yellow);
-draw_text(x,y,"NOTICE:");
 
 draw_set_halign(fa_right);
 draw_set_valign(fa_middle);
 draw_set_font(fnt_small_bold);
-draw_set_color(c_yellow);
-draw_text(x,y+45,"This is an unfinished version.");
+draw_set_color(c_white);
+draw_text(x,y,"This is an unfinished version.");
 
 draw_set_halign(fa_right);
 draw_set_valign(fa_middle);
 draw_set_font(fnt_small_bold);
-draw_set_color(c_yellow);
-draw_text(x,y+85,"Expect to encounter bugs.");
+draw_set_color(c_white);
+draw_text(x,y+45,"Expect to encounter bugs.");
 }
 </string>
           </argument>

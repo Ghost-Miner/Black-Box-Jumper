@@ -51,14 +51,14 @@ showTimeMin=myTime div 60
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if ((global.LevelNumber = 5) or (global.Speedrun = false) or (global.Difficulty = "NotALevel"))
+            <string>if ((global.Speedrun = false) or (global.Difficulty = "NotALevel"))
 {
     instance_destroy();
 }
 
 if (instance_exists(obj_player) or instance_exists(obj_player_DEAD_copy))
 {
-myTime=myTime+delta_time/1000000
+    myTime=myTime+delta_time/1000000
 }
 showTimeSec=myTime mod 60
 showTimeMin=myTime div 60

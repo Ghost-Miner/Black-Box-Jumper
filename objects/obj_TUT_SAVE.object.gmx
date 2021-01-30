@@ -11,21 +11,31 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>333</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_save_game</functionname>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>2</kind>
-            <string>Tutorial.sav</string>
+            <kind>1</kind>
+            <string>//game_save(global.SaveDir + "\Tutorial.sav")
+
+global.TutorialFinished = 1;
+
+if (file_exists(global.DataDir + "\GameInfo.dat"))
+{
+ini_open(global.DataDir + "\GameInfo.dat");
+ini_write_real("GameInfo","Tutorial Finished",global.TutorialFinished);
+ini_close();
+}
+</string>
           </argument>
         </arguments>
       </action>

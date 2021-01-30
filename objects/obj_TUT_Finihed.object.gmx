@@ -29,25 +29,55 @@
 draw_set_valign(fa_middle);
 draw_set_font(fnt_small_bold);
 draw_set_color(c_white);
-draw_text(room_width/2,100,"CONGRATULATIONS!");
-draw_set_font(fnt_small_bold)
-draw_text(room_width/2,200,"You completed the tutorial!");
+draw_text(room_width/2,100,"T U T O R I A L   C O M P L E T E");
 draw_set_font(fnt_small)
-draw_text(room_width/2,300,"Press ENTER to start the game");
-draw_text(room_width/2,350,"Press ESCAPE to return to main menu");
+draw_text(room_width/2,200,"SPACEBAR - Start the game");
+draw_text(room_width/2,250,"ESCAPE - return to main menu");
 
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle)
 draw_set_font(fnt_small_bold);
-draw_text(room_width/2,450,"Other keys you should know about:");
+draw_text(room_width/2,350,"USEFUL KEYS:");
 
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle)
 draw_set_font(fnt_small);
-draw_text(room_width/2,500,"R: Restart level");
-draw_text(room_width/2,550,"F2: Take a screenshot");
-draw_text(room_width/2,600,"F11: Toggle fullscreen");
+draw_text(room_width/2,400,"R: Restart level");
+draw_text(room_width/2,450,"F2: Take a screenshot");
+draw_text(room_width/2,500,"F11: Toggle fullscreen");
+
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle)
+draw_set_font(fnt_small_bold);
+draw_text(room_width/2,600,"NOTE:");
+
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle)
+draw_set_font(fnt_small);
+draw_text(room_width/2,650,"Escape is used to return to the menu, not to pause the game.");
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="32">
+      <action>
+        <libid>1</libid>
+        <id>224</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_another_room</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>11</kind>
+            <room>room_EASY_Level_1</room>
           </argument>
         </arguments>
       </action>
@@ -70,28 +100,6 @@ draw_text(room_width/2,600,"F11: Toggle fullscreen");
           <argument>
             <kind>11</kind>
             <room>room_UI_menu</room>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="13">
-      <action>
-        <libid>1</libid>
-        <id>224</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_another_room</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>11</kind>
-            <room>room_EASY_Level_1</room>
           </argument>
         </arguments>
       </action>

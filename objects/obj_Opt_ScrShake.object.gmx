@@ -25,12 +25,42 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_halign(fa_left);
+            <string>///Draw text switch
+draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_color(c_white);
-draw_set_font(fnt_timer);
-draw_text(x,y,"Screenshake: " + string(global.ScreenShakeY));
+draw_set_font(fnt_LevelSelect);
 
+switch(global.ScreenShakeY)
+{
+    default:
+        draw_text(x,y,"Screenshake: " + string(global.ScreenShakeY));
+        break;
+    case 0:
+        draw_text(x,y,"Screenshake: Off");
+        break;
+    case 2:
+        draw_text(x,y,"Screenshake: 2 (deafult)");
+        break;
+    case 500:
+        draw_text(x,y,"Is there a limit?");
+        break;
+    case 1000:
+        draw_text(x,y,"I guess not.");
+        break;
+    case 2500:
+        draw_text(x,y,"You gotta stop this, dude.");
+        break;
+    case 5000:
+        draw_text(x,y,"There's nothing to find!");   
+        break;
+    case 10000:
+        draw_text(x,y,"I told you there's nothing to see!");    
+        break;
+    case 10001:
+        draw_text(x,y,"Was it worth it wasting 10  or even more minutes of your lfe?");
+        break;
+}
 </string>
           </argument>
         </arguments>

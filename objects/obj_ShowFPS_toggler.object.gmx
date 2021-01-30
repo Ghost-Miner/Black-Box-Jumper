@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//Change sprite
-if global.ShowFPS = true
+if global.ShowFPS = 1
 {
     sprite_index = spr_UI_toggler_ON;
 }
@@ -56,15 +56,13 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.ShowFPS = true)
+            <string>if (global.ShowFPS = 1)
 {
-    global.ShowFPS = false;
-    sprite_index = spr_UI_toggler_OFF;
+    global.ShowFPS = 0;
 }
 else
 {
-    global.ShowFPS = true;
-    sprite_index = spr_UI_toggler_ON;
+    global.ShowFPS = 1;
 }
 </string>
           </argument>

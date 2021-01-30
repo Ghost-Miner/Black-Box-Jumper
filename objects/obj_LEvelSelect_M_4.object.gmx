@@ -25,58 +25,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>LevelNumber = room_MEDIUM_Level_4;
-LevelName = 4;
-FileName = "Level-M4.sav";
+            <string>ini_open(global.DataDir + "\Levels.dat");
+
+LevelName = room_MEDIUM_Level_4;
+LevelNumber = 4;
+LoadLevel = ini_read_string("Medium","Level 4","false");
+ini_close();
+
+
+if LoadLevel = "false"
+{
+        sprite_index = spr_UI_LevelLocked;
+}
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>408</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>-1</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>file_exists("Level-M4.sav")</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>541</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_sprite_set</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>5</kind>
-            <sprite>spr_UI_LevelLocked</sprite>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1</string>
           </argument>
         </arguments>
       </action>
@@ -84,29 +45,41 @@ FileName = "Level-M4.sav";
     <event eventtype="6" enumb="4">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>if (file_exists(FileName))
-{
-    room_goto(LevelNumber);
-}
-else
-{
-    instance_create(room_width/2+64,room_height/2,obj_UI_UnlockTheLevelFirst);
-}
-</string>
+            <kind>9</kind>
+            <script>scr_Level_select</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -114,54 +87,81 @@ else
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>draw_self()
-if (mouse_x &gt; x &amp;&amp; mouse_y &gt; y &amp;&amp; mouse_x &lt; x+sprite_width &amp;&amp; mouse_y &lt; y+sprite_height) {
-    draw_set_color(c_white)
-    draw_set_alpha(.25) 
-    draw_rectangle(x, y, x+sprite_width, y+sprite_height, false)
-    draw_set_alpha(1)
-}
-</string>
+            <kind>9</kind>
+            <script>scr_btn_highlight</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>///Level number
-draw_set_halign(fa_center);
-draw_set_valign(fa_middle);
-draw_set_font(fnt_LevelSelect)
-draw_set_color(c_white)
-draw_text(x+30,y+30,LevelName);
-</string>
+            <kind>9</kind>
+            <script>scr_Level_Button_Text</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>

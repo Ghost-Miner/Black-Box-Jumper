@@ -26,10 +26,18 @@
           <argument>
             <kind>1</kind>
             <string>draw_set_color(c_white);
-draw_set_font(fnt_xxsmall);
+draw_set_font(fnt_xsmall);
 draw_set_valign(fa_middle);
-draw_set_halign(fa_right);
-draw_text(1248,55,"Attempts: " + string(global.Attempts));
+draw_set_halign(fa_center);
+
+if global.Speedrun = false
+{
+    draw_text(room_width/2,64,"Attempts: " + string(global.Attempts));
+}
+else
+{
+    draw_text(room_width/2,96,"Attempts: " + string(global.Attempts));
+}
 </string>
           </argument>
         </arguments>

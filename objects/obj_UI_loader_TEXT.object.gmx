@@ -11,6 +11,46 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>scr_Options_Load</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -27,31 +67,106 @@
             <kind>1</kind>
             <string>///Initialise variables and reset other crap
 
-global.SpdTimeSecEasy = 00;
-global.SpdTimeMinEasy = 00;
-global.SpdTimeSecMedium = 00;
-global.SpdTimeMinMedium = 00;
-global.SpdTimeSecHard = 00;
-global.SpdTimeMinHard = 00;
+//Create directories
+if !directory_exists("Screenshots")
+{
+    directory_create("Screenshots");
+}
+    
+if !directory_exists("Game data")
+{
+    directory_create("Game data");
+}
+
+if !directory_exists("Speedrun records")
+{
+    directory_create("Speedrun records");
+}
+
+if !directory_exists("Game data" + "\Level statisctics")
+{
+    directory_create("Game data" + "\Level statisctics");
+}
+
+if !directory_exists("Game data" + "\Level statisctics" +"\Easy")
+{
+    directory_create("Game data" + "\Level statisctics" +"\Easy");
+}
+
+if !directory_exists("Game data" + "\Level statisctics" +"\Medium")
+{
+    directory_create("Game data" + "\Level statisctics" +"\Medium");
+}
+
+if !directory_exists("Game data" + "\Level statisctics" +"\Hard")
+{
+    directory_create("Game data" + "\Level statisctics" +"\Hard");
+}
+
+//Read/Write game data
+if file_exists(working_directory + "\Game data" + "\GameInfo.dat")
+{
+    ini_open(working_directory + "\Game data" + "\GameInfo.dat");
+    global.Attempts = ini_read_real("GameInfo","Attempts",0);
+    global.TutorialFinished = ini_read_real("GameInfo","TutorialFinished",0);
+    global.SpeedrunNum = ini_read_real("GameInfo","Speedrun Number",1);
+    global.Session = ini_read_real("GameInfo","Session",0);
+    
+    ini_write_real("GameInfo","Score",0);
+    ini_close();
+}
+else
+{
+    global.Attempts = 0;
+    global.TutorialFinished = 0;
+    ini_open(working_directory + "\Game data" + "\GameInfo.dat");
+    ini_write_real("GameInfo","Attempts",0);
+    ini_write_real("GameInfo","Tutorial Finished",0);
+    ini_write_real("GameInfo","Score",0);
+    ini_read_real("GameInfo","Session",0);
+    ini_close();
+}
+global.Score = 0;
+    
+//Speedrun variables
+global.SpdTimeSecEasy = 0;
+global.SpdTimeMinEasy = 0;
+global.SpdTimeSecMedium = 0;
+global.SpdTimeMinMedium = 0;
+global.SpdTimeSecHard = 0;
+global.SpdTimeMinHard = 0;
 global.Speedrun = false;
 
+//Directory paths
+global.SaveDir = working_directory + "\Saves";
+global.DataDir = working_directory + "\Game data";
+global.SpdDir = working_directory + "\Speedrun records";
+
+global.LevelStatsDir = working_directory + "Game data" + "\Level statisctics";
+
+global.LvlStatsEasy = working_directory + "Game data" + "\Level statisctics" +"\Easy";
+global.LvlStatsMedium = working_directory + "Game data" + "\Level statisctics" +"\Medium";
+global.LvlStatsHard = working_directory + "Game data" + "\Level statisctics" +"\Hard";
+
+//Game info
 global.Unfinished = false;
-global.Sound = 1;
-global.Music = 1;
-global.points = 0;
-global.bullets = 1000000000;
+global.GameVersion = "1.4";
+global.GameVersionShort = "1.4";
+
+//Tutorial
+if (file_exists(working_directory + "\Game data" + "\GameInfo.dat"))
+{
+    ini_open(working_directory + "\Game data" + "\GameInfo.dat")
+    global.TutorialFinished = ini_read_real("GameInfo","Tutorial Finished",0);
+}
+
+//Other game stuff
 global.Cheats = 0;
-global.Attempts = 0;
-global.GameVersion = "1.3";
-global.GameVersionShort = "1.3";
 global.LastLevel = false;
 global.ShowSpdTimer = false;
-global.ShowFPS = true;
 global.Jumps = 0;
-global.TotalScore = 0;
-
-global.ScreenShakeX = -2;
-global.ScreenShakeY = 2;
+global.NoHurt = false;
+global.FreezeTime = false;
 
 global.EasyMax = 1.12;
 global.MedMax = 2.12;
@@ -59,30 +174,6 @@ global.HardMax = 3.05;
 
 display_reset(0, true);
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>801</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_cursor</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>5</kind>
-            <sprite>spr_CURSOR_hidden</sprite>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -108,9 +199,9 @@ display_reset(0, true);
 draw_set_valign(fa_middle);
 draw_set_font(fnt_UI_title)
 draw_set_color(c_white)
-draw_text(room_width/2,y,"Loading game...");
+draw_text(room_width/2,y,"Black Box Jumper");
 draw_set_font(fnt_small_bold)
-draw_text(room_width/2,y+64,"Press F11 to toggle fullscreen");
+draw_text(room_width/2,y+64,"Made by GhostMiner, 2020");
 </string>
           </argument>
         </arguments>

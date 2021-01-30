@@ -1,7 +1,14 @@
-if (file_exists("Save.sav"))
+ini_open(global.DataDir + "\GameInfo.dat");
+LoadRoom = ini_read_real("GameInfo","CurrentLevel",17);
+ini_close();
+
+if LoadRoom >= 17 or global.GameFinished != 1
 {
-    var LoadFile = file_text_open_read("Save.sav")
-    var LoadedRoom = file_text_read_real(LoadFile)
-    file_text_close(LoadFile);
-    room_goto(LoadedRoom);
+    room_goto(LoadRoom);
 }
+else
+{
+    sound_play(sfx_error);
+    //room_goto(room_TUT_1_N);
+}
+ 

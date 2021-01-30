@@ -159,10 +159,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>screen_save("BBJ_Screenshot_"+string(global.scrnum)+".png")
+            <string>//COOL! You found another long forgotten and unused feature/function!
+
+/*screen_save("BBJ_Screenshot_"+string(global.scrnum)+".png")
 global.scrnum += 1;
 
-//draw_text(32, 32, "Today is " + string(current_day) + "/" + string (current_month) + "/" + string(current_year) +".");
+draw_text(32, 32, "Today is " + string(current_day) + "/" + string (current_month) + "/" + string(current_year) +".");
 </string>
           </argument>
         </arguments>

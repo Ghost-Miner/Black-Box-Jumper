@@ -32,6 +32,9 @@ vsp = 0;
 jumpspeed = 12.5;
 movespeed = -6;
 ImageAngle = 0;
+
+Move = false;
+
 global.TimerActive = 0;
 
 jumps = 0;
@@ -81,32 +84,6 @@ jumpsmax = 2;
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>bullet = instance_create(x,y,obj_bullet);
-bullet.direction = image_angle;
-bullet.image_angle = image_angle;
-bullet.speed = 15;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -125,6 +102,7 @@ bullet.speed = 15;
           <argument>
             <kind>1</kind>
             <string>///controls and gravity 
+
 //Get player's input
 key_right = (keyboard_check(vk_right) or keyboard_check(ord("D")));
 key_left = (keyboard_check(vk_left) or keyboard_check(ord("A")));
@@ -134,7 +112,7 @@ key_jump = (keyboard_check_pressed(vk_up) or keyboard_check_pressed(ord("W")));
 move = key_left - key_right;
 hsp = move * movespeed;
 if (vsp &lt; 10) vsp += grav;
-
+    
 if (place_meeting(x,y+1,obj_wall))
 {
     jumps = jumpsmax;
@@ -147,6 +125,8 @@ if ((key_jump) and (jumps &gt; 0))
     global.Jumps += 1;
 }
 
+if Move = true {
+
 //Horizontal collision
 if (place_meeting(x+hsp,y,obj_wall))
 {
@@ -156,7 +136,8 @@ if (place_meeting(x+hsp,y,obj_wall))
     }
     hsp = 0;
 }
-x += hsp;
+x += hsp; 
+}
 
 //vertical collision
 if (place_meeting(x,y+vsp,obj_wall))
@@ -216,31 +197,60 @@ if (keyboard_check(vk_left) or keyboard_check(vk_right) or keyboard_check(vk_up)
           <argument>
             <kind>1</kind>
             <string>///Debug keys
-if (debug_mode or (global.Cheats = 1))
+if (global.Cheats = 1 or debug_mode)
 {
-    /* if (keyboard_check_pressed(ord("3")))
-    {
-        room_goto(room_tutorial);
-    } */
+    
+//  ** REMOVE OBJCESTS **     
+    // DELETE ALL KEYS
     if (keyboard_check_pressed(ord("4")))
     {
         instance_destroy(obj_key);
     }
+    
+    // DELETE ALL ENEMIES
+    if (keyboard_check_pressed(ord("5")))
+    {
+        instance_destroy(obj_enemy);
+    }
+
+    
+//  ** SWITCH ROOMS **
+    // TUTORIAL 
+    if (keyboard_check_pressed(ord("3")))
+    {
+        room_goto(room_TUT_1);
+    }
+    //GO TO NEXT LEVEL
     if (keyboard_check_pressed(ord("2")))
     {
-        if (global.LevelNumber &lt; 3.04)
+        if (global.LevelNumber &lt; 3.05)
         {
             room_goto_next();
         }
         else
         {
-            room_goto(room_UI_menu)
+            room_goto(room_UI_menu);
         }
     }
 
+    //GO TO PREVIOUS LEVEL
     if (keyboard_check_pressed(ord("1")))
     {
         room_goto_previous();
+    }
+    
+//  ** OTHER **
+    
+    // INVICIBILITY
+    if (keyboard_check_pressed(ord("6")))
+    {
+        global.NoHurt = true;
+    }
+    
+    // FREEZE TIME
+    if (keyboard_check_pressed(ord("7")))
+    {
+        global.FreezeTime = true;
     }
 }
 </string>
@@ -263,10 +273,16 @@ if (debug_mode or (global.Cheats = 1))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Turns on cheats mode
-if (debug_mode or (keyboard_check(vk_control)) and (keyboard_check(ord("C"))))
+            <string>///ENABLE CHEATS
+if (keyboard_check(vk_control)) and (keyboard_check(vk_shift)) and (keyboard_check(ord("C"))) 
 {
-global.Cheats =1;
+global.Cheats = 1;
+instance_create(16,16,obj_cheatsText);
+}
+
+if (mouse_check_button(mb_left) and mouse_check_button(mb_right) and keyboard_check(vk_control))
+{
+    global.Cheats = 0;
 }
 </string>
           </argument>
@@ -299,36 +315,6 @@ global.Cheats =1;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_TUT_5_enemy">
-      <action>
-        <libid>1</libid>
-        <id>201</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_create_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>10</kind>
-            <object>obj_TUT_enemy</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1152</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>64</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="4" ename="obj_gate">
       <action>
         <libid>1</libid>
@@ -349,17 +335,17 @@ global.Cheats =1;
             <string>if (global.LastLevel = true and global.Speedrun = false)
 {
     room_goto(room_credits);
-    global.LevelScore = 0;
-    global.TotalScore = 0;
+    //global.LevelScore = 0;
+    //global.TotalScore = 0;
 }
 else 
 {
     room_goto_next();    
 }
 
-if global.LastLevel = true
+/*if global.LastLevel = true
 {
-    file_delete("Save.sav");
+    file_delete("CurrentLevel.sav");
 }
 
 global.LevelScore += 20;
@@ -518,7 +504,7 @@ global.TotalScore = global.TotalScore + global.LevelScore;
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>global.Sound = 1</string>
+            <string>global.Sound = 1 and global.NoHurt = false</string>
           </argument>
         </arguments>
       </action>
@@ -652,7 +638,7 @@ global.TotalScore = global.TotalScore + global.LevelScore;
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>global.Sound = 1</string>
+            <string>global.Sound = 1 and global.NoHurt = false</string>
           </argument>
         </arguments>
       </action>
@@ -727,6 +713,36 @@ global.TotalScore = global.TotalScore + global.LevelScore;
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_TUT_5_enemy">
+      <action>
+        <libid>1</libid>
+        <id>201</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_create_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>10</kind>
+            <object>obj_TUT_enemy</object>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1152</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>64</string>
+          </argument>
+        </arguments>
       </action>
     </event>
     <event eventtype="5" enumb="68">
@@ -967,11 +983,15 @@ global.TotalScore = global.TotalScore + global.LevelScore;
           <argument>
             <kind>1</kind>
             <string>///Save game
-    if (file_exists("Save.sav")) file_delete("Save.sav");
-    var SaveFile = file_text_open_write("Save.sav");
-    var SavedRoom = room;
-    file_text_write_real(SaveFile,SavedRoom);
-    file_text_close(SaveFile);
+if ((global.Cheats = 0 and global.Speedrun = false) or debug_mode)
+{
+    var SavedRoom = room;    
+    ini_open(global.DataDir + "\GameInfo.dat");
+    ini_write_real("GameInfo","CurrentLevel",room);
+    ini_close();
+}
+
+
 </string>
           </argument>
         </arguments>
@@ -993,123 +1013,163 @@ global.TotalScore = global.TotalScore + global.LevelScore;
           <argument>
             <kind>1</kind>
             <string>///Save levels
-//Easy
-    if global.LevelNumber = 1.01
-    {
-        game_save("Level-E1.sav")
-    }
-    if global.LevelNumber = 1.02
-    {
-        game_save("Level-E2.sav")
-    }
-    if global.LevelNumber = 1.03
-    {
-        game_save("Level-E3.sav")
-    }
-    if global.LevelNumber = 1.04
-    {
-        game_save("Level-E4.sav")
-    }
-    if global.LevelNumber = 1.05
-    {
-        game_save("Level-E5.sav")
-    }
-    if global.LevelNumber = 1.06
-    {
-        game_save("Level-E6.sav")
-    }
-    if global.LevelNumber = 1.07
-    {
-        game_save("Level-E7.sav")
-    }
-    if global.LevelNumber = 1.08
-    {
-        game_save("Level-E8.sav")
-    }
-    if global.LevelNumber = 1.09
-    {
-        game_save("Level-E9.sav")
-    }
-    if global.LevelNumber = 1.10
-    {
-        game_save("Level-E10.sav")
-    }
-    if global.LevelNumber = 1.11
-    {
-        game_save("Level-E11.sav")
-    }
-    if global.LevelNumber = 1.12
-    {
-        game_save("Level-E12.sav")
-    }
 
-//Medium
-    if global.LevelNumber = 2.01
+if (global.Cheats = 0 or debug_mode)
+{
+    ini_open(global.DataDir + "\Levels.dat");
+    
+    switch (global.LevelNumber)
     {
-        game_save("Level-M1.sav")
+    // E A S Y
+        case 1.01: 
+            ini_write_string("Easy","Level 1","true");
+            break;
+            
+        case 1.02:
+            ini_write_string("Easy","Level 2","true");
+            break;
+            
+        case 1.03:
+            ini_write_string("Easy","Level 3","true");
+            break;
+            
+        case 1.04:
+            ini_write_string("Easy","Level 4","true");
+            break;
+            
+        case 1.05:
+            ini_write_string("Easy","Level 5","true");
+            break;
+            
+        case 1.06:
+            ini_write_string("Easy","Level 6","true");
+            break;
+            
+        case 1.07:
+            ini_write_string("Easy","Level 7","true");
+            break;
+            
+        case 1.08:
+            ini_write_string("Easy","Level 8","true");
+            break;
+            
+        case 1.09:
+            ini_write_string("Easy","Level 9","true");
+            break;
+            
+        case 1.10:
+            ini_write_string("Easy","Level 10","true");
+            break;
+            
+        case 1.11:
+            ini_write_string("Easy","Level 11","true");
+            break;
+            
+        case 1.12:
+            ini_write_string("Easy","Level 12","true");
+            break;    
+            
+    // M E D I U M    
+        case 2.01: 
+            ini_write_string("Medium","Level 1","true");
+            break;
+            
+        case 2.02:
+            ini_write_string("Medium","Level 2","true");
+            break;
+            
+        case 2.03:
+            ini_write_string("Medium","Level 3","true");
+            break;
+            
+        case 2.04:
+            ini_write_string("Medium","Level 4","true");
+            break;
+            
+        case 2.05:
+            ini_write_string("Medium","Level 5","true");
+            break;
+            
+        case 2.06:
+            ini_write_string("Medium","Level 6","true");
+            break;
+            
+        case 2.07:
+            ini_write_string("Medium","Level 7","true");
+            break;
+            
+        case 2.08:
+            ini_write_string("Medium","Level 8","true");
+            break;
+            
+        case 2.09:
+            ini_write_string("Medium","Level 9","true");
+            break;
+            
+        case 2.10:
+            ini_write_string("Medium","Level 10","true");
+            break;
+            
+        case 2.11:
+            ini_write_string("Medium","Level 11","true");
+            break;
+            
+        case 2.12:
+            ini_write_string("Medium","Level 12","true");
+            break;   
+          
+     // H A R D  
+                case 3.01: 
+            ini_write_string("Hard","Level 1","true");
+            break;
+            
+        case 3.02:
+            ini_write_string("Hard","Level 2","true");
+            break;
+            
+        case 3.03:
+            ini_write_string("Hard","Level 3","true");
+            break;
+            
+        case 3.04:
+            ini_write_string("Hard","Level 4","true");
+            break;
+            
+        case 3.05:
+            ini_write_string("Hard","Level 5","true");
+            break;
+            
+        case 3.06:
+            ini_write_string("Hard","Level 6","true");
+            break;
+            
+        case 3.07:
+            ini_write_string("Hard","Level 7","true");
+            break;
+            
+        case 3.08:
+            ini_write_string("Hard","Level 8","true");
+            break;
+            
+        case 3.09:
+            ini_write_string("Hard","Level 9","true");
+            break;
+            
+        case 3.10:
+            ini_write_string("Hard","Level 10","true");
+            break;
+            
+        case 3.11:
+            ini_write_string("Hard","Level 11","true");
+            break;
+            
+        case 3.12:
+            ini_write_string("Hard","Level 12","true");
+            break; 
     }
-    if global.LevelNumber = 2.02
-    {
-        game_save("Level-M2.sav")
-    }
-    if global.LevelNumber = 2.03
-    {
-        game_save("Level-M3.sav")
-    }
-    if global.LevelNumber = 2.04
-    {
-        game_save("Level-M4.sav")
-    }
-    if global.LevelNumber = 2.05
-    {
-        game_save("Level-M5.sav")
-    }
-    if global.LevelNumber = 2.06
-    {
-        game_save("Level-M6.sav")
-    }
-    if global.LevelNumber = 2.07
-    {
-        game_save("Level-M7.sav")
-    }
-    if global.LevelNumber = 2.08
-    {
-        game_save("Level-M8.sav")
-    }
-    if global.LevelNumber = 2.09
-    {
-        game_save("Level-M9.sav")
-    }
-    if global.LevelNumber = 2.10
-    {
-        game_save("Level-M10.sav")
-    }
-    if global.LevelNumber = 2.11
-    {
-        game_save("Level-M11.sav")
-    }
-    if global.LevelNumber = 2.12
-    {
-        game_save("Level-M12.sav")
-    }
-//Hard
-  if global.LevelNumber = 3.01
-    {
-        game_save("Level-H1.sav")
-    }
-    if global.LevelNumber = 3.02
-    {
-        game_save("Level-H2.sav")
-    }
-    if global.LevelNumber = 3.03
-    {
-        game_save("Level-H3.sav")
-    }
-    if global.LevelNumber = 3.04
-    {
-        game_save("Level-H4.sav")
-    }
-
+    
+    ini_close();
+}
 </string>
           </argument>
         </arguments>
@@ -1132,12 +1192,7 @@ global.TotalScore = global.TotalScore + global.LevelScore;
             <kind>1</kind>
             <string>///diplay and reset score and FPS
 instance_destroy(obj_DEATH_GAMEOVER);
-global.LevelScore = 0;
 
-if (!instance_exists(obj_score))
-{
-    instance_create(1248,64,obj_score);
-}
 if (!instance_exists(obj_FPS_meter))
 {
     instance_create(1248,96,obj_FPS_meter);
@@ -1145,9 +1200,82 @@ if (!instance_exists(obj_FPS_meter))
 
 if global.LevelNumber &lt;= 0.5
 {
-    instance_destroy(obj_score);
+    //instance_destroy(obj_score);
     instance_destroy(obj_FPS_meter);
 }
+
+/* global.LevelScore = 0;
+
+if (!instance_exists(obj_score))
+{
+    instance_create(1248,64,obj_score);
+} */
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Save Attempts value
+
+ini_open(global.DataDir + "\GameInfo.dat");
+ini_write_real("GameInfo","Attempts",global.Attempts);
+ini_close();
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if ((global.LevelNumber &gt;= 1.01) and (global.LevelNumber &lt;= global.EasyMax))
+{
+    global.Difficulty  = "Easy";
+}
+
+if ((global.LevelNumber &gt;= 2.01) and (global.LevelNumber &lt;= global.MedMax))
+{
+    global.Difficulty  = "Medium";
+}
+
+if ((global.LevelNumber &gt;= 3.01) and (global.LevelNumber &lt;= global.HardMax))
+{
+    global.Difficulty  = "Hard";
+}
+
+
+/* global.EasyMax = 1.12;
+global.MedMax = 2.12;
+global.HardMax = 3.05;
 </string>
           </argument>
         </arguments>
@@ -1254,6 +1382,68 @@ if global.LevelNumber &lt;= 0.5
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if global.Fullscreen = 1
+{
+    global.Fullscreen = 0;
+}
+else
+{
+    global.Fullscreen = 1;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="113">
+      <action>
+        <libid>1</libid>
+        <id>305</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_timeline_set</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>14</kind>
+            <timeline>tml_Screenshot</timeline>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
           <argument>
             <kind>4</kind>
             <string>0</string>
@@ -1393,6 +1583,29 @@ if global.LevelNumber &lt;= 0.5
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.Attempts += 1;
+//global.LevelScore -= 5;
+room_restart();
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
     <event eventtype="9" enumb="38">
@@ -1560,40 +1773,6 @@ bullet.speed = 15;
       </action>
       <action>
         <libid>1</libid>
-        <id>422</id>
-        <kind>1</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>408</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>global.bullets &gt; 0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>211</id>
         <kind>0</kind>
         <userelative>0</userelative>
@@ -1616,20 +1795,6 @@ bullet.speed = 15;
           </argument>
         </arguments>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>424</id>
-        <kind>2</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
     </event>
     <event eventtype="9" enumb="27">
       <action>
@@ -1649,6 +1814,29 @@ bullet.speed = 15;
           <argument>
             <kind>11</kind>
             <room>room_UI_menu</room>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Move = true;
+</string>
           </argument>
         </arguments>
       </action>

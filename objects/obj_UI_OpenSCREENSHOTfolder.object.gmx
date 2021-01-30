@@ -11,22 +11,22 @@
     <event eventtype="6" enumb="4">
       <action>
         <libid>1</libid>
-        <id>322</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
+        <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
         <functionname></functionname>
-        <codestring>url_open(argument0);
-</codestring>
+        <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>file://%appdata%/Black_Box_Jumper</string>
+            <string>url_open("file://%appdata%/Black_Box_Jumper/Screenshots")
+</string>
           </argument>
         </arguments>
       </action>

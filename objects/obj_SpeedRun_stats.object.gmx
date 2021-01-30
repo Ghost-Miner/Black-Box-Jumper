@@ -8,6 +8,135 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var Date = string(current_day) + "/" + string(current_month) + "/" +  string(current_year);
+var Time = string(current_hour) + "_" + string(current_minute) + "_" + string(current_second);
+
+var TotalTime = string(global.SpdTotalTimeMin) + ":" + string(global.SpdTotalTimeSec);
+
+var EasyTimeA = string(global.SpdTimeMinEasy) + ":" + string(global.SpdTimeSecEasy);
+var EasyTimeB = string(global.SpdTimeMinEasy) + ":" + "0" + string(global.SpdTimeSecEasy);
+
+var MediumTimeA = string(global.SpdTimeMinMedium) + ":" + string(global.SpdTimeSecMedium);
+var MediumTimeB = string(global.SpdTimeMinMedium) + ":" + "0" + string(global.SpdTimeSecMedium);
+
+var HardTimeA = string(global.SpdTimeMinHard) + ":" + "0" + string(global.SpdTimeSecHard);
+var HardTimeB = string(global.SpdTimeMinHard) + ":" + string(global.SpdTimeSecHard);
+
+
+if (global.SpdTimeSecEasy &lt; 10)
+{   EasyTime = EasyTimeB    }
+else
+{   EasyTime = EasyTimeA   }
+
+if (global.SpdTimeSecMedium &lt; 10)
+{   MediumTime = MediumTimeB    }
+else
+{   MediumTime = MediumTimeA    }
+
+if (global.SpdTimeSecHard &lt; 10)
+{   HardTime = HardTimeA    }
+else
+{   HardTime = HardTimeB    }
+
+File = file_text_open_write(global.SpdDir + "\Speedrun" + string(global.SpeedrunNum) + ".txt");
+global.SpeedrunNum += 1;
+
+file_text_write_string(File, "BLACK BOX JUMPER");
+file_text_writeln(File);
+file_text_write_string(File, "Speedrun statistics");
+file_text_writeln(File);
+file_text_write_string(File, "===============");
+file_text_writeln(File);
+file_text_writeln(File);
+
+file_text_write_string(File, "Game versions: " + string(global.GameVersion));
+file_text_writeln(File);
+file_text_write_string(File, "Speedrun number: " + string(global.SpeedrunNum - 1));
+file_text_writeln(File);
+file_text_write_string(File, "Date: " + string(Date));
+file_text_writeln(File);
+file_text_write_string(File, "Time: " + string(Time));
+file_text_writeln(File);
+file_text_write_string(File, "---------------");
+file_text_writeln(File);
+file_text_write_string(File, "Attempts: " + string(global.Attempts));
+file_text_writeln(File);
+file_text_write_string(File, "Jumps: " + string(global.Jumps));
+file_text_writeln(File);
+file_text_write_string(File, "Score: 0");
+file_text_writeln(File);
+file_text_writeln(File);
+file_text_write_string(File, "Total time: " + string(TotalTime));
+file_text_writeln(File);
+file_text_writeln(File);
+file_text_write_string(File, "Easy: " + string(EasyTime));
+file_text_writeln(File);
+file_text_write_string(File, "Medium: " + string(MediumTime));
+file_text_writeln(File);
+file_text_write_string(File, "Hard: " + string(HardTime));
+file_text_writeln(File);
+
+if global.Cheats = 1
+{
+    file_text_writeln(File);
+    file_text_write_string(File, "**************");
+    file_text_writeln(File);
+    file_text_write_string(File, "CHEATS WERE ENEALED!");
+    file_text_writeln(File);
+    file_text_write_string(File, "**************");
+    file_text_writeln(File);
+}
+
+file_text_close(File);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>ini_open(global.DataDir + "\GameInfo.dat");
+
+ini_write_real("GameInfo","Speedrun Number",global.SpeedrunNum);
+
+ini_close();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -51,10 +180,14 @@ else
 
 
 draw_text(room_width/2,room_height/2+64,"Attempts: " + string(global.Attempts));
-draw_text(room_width/2,room_height/2+100,"Score: " + string(global.TotalScore));
-draw_text(room_width/2,room_height/2+135,"Jumps: " + string(global.Jumps));
+//draw_text(room_width/2,room_height/2+135,"Score: " + string(global.TotalScore));
+draw_text(room_width/2,room_height/2+100,"Jumps: " + string(global.Jumps));
 
-draw_text(room_width/2,room_height/2+250,"Press SPACE to return to main menu");
+draw_text(room_width/2,room_height/2+150,"Press SPACE to return to main menu");
+
+draw_text(room_width/2,room_height/2+250,"Record of this run has been saved to");
+draw_set_font(fnt_smalll_italic);
+draw_text(room_width/2,room_height/2+285,"%appdata%/Black_Box_Jumper/Speedrun records");
 </string>
           </argument>
         </arguments>

@@ -27,6 +27,36 @@
             <kind>1</kind>
             <string>myTime=60.0
 //display_reset(0, true);
+
+global.Cheats = 0;
+global.NoHurt = false;
+global.FreezeTime = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Reset game
+    ini_open(global.DataDir + "\GameInfo.dat");
+    ini_write_real("GameInfo","CurrentLevel",1);
+    ini_write_real("GameInfo","Attempts",0);
+    ini_write_real("GameInfo","Score",0);
+    ini_close();
 </string>
           </argument>
         </arguments>
@@ -140,7 +170,7 @@ else
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>global.Sound = 1</string>
+            <string>global.Music = 1</string>
           </argument>
         </arguments>
       </action>

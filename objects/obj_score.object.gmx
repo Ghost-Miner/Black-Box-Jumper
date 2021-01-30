@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ShowScore = global.LevelScore + global.TotalScore;
+            <string>/*ShowScore = global.LevelScore + global.TotalScore;
+
 draw_set_color(c_white);
 draw_set_font(fnt_xxsmall);
 draw_set_valign(fa_middle);

@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(c_white);
+            <string>/*draw_set_color(c_white);
 draw_set_font(fnt_small);
 draw_text(room_width/2,75,"Score: ");
 draw_text(room_width/2+64,75,global.points);

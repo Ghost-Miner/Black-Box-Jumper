@@ -60,6 +60,7 @@ global.Difficulty = "NotALevel";</code>
     <instance objName="obj_border_vert" x="1264" y="456" name="inst_655513CD" locked="0" code="" scaleX="1" scaleY="16" colour="4294967295" rotation="0"/>
     <instance objName="obj_mus_play_Decisions" x="0" y="0" name="inst_55AD8553" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_SpeedRun_stats" x="32" y="96" name="inst_7EABAE45" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Opn_spd_Records" x="224" y="608" name="inst_585BE959" locked="0" code="" scaleX="26" scaleY="2" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
