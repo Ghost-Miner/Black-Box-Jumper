@@ -51,6 +51,46 @@
       </action>
       <action>
         <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>scr_Controls_Load</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -67,6 +107,10 @@
             <kind>1</kind>
             <string>///Initialise variables and reset other crap
 
+//global.KeyJump = (vk_up); //(keyboard_check_pressed(vk_up) or keyboard_check_pressed(ord("W")));
+//global.KeyLeft = (vk_left) //(keyboard_check(vk_left) or keyboard_check(ord("A")));
+//global.KeyRight = (vk_right) //(keyboard_check(vk_right) or keyboard_check(ord("D")));
+
 //Create directories
 if !directory_exists("Screenshots")
 {
@@ -81,6 +125,11 @@ if !directory_exists("Game data")
 if !directory_exists("Speedrun records")
 {
     directory_create("Speedrun records");
+}
+
+if !directory_exists("Custom levels")
+{
+    directory_create("Custom levels");
 }
 
 if !directory_exists("Game data" + "\Level statisctics")
@@ -102,6 +151,7 @@ if !directory_exists("Game data" + "\Level statisctics" +"\Hard")
 {
     directory_create("Game data" + "\Level statisctics" +"\Hard");
 }
+
 
 //Read/Write game data
 if file_exists(working_directory + "\Game data" + "\GameInfo.dat")
@@ -150,8 +200,8 @@ global.LvlStatsHard = working_directory + "Game data" + "\Level statisctics" +"\
 
 //Game info
 global.Unfinished = false;
-global.GameVersion = "1.4";
-global.GameVersionShort = "1.4";
+global.GameVersion = "1.4.2";
+global.GameVersionShort = "1.4.2";
 
 //Tutorial
 if (file_exists(working_directory + "\Game data" + "\GameInfo.dat"))
@@ -167,6 +217,10 @@ global.ShowSpdTimer = false;
 global.Jumps = 0;
 global.NoHurt = false;
 global.FreezeTime = false;
+global.HidCursor = false;
+
+global.Occupied = false;
+global.AttemptsCL = 0;
 
 global.EasyMax = 1.12;
 global.MedMax = 2.12;

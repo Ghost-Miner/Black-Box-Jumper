@@ -12,7 +12,8 @@
   <showcolour>-1</showcolour>
   <code>global.LastLevel = false;
 global.Difficulty = "NotALevel";
-global.Jumps = 0;</code>
+global.Jumps = 0;
+global.kc = false;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -78,6 +79,7 @@ global.Jumps = 0;</code>
     <instance objName="obj_ACC_KeyNum_4" x="360" y="528" name="inst_640D7AB8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ACC_KeyNum_5" x="264" y="608" name="inst_B1FD4DAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ACC_KeyNum_6" x="400" y="688" name="inst_75872D4B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="key_name" x="0" y="96" name="inst_D849F395" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

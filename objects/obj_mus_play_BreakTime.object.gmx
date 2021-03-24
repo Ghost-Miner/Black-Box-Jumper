@@ -159,7 +159,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//COOL! You found another long forgotten and unused feature/function!
+            <string>///COOL! You found another long forgotten and unused feature/function!
 
 /*screen_save("BBJ_Screenshot_"+string(global.scrnum)+".png")
 global.scrnum += 1;

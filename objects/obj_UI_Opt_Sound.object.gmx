@@ -235,7 +235,7 @@
         <arguments>
           <argument>
             <kind>6</kind>
-            <sound>sfx_key</sound>
+            <sound>sfx_new_contact</sound>
           </argument>
           <argument>
             <kind>3</kind>

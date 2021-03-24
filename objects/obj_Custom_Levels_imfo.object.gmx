@@ -29,13 +29,9 @@
 draw_set_valign(fa_top);
 draw_set_font(fnt_small)
 draw_set_color(c_white)
-draw_text(16,128,"User made levels are coming soon");
-draw_text(16,192,"Stay tuned for updates");
-
-draw_text(16,320,"Itch.io: ghost-miner.itch.io");
-draw_text(16,384,"Discord: usfXuqa");
-draw_text(16,448,"Twitter: @_GhostMiner");
-
+draw_text(16,128,"Place folder with level files to");
+draw_text(16,168,"%appdata%/Black_Box_Jumper/Custom levels");
+draw_text(16,225,"Folder name has to be the same as level file name");
 
 </string>
           </argument>

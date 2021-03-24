@@ -34,6 +34,10 @@ if room = 4
 {
     room_goto(room_UI_credits)
 }
+else if room = 6
+{
+    room_goto(room_UI_controls)
+}
 else
 {
     room_goto(room_UI_menu)

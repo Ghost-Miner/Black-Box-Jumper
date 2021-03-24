@@ -1,13 +1,14 @@
-if global.Occupied = false
+if !file_exists(global.LoadLevel)
 {
-global.Occupied = true;
+    exit;
+} 
 
-file = file_text_open_read("Level Editor BBJ test.txt");
+file = file_text_open_read(global.LoadLevel)
 
 var X = 0;
 var Y = 0;
 var i;
-//global.ShrinkObjects = true;
+global.ShrinkObjects = true;
 
 for (i = 0; i < 945; i += 1)
 {
@@ -21,7 +22,7 @@ for (i = 0; i < 945; i += 1)
         
         case("BREAK"):
         Y += 32; 
-        X = 0;
+        X = -32;
         //file_text_readln(file);
         break;
         
@@ -30,27 +31,27 @@ for (i = 0; i < 945; i += 1)
         break;
         
         case("--"):
-        instance_create(X,Y,obj_borderr_hor);
+        instance_create(X,Y,obj_ground_CL);
         break;
         
         case("01"):
-        instance_create(X,Y,obj_platform_1x1);
+        instance_create(X,Y,obj_platform_CL);
         break;
         
         case("02"):
-        instance_create(X,Y,obj_player);
+        instance_create(X,Y,obj_player_CL);
         break;
         
         case("03"):
-        instance_create(X,Y,obj_enemy);
+        instance_create(X,Y,obj_enemy_CL);
         break;
         
         case("04"):
-        instance_create(X,Y,obj_spike);
+        instance_create(X,Y,obj_spike_CL);
         break;
         
         case("05"):
-        instance_create(X,Y,obj_gate);
+        //instance_create(X,Y,obj_gate_CL);
         break;
         
         case("06"):
@@ -58,11 +59,11 @@ for (i = 0; i < 945; i += 1)
         break;
         
         case("07"):
-        instance_create(X,Y,obj_border);
+        instance_create(X,Y,obj_border_CL);
         break;
         
         case("08"):
-        instance_create(X,Y,obj_border);
+        instance_create(X,Y,obj_ground_CL);
         break;  
     }
     file_text_readln(file);
@@ -72,4 +73,9 @@ for (i = 0; i < 945; i += 1)
 
 
 file_text_close(file);
-}
+
+global.ShrinkObjects = false;
+
+instance_create(8,8,obj_gate_spawner_CL);
+instance_create(0,0,obj_Timer_CL);
+

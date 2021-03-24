@@ -14,6 +14,10 @@
     <sound>sound\sfx_LevelComplete</sound>
     <sound>sound\sfx_shoot</sound>
     <sound>sound\sfx_error</sound>
+    <sound>sound\sfx_crit_stop</sound>
+    <sound>sound\sfx_new_contact</sound>
+    <sound>sound\sfx_ring1</sound>
+    <sound>sound\sfx_level_complete_2</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
@@ -32,6 +36,7 @@
     <sprite>sprites\spr_gate</sprite>
     <sprite>sprites\spr_border_vert</sprite>
     <sprite>sprites\spr_Border_hor</sprite>
+    <sprite>sprites\spr_CL_ground</sprite>
     <sprite>sprites\spr_key</sprite>
     <sprite>sprites\spr_spike</sprite>
     <sprite>sprites\spr_Skip_tutorial</sprite>
@@ -50,6 +55,11 @@
           <sprite>sprites\spr_UI_plus</sprite>
           <sprite>sprites\spr_UI_minus</sprite>
           <sprite>sprites\spt_UI_Reset</sprite>
+        </sprites>
+        <sprites name="Level buttons">
+          <sprite>sprites\spr_UnlockTheLevel</sprite>
+          <sprite>sprites\spr_UI_LevelLocked</sprite>
+          <sprite>sprites\spr_LevelSelectButton</sprite>
         </sprites>
         <sprite>sprites\spr_UI_play</sprite>
         <sprite>sprites\spr_UI_Options</sprite>
@@ -70,11 +80,6 @@
         <sprite>sprites\spr_UI_toggle</sprite>
         <sprite>sprites\spr_UI_NewGame</sprite>
         <sprite>sprites\spr_Custom_Levels</sprite>
-        <sprites name="Level buttons">
-          <sprite>sprites\spr_UnlockTheLevel</sprite>
-          <sprite>sprites\spr_UI_LevelLocked</sprite>
-          <sprite>sprites\spr_LevelSelectButton</sprite>
-        </sprites>
       </sprites>
       <sprites name="Tutorial">
         <sprite>sprites\spr_trigger</sprite>
@@ -129,6 +134,11 @@
     <sprite>sprites\spr_air</sprite>
     <sprite>sprites\spr_dark_overlay</sprite>
     <sprite>sprites\spr_empty</sprite>
+    <sprite>sprites\spr_Import_Level</sprite>
+    <sprite>sprites\spr_get_editor</sprite>
+    <sprite>sprites\spr_customize_controls</sprite>
+    <sprite>sprites\spr_CC_bgr</sprite>
+    <sprite>sprites\spr_Reset_controls</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -139,6 +149,7 @@
     <background>background\bgr_hard_lvl_1</background>
     <background>background\bgr_hard_lvl_2</background>
     <background>background\bgr_hard_lvl3</background>
+    <background>background\bgr_editor</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -149,6 +160,7 @@
     <script>scripts\scr_DisplayTime_exp.gml</script>
     <script>scripts\scr_btn_highlight.gml</script>
     <script>scripts\scr_btn_rectangle.gml</script>
+    <script>scripts\scr_btn_rectangle_2.gml</script>
     <script>scripts\scr_btn_underline.gml</script>
     <script>scripts\scr_NewGame.gml</script>
     <script>scripts\scr_ResetGame.gml</script>
@@ -163,6 +175,12 @@
     <script>scripts\script11.gml</script>
     <script>scripts\scr_New_game_session.gml</script>
     <script>scripts\scr_Import_Level.gml</script>
+    <script>scripts\scr_CL_Restart.gml</script>
+    <script>scripts\scr_Reset_2.gml</script>
+    <script>scripts\scr_Controls_Save.gml</script>
+    <script>scripts\scr_Controls_Load.gml</script>
+    <script>scripts\scr_CC_Press_A_Key_prompt.gml</script>
+    <script>scripts\sc_key_names.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_small</font>
@@ -180,17 +198,37 @@
     <font>fonts\fnt_timer</font>
     <font>fonts\fnt_timer_normal</font>
     <font>fonts\fnt_lvl_start_timer</font>
+    <font>fonts\font15</font>
+    <font>fonts\font16</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
-    <object>objects\obj_player_DEAD_copy</object>
-    <objects name="Platforms">
-      <object>objects\obj_wall</object>
-      <object>objects\obj_platform_1x1</object>
-      <object>objects\obj_platform_2x1</object>
-      <object>objects\obj_platform_3x1</object>
-      <object>objects\obj_platform_4x1</object>
-      <object>objects\obj_platform_5x1</object>
+    <objects name="GAME OBJECTS">
+      <objects name="Platforms">
+        <object>objects\obj_wall</object>
+        <object>objects\obj_platform_1x1</object>
+        <object>objects\obj_platform_2x1</object>
+        <object>objects\obj_platform_3x1</object>
+        <object>objects\obj_platform_4x1</object>
+        <object>objects\obj_platform_5x1</object>
+      </objects>
+      <object>objects\obj_player_DEAD_copy</object>
+      <object>objects\gate_spawner</object>
+      <object>objects\obj_bullet</object>
+      <object>objects\obj_spike</object>
+      <object>objects\obj_key</object>
+      <object>objects\obj_enemy</object>
+      <object>objects\obj_gate</object>
+      <object>objects\obj_ENEMY_border</object>
+      <object>objects\obj_borderr_hor</object>
+      <object>objects\obj_border_vert</object>
+      <object>objects\obj_border</object>
+    </objects>
+    <objects name="TUTORIAL">
+      <object>objects\obj_arrow_tut_2</object>
+      <object>objects\obj_arrow_tut_3</object>
+      <object>objects\obj_arrow_tut</object>
+      <object>objects\obj_tut_death_void</object>
     </objects>
     <objects name="Statisctics">
       <object>objects\obj_score</object>
@@ -225,6 +263,7 @@
           <object>objects\obj_UI_back</object>
           <object>objects\obj_UI_PlayTutorial</object>
           <object>objects\obj_UI_Options_Advanced</object>
+          <object>objects\obj_UI_ReportBug</object>
         </objects>
         <objects name="Options">
           <object>objects\obj_UI_Opt_musicON</object>
@@ -237,7 +276,14 @@
           <object>objects\obj_ShowFPS</object>
           <object>objects\obj_UI_Opt_Sound</object>
           <object>objects\obj_UI_ProgressResetInfo</object>
+          <object>objects\obj_UI_Opt_Mouse_defaulkt</object>
+          <object>objects\obj_UI_Opt_Mouse_custom</object>
+          <object>objects\obj_UI_Opt_Audio</object>
           <object>objects\obj_UI_OpenSCREENSHOTfolder</object>
+          <object>objects\obj_UI_Opt_Video</object>
+          <object>objects\obj_UI_Opt_Other</object>
+          <object>objects\obj_Custom_Levels</object>
+          <object>objects\obj_UI_Opt_MousePointerText</object>
         </objects>
         <objects name="Level Select">
           <objects name="Easy">
@@ -301,6 +347,7 @@
         <object>objects\obj_UI_text_credits</object>
         <object>objects\obj_UI_text_credits_playtesters</object>
         <object>objects\obj_UI_text_controls</object>
+        <object>objects\obj_UI_Controls_Customize</object>
         <object>objects\obj_UI_text_Options</object>
         <object>objects\obj_UI_text_OptionsAdvanced</object>
         <object>objects\obj_version_menu</object>
@@ -365,50 +412,68 @@
         <object>objects\obj_ACC_KeyNum_Esc</object>
       </objects>
     </objects>
-    <object>objects\obj_bullet</object>
-    <object>objects\obj_border</object>
-    <object>objects\obj_spike</object>
-    <object>objects\obj_enemy</object>
-    <object>objects\obj_ENEMY_border</object>
-    <object>objects\obj_gate</object>
-    <object>objects\obj_borderr_hor</object>
-    <object>objects\obj_border_vert</object>
-    <object>objects\obj_key</object>
-    <object>objects\gate_spawner</object>
+    <objects name="CUSTOM LEVELS">
+      <objects name="CL level objects">
+        <object>objects\obj_player_CL</object>
+        <object>objects\obj_enemy_CL</object>
+        <object>objects\obj_spike_CL</object>
+        <object>objects\obj_platform_CL</object>
+        <object>objects\obj_gate_CL</object>
+        <object>objects\obj_border_CL</object>
+        <object>objects\obj_ground_CL</object>
+        <object>objects\obj_borderr_hor_CL</object>
+        <object>objects\obj_border_ver_CL</object>
+      </objects>
+      <object>objects\obj_air</object>
+      <object>objects\obj_Import_Level</object>
+      <object>objects\obj_Custom_Levels_imfo</object>
+      <object>objects\obj_Custom_Levels_title</object>
+      <object>objects\obj_CL_Level_impot</object>
+      <object>objects\obj_border_spawn_CL</object>
+      <object>objects\obj_Timer_CL</object>
+      <object>objects\obj_gate_spawner_CL</object>
+      <object>objects\obj_CL_Load_level</object>
+      <object>objects\obj_death_count_CL</object>
+    </objects>
+    <objects name="Speedrun">
+      <object>objects\obj_SpdTimer</object>
+      <object>objects\objSpdTimer_TotalTime</object>
+      <object>objects\obj_SpeedRun_stats</object>
+      <object>objects\obj_SpdTimer_showText</object>
+    </objects>
+    <objects name="Control keys">
+      <object>objects\obj_customize_controls</object>
+      <object>objects\obj_Controls_Save</object>
+      <object>objects\obj_CC_Jump</object>
+      <object>objects\obj_CC_Left</object>
+      <object>objects\obj_CC_Right</object>
+      <object>objects\obj_CC_Shoot</object>
+      <object>objects\obj_CC_Restart</object>
+      <object>objects\obj_Customize_Right</object>
+      <object>objects\obj_Customize_Left</object>
+      <object>objects\obj_Customize_Jump</object>
+      <object>objects\obj_Customize_Shoot</object>
+      <object>objects\obj_CC_Reset</object>
+      <object>objects\obj_Customize_Restart</object>
+      <object>objects\key_name</object>
+    </objects>
     <object>objects\obj_GAMEOVER</object>
     <object>objects\obj_DEATH_GAMEOVER</object>
-    <object>objects\obj_SpdTimer</object>
-    <object>objects\objSpdTimer_TotalTime</object>
-    <object>objects\obj_SpeedRun_stats</object>
     <object>objects\obj_IncomatibleFiles</object>
-    <object>objects\obj_arrow_tut_2</object>
-    <object>objects\obj_arrow_tut</object>
-    <object>objects\obj_arrow_tut_3</object>
     <object>objects\obj_credits</object>
-    <object>objects\obj_tut_death_void</object>
-    <object>objects\obj_SpdTimer_showText</object>
-    <object>objects\obj_UI_ReportBug</object>
     <object>objects\obj_cheatsText</object>
     <object>objects\obj_debugModeText</object>
-    <object>objects\obj_UI_Opt_Audio</object>
-    <object>objects\obj_UI_Opt_Other</object>
-    <object>objects\obj_UI_Opt_Video</object>
-    <object>objects\obj_UI_Opt_MousePointerText</object>
-    <object>objects\obj_UI_Opt_Mouse_custom</object>
-    <object>objects\obj_UI_Opt_Mouse_defaulkt</object>
     <object>objects\obj_Opn_spd_Records</object>
-    <object>objects\obj_air</object>
-    <object>objects\obj_Level_impoter</object>
     <object>objects\obj_dark_overlay</object>
-    <object>objects\obj_Custom_Levels</object>
-    <object>objects\obj_Custom_Levels_title</object>
-    <object>objects\obj_Custom_Levels_imfo</object>
     <object>objects\obj_discord_link</object>
     <object>objects\obj_Twitter_link</object>
     <object>objects\spr_itchio_linl</object>
+    <object>objects\obj_get_Editor</object>
+    <object>objects\obj_CC_reserved</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_Screenshot</timeline>
+    <timeline>timelines\tml_Load_Level</timeline>
   </timelines>
   <rooms name="rooms">
     <rooms name="Menu and GUI">
@@ -418,6 +483,7 @@
       <room>rooms\room_UI_credits</room>
       <room>rooms\room_UI_Credits_playtesters</room>
       <room>rooms\room_UI_controls</room>
+      <room>rooms\room_CC_Customize</room>
       <room>rooms\room_UI_Options</room>
       <room>rooms\room_Options_Advanced</room>
       <room>rooms\room_UI_Easy_Level_select</room>
@@ -469,9 +535,8 @@
       </rooms>
     </rooms>
     <room>rooms\room_Speedrun_Finished</room>
-    <room>rooms\foom_for_test</room>
-    <room>rooms\room_Import_Level</room>
     <room>rooms\room_Custom_Levels</room>
+    <room>rooms\room_Custom_Level</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

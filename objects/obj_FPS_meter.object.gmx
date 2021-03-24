@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (fps &lt; 50)
+            <string>/*if (fps &lt; 50)
 {
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
@@ -35,7 +35,7 @@
     draw_text(room_width/2,room_height/2,"LOW FPS DETECTED");
     draw_text(room_width/2,room_height/2+30,"Close or minimuze all open folder windows.");
     //draw_text(room_width/2,125,"Close or minimuze all open folder windows.");
-}
+} */
 
 if (global.ShowFPS = true)
 {

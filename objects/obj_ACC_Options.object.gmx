@@ -396,7 +396,7 @@ else
         <arguments>
           <argument>
             <kind>6</kind>
-            <sound>sfx_key</sound>
+            <sound>sfx_new_contact</sound>
           </argument>
           <argument>
             <kind>3</kind>
@@ -560,26 +560,6 @@ else
       </action>
       <action>
         <libid>1</libid>
-        <id>213</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_sound</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>-1</isnot>
-        <arguments>
-          <argument>
-            <kind>6</kind>
-            <sound>mus_Decisions_Kevin</sound>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>211</id>
         <kind>0</kind>
         <userelative>0</userelative>
@@ -598,7 +578,7 @@ else
           </argument>
           <argument>
             <kind>3</kind>
-            <string>1</string>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
