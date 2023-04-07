@@ -3,12 +3,14 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <NewExtensions/>
+    <extension index="0">extensions\execute_shell_simple_ext</extension>
+  </NewExtensions>
   <sounds name="sound">
     <sound>sound\mus_TheComplex_Kevin</sound>
     <sound>sound\mus_Decisions_Kevin</sound>
     <sound>sound\mus_Breaktime_Kevin</sound>
     <sound>sound\mus_AN_lately</sound>
+    <sound>sound\mus_carefree_kevin</sound>
     <sound>sound\sfx_death</sound>
     <sound>sound\sfx_key</sound>
     <sound>sound\sfx_LevelComplete</sound>
@@ -139,6 +141,7 @@
     <sprite>sprites\spr_customize_controls</sprite>
     <sprite>sprites\spr_CC_bgr</sprite>
     <sprite>sprites\spr_Reset_controls</sprite>
+    <sprite>sprites\rickroll_1</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -200,6 +203,8 @@
     <font>fonts\fnt_lvl_start_timer</font>
     <font>fonts\font15</font>
     <font>fonts\font16</font>
+    <font>fonts\font17</font>
+    <font>fonts\font18</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
@@ -470,6 +475,7 @@
     <object>objects\spr_itchio_linl</object>
     <object>objects\obj_get_Editor</object>
     <object>objects\obj_CC_reserved</object>
+    <object>objects\o_rickroll</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_Screenshot</timeline>
@@ -541,6 +547,11 @@
   <help>
     <rtf>help.rtf</rtf>
   </help>
+  <audiogroups name="audiogroups">
+    <audiogroup name="audiogroup_default"/>
+    <audiogroup name="Music"/>
+    <audiogroup name="Sound_FX"/>
+  </audiogroups>
   <TutorialState>
     <IsTutorial>0</IsTutorial>
     <TutorialName></TutorialName>

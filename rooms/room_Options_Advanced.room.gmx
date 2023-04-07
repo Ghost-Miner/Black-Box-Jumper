@@ -6,7 +6,7 @@
   <vsnap>4</vsnap>
   <hsnap>4</hsnap>
   <isometric>0</isometric>
-  <speed>144</speed>
+  <speed>10</speed>
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
@@ -63,6 +63,7 @@
     <instance objName="obj_ACC_KeyNum_3" x="180" y="268" name="inst_A752C8A4" locked="0" code="" scaleX="0.592592597007751" scaleY="0.592592597007751" colour="4294967295" rotation="0"/>
     <instance objName="obj_ACC_AdvOptions" x="144" y="24" name="inst_5EB74025" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ACC_KeyNum_Esc" x="376" y="644" name="inst_8AC2BCA7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_rickroll" x="192" y="0" name="inst_566E67A7" locked="0" code="" scaleX="3.7260274887085" scaleY="4.33939409255981" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

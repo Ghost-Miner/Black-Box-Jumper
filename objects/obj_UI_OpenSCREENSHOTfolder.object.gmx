@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>url_open("file://%appdata%/Black_Box_Jumper/Screenshots")
+            <string>//url_open("file://%appdata%/Black_Box_Jumper/Screenshots")
+execute_shell_simple((game_save_id + "/Screenshots"))
 </string>
           </argument>
         </arguments>
