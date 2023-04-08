@@ -11,22 +11,33 @@
     <event eventtype="6" enumb="4">
       <action>
         <libid>1</libid>
-        <id>322</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
+        <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
         <functionname></functionname>
-        <codestring>url_open(argument0);
-</codestring>
+        <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>https://ghost-miner.itch.io/bbj-level-editor</string>
+            <string>var _url, _path, _txt;
+_url = "https://ghost-miner.itch.io/bbj-level-editor"
+_path = (game_save_id + "/shortcut.url")
+_txt = file_text_open_write(_path)
+file_text_write_string(_txt, ("[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,11
+[InternetShortcut]
+IDList=
+URL=" + _url))
+file_text_close(_txt)
+execute_shell_simple(_path)
+
+</string>
           </argument>
         </arguments>
       </action>

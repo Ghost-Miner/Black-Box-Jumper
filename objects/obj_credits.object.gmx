@@ -88,6 +88,58 @@ else
     room_goto(room_UI_menu);
 }
 //showTime=(myTime)
+
+global.crXPos = x; 
+global.crYPos = y;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Calculate movement spee based on fps
+
+if (vspeed &gt; -1 and fps &gt; 30) { vspeed = -1}
+else if (vspeed &gt; -1) { vspeed = -2 } 
+var targetFps = 60;
+var currentFps = fps;
+var targetSpeed = global.movSpeed;
+var currentSpeed = global.movSpeed;
+
+// Divide target FPS with current FPS ( 60 / 30 = 2 )
+var calcSpeed1 = targetFps / currentFps; 
+// Subtract 1 from previous result ( 2 - 1 = 1 )
+var calcSpeed2 = calcSpeed1 + 1;
+// Add previous result to the credits move speed ( 1 + movSpeed = 2)
+var currentSpeed = global.movSpeed + calcSpeed2;
+var finalSpeed 
+    if (currentSpeed &gt; 0) 
+    { finalSpeed = -currentSpeed }
+    else 
+    { finalSpeed = currentSpeed}
+if (finalSpeed &gt; -1)
+{ global.movSpeed = -1; }
+// St movSpeed to currentSpeed1
+global.movSpeed = finalSpeed;
+vspeed = global.movSpeed
+
+if (vspeed &gt; -1 and fps &gt; 30) { vspeed = -1}
+else if (vspeed &gt; -1 and fps &lt;= 30) { vspeed = -2 } 
+
 </string>
           </argument>
         </arguments>
@@ -248,26 +300,6 @@ else
       </action>
       <action>
         <libid>1</libid>
-        <id>104</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_vspeed</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>-1</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>801</id>
         <kind>0</kind>
         <userelative>0</userelative>
@@ -287,6 +319,29 @@ else
           <argument>
             <kind>4</kind>
             <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>vspeed = global.movSpeed
+global.crXPos = x;
+global.crYPos = y;
+</string>
           </argument>
         </arguments>
       </action>

@@ -200,8 +200,8 @@ global.LvlStatsHard = working_directory + "Game data" + "\Level statisctics" +"\
 
 //Game info
 global.Unfinished = false;
-global.GameVersion = "1.4.2";
-global.GameVersionShort = "1.4.2";
+global.GameVersion = "1.6";
+global.GameVersionShort = "1.6";
 
 //Tutorial
 if (file_exists(working_directory + "\Game data" + "\GameInfo.dat"))
@@ -255,7 +255,7 @@ draw_set_font(fnt_UI_title)
 draw_set_color(c_white)
 draw_text(room_width/2,y,"Black Box Jumper");
 draw_set_font(fnt_small_bold)
-draw_text(room_width/2,y+64,"Made by GhostMiner, 2020");
+draw_text(room_width/2,y+64,"Made by GhostMiner, 2020-2023");
 </string>
           </argument>
         </arguments>

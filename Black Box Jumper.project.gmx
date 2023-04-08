@@ -3,6 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <NewExtensions>
     <extension index="0">extensions\execute_shell_simple_ext</extension>
   </NewExtensions>
   <sounds name="sound">
@@ -138,6 +139,7 @@
     <sprite>sprites\spr_empty</sprite>
     <sprite>sprites\spr_Import_Level</sprite>
     <sprite>sprites\spr_get_editor</sprite>
+    <sprite>sprites\spr_open_level_folder</sprite>
     <sprite>sprites\spr_customize_controls</sprite>
     <sprite>sprites\spr_CC_bgr</sprite>
     <sprite>sprites\spr_Reset_controls</sprite>
@@ -474,8 +476,10 @@
     <object>objects\obj_Twitter_link</object>
     <object>objects\spr_itchio_linl</object>
     <object>objects\obj_get_Editor</object>
+    <object>objects\obj_open_lvls_folder</object>
     <object>objects\obj_CC_reserved</object>
     <object>objects\o_rickroll</object>
+    <object>objects\credits_info</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_Screenshot</timeline>
