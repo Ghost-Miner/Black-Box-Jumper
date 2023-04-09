@@ -38,43 +38,43 @@ draw_set_color(c_white);
 switch(global.LevelNumber)
 {
     default:
-        draw_text(16,16,"Level: " + global.Difficulty +  ", undefined");
+        draw_text(16,16,"Level: " + global.Difficulty +  " undefined");
         break;
     case 3.01:
-        draw_text(16,16,"Level: " + global.Difficulty +  ", 1");
+        draw_text(16,16,"Level: " + global.Difficulty +  " 1");
         break;
     case 3.02:
-        draw_text(16,16,"Level: " + global.Difficulty +  ", 2");
+        draw_text(16,16,"Level: " + global.Difficulty +  " 2");
         break;
     case 3.03:
-        draw_text(16,16,"Level: " + global.Difficulty +  ", 3");
+        draw_text(16,16,"Level: " + global.Difficulty +  " 3");
         break;
     case 3.04:
-        draw_text(16,16,"Level: " + global.Difficulty +  ", 4");
+        draw_text(16,16,"Level: " + global.Difficulty +  " 4");
         break;
     case 3.05:
-        draw_text(16,16,"Level: " + global.Difficulty +  ", 5");
+        draw_text(16,16,"Level: " + global.Difficulty +  " 5");
         break;
     case 3.06:
-        draw_text(16,16,"Level: " + global.Difficulty +  ", 6");
+        draw_text(16,16,"Level: " + global.Difficulty +  " 6");
         break;
     case 3.07:
-        draw_text(16,16,"Level: " + global.Difficulty +  ", 7");
+        draw_text(16,16,"Level: " + global.Difficulty +  " 7");
         break;
     case 3.08:
-        draw_text(16,16,"Level: " + global.Difficulty +  ", 8");
+        draw_text(16,16,"Level: " + global.Difficulty +  " 8");
         break;
     case 3.09:
-        draw_text(16,16,"Level: " + global.Difficulty +  ", 9");
+        draw_text(16,16,"Level: " + global.Difficulty +  " 9");
         break;
     case 3.10:
-        draw_text(16,16,"Level: " + global.Difficulty +  ", 10");
+        draw_text(16,16,"Level: " + global.Difficulty +  " 10");
         break;
     case 3.11:
-        draw_text(16,16,"Level: " + global.Difficulty +  ", 11");
+        draw_text(16,16,"Level: " + global.Difficulty +  " 11");
         break;
     case 3.12:
-        draw_text(16,16,"Level: " + global.Difficulty +  ", 12");
+        draw_text(16,16,"Level: " + global.Difficulty +  " 12");
         break;
 
 }

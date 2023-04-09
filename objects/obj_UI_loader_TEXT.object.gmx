@@ -199,7 +199,7 @@ global.LvlStatsMedium = working_directory + "Game data" + "\Level statisctics" +
 global.LvlStatsHard = working_directory + "Game data" + "\Level statisctics" +"\Hard";
 
 //Game info
-global.Unfinished = false;
+global.Unfinished = true;
 global.GameVersion = "1.6";
 global.GameVersionShort = "1.6";
 

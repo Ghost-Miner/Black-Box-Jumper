@@ -43,42 +43,50 @@ if (global.Difficulty != "Custom Level" and global.Occupied = false)
             draw_text(16,16,"Level: " + global.Difficulty +  ", undefined");
             break;
         case 1.01:
-            draw_text(16,16,"Level: " + global.Difficulty +  ", 1");
+            draw_text(16,16,"Level: " + global.Difficulty +  " 1");
             break;
         case 1.02:
-            draw_text(16,16,"Level: " + global.Difficulty +  ", 2");
+            draw_text(16,16,"Level: " + global.Difficulty +  " 2");
             break;
         case 1.03:
-            draw_text(16,16,"Level: " + global.Difficulty +  ", 3");
+            draw_text(16,16,"Level: " + global.Difficulty +  " 3");
             break;
         case 1.04:
-            draw_text(16,16,"Level: " + global.Difficulty +  ", 4");
+            draw_text(16,16,"Level: " + global.Difficulty +  " 4");
             break;
         case 1.05:
-            draw_text(16,16,"Level: " + global.Difficulty +  ", 5");
+            draw_text(16,16,"Level: " + global.Difficulty +  " 5");
             break;
         case 1.06:
-            draw_text(16,16,"Level: " + global.Difficulty +  ", 6");
+            draw_text(16,16,"Level: " + global.Difficulty +  " 6");
             break;
         case 1.07:
-            draw_text(16,16,"Level: " + global.Difficulty +  ", 7");
+            draw_text(16,16,"Level: " + global.Difficulty +  " 7");
             break;
         case 1.08:
-            draw_text(16,16,"Level: " + global.Difficulty +  ", 8");
+            draw_text(16,16,"Level: " + global.Difficulty +  " 8");
             break;
         case 1.09:
-            draw_text(16,16,"Level: " + global.Difficulty +  ", 9");
+            draw_text(16,16,"Level: " + global.Difficulty +  " 9");
             break;
         case 1.10:
-            draw_text(16,16,"Level: " + global.Difficulty +  ", 10");
+            draw_text(16,16,"Level: " + global.Difficulty +  " 10");
             break;
         case 1.11:
-            draw_text(16,16,"Level: " + global.Difficulty +  ", 11");
+            draw_text(16,16,"Level: " + global.Difficulty +  " 11");
             break;
         case 1.12:
-            draw_text(16,16,"Level: " + global.Difficulty +  ", 12");
+            draw_text(16,16,"Level: " + global.Difficulty +  " 12");
             break;
-    
+        case 1.13:
+            draw_text(16,16,"Level: " + global.Difficulty +  " 13");
+            break;
+        case 1.14:
+            draw_text(16,16,"Level: " + global.Difficulty +  " 14");
+            break;
+        case 1.15:
+            draw_text(16,16,"Level: " + global.Difficulty +  " 15");
+            break;
     }
 }
 else
