@@ -96,7 +96,6 @@ global.LastLevel = false;</code>
     <instance objName="obj_border" x="928" y="352" name="inst_95549F1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_border" x="928" y="288" name="inst_A92CC94D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_borderr_hor" x="1056" y="704" name="inst_F086B248" locked="0" code="" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_gate" x="608" y="64" name="inst_CA293401" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

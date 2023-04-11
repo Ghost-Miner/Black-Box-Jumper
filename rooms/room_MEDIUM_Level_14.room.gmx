@@ -115,7 +115,6 @@ global.LastLevel = true;</code>
     <instance objName="obj_spike" x="640" y="416" name="inst_B210DDA4" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike" x="704" y="416" name="inst_717DA34C" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike" x="768" y="416" name="inst_6803893C" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_gate" x="64" y="64" name="inst_DFE0AC2B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="64" y="672" name="inst_11734C71" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

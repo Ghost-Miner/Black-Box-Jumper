@@ -49,6 +49,14 @@ if ((global.LevelNumber = 3.03) and (!instance_exists(obj_gate)) and (!instance_
 {
     instance_create(1184,608,obj_gate);
 }
+if ((global.LevelNumber = 3.07) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
+{
+    instance_create(672,32,obj_gate);
+}
+if ((global.LevelNumber = 1.13) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
+{
+    instance_create(480,64,obj_gate);
+}
 else
 {
     if ((!instance_exists(obj_gate)) and (!instance_exists(obj_key)))

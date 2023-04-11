@@ -59,7 +59,6 @@ global.LastLevel = false;</code>
     <instance objName="obj_DEATH_COUNT" x="160" y="16" name="inst_BE65240E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mus_play_Complex" x="112" y="16" name="inst_D1C1A393" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_UI_HM_Number" x="0" y="0" name="inst_B92C57A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_COUNTDOWN_15sec" x="192" y="32" name="inst_967D5936" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike" x="160" y="352" name="inst_C85CF402" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike" x="224" y="352" name="inst_08D34EC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike" x="288" y="352" name="inst_61B1AC70" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -131,6 +130,7 @@ global.LastLevel = false;</code>
     <instance objName="obj_ENEMY_border" x="1120" y="192" name="inst_4B8254F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ENEMY_border" x="640" y="608" name="inst_7F30EEA6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ENEMY_border" x="864" y="608" name="inst_16F6C0EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_COUNTDOWN_20sec" x="64" y="32" name="inst_EB5CE626" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
