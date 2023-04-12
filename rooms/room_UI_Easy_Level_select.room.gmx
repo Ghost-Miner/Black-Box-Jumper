@@ -4,7 +4,7 @@
   <width>1280</width>
   <height>720</height>
   <vsnap>16</vsnap>
-  <hsnap>16</hsnap>
+  <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>144</speed>
   <persistent>0</persistent>
@@ -54,23 +54,26 @@ global.difficulty = "Easy";</code>
   <instances>
     <instance objName="obj_UI_back" x="16" y="648" name="inst_8685EC5B" locked="0" code="" scaleX="1.3125" scaleY="1.26315784454346" colour="4294967295" rotation="0"/>
     <instance objName="obj_UI_title_Level_select" x="16" y="16" name="inst_DC76A1B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_LevelSelect_1_E" x="32" y="96" name="inst_C3246E3D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_LevelSelect_2_E" x="32" y="176" name="inst_CAC44DD3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_LevelSelect_3_E" x="32" y="256" name="inst_0DC8EA0A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_LevelSelect_4_E" x="32" y="336" name="inst_6D39FB8B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_LevelSelect_5_E" x="32" y="416" name="inst_28921D3B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_LevelSelect_1_E" x="32" y="128" name="inst_C3246E3D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_LevelSelect_2_E" x="32" y="208" name="inst_CAC44DD3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_LevelSelect_3_E" x="32" y="288" name="inst_0DC8EA0A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_LevelSelect_4_E" x="32" y="368" name="inst_6D39FB8B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_LevelSelect_5_E" x="32" y="448" name="inst_28921D3B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_UI_ESC_F11" x="80" y="32" name="inst_447A3B7B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_LevelSelect_6_E" x="32" y="496" name="inst_D72B85F1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_LevelSelect_7_E" x="160" y="96" name="inst_E9CBD45C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_LevelSelect_8_E" x="160" y="176" name="inst_E0229216" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_LevelSelect_9_E" x="160" y="256" name="inst_16FFDEFD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_LevelSelect_10_E" x="160" y="336" name="inst_2CBE71FA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_LevelSelect_11_E" x="160" y="416" name="inst_92AAADAC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_LevelSelect_12_E" x="160" y="496" name="inst_A26EC0DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_LevelSelect_6_E" x="128" y="128" name="inst_D72B85F1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_LevelSelect_8_E" x="128" y="288" name="inst_E0229216" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_LevelSelect_9_E" x="128" y="368" name="inst_16FFDEFD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_LevelSelect_10_E" x="128" y="448" name="inst_2CBE71FA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_LevelSelect_11_E" x="224" y="128" name="inst_92AAADAC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_LevelSelect_12_E" x="224" y="208" name="inst_A26EC0DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Easy_LevelSelectr" x="32" y="592" name="inst_424AE4AC" locked="0" code="" scaleX="0.643678188323975" scaleY="0.600000023841858" colour="4294967295" rotation="0"/>
     <instance objName="obj_Medium_lvl_select" x="160" y="592" name="inst_2A87684A" locked="0" code="" scaleX="0.650557637214661" scaleY="0.634920656681061" colour="4294967295" rotation="0"/>
     <instance objName="obj_mus_play_Decisions" x="48" y="48" name="inst_87F73FBD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Hard_lvl_select" x="352" y="592" name="inst_5EDCA8CD" locked="0" code="" scaleX="0.714285731315613" scaleY="0.689999997615814" colour="4294967295" rotation="0"/>
+    <instance objName="obj_LevelSelect_7_E" x="128" y="208" name="inst_86BDF361" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_LevelSelect_13_E" x="224" y="288" name="inst_4B379F50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_LevelSelect_15_E" x="224" y="448" name="inst_94E8FA5E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_LevelSelect_14_E" x="224" y="368" name="inst_778F8FA7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -79,13 +79,13 @@ if (global.Difficulty != "Custom Level" and global.Occupied = false)
             draw_text(16,16,"Level: " + global.Difficulty +  " 12");
             break;
         case 1.13:
-            draw_text(16,16,"Level: " + global.Difficulty +  " 13");
+            draw_text(16,16,"Level: Easy 13");
             break;
         case 1.14:
-            draw_text(16,16,"Level: " + global.Difficulty +  " 14");
+            draw_text(16,16,"Level: Easy 14");
             break;
         case 1.15:
-            draw_text(16,16,"Level: " + global.Difficulty +  " 15");
+            draw_text(16,16,"Level: Easy 15");
             break;
     }
 }

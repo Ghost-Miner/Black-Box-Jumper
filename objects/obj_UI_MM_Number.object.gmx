@@ -77,13 +77,13 @@ switch(global.LevelNumber)
         draw_text(16,16,"Level: " + global.Difficulty +  " 12");
         break;
     case 2.13:
-        draw_text(16,16,"Level: " + global.Difficulty +  " 13");
+        draw_text(16,16,"Level: Medium 13");
         break;
     case 2.14:
-        draw_text(16,16,"Level: " + global.Difficulty +  " 14");
+        draw_text(16,16,"Level: Medium 14");
         break;
     case 2.15:
-        draw_text(16,16,"Level: " + global.Difficulty +  " 15");
+        draw_text(16,16,"Level: Medium 15");
         break;
 
 }

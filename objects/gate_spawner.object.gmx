@@ -37,19 +37,19 @@ if ((global.LevelNumber = 1.11) and (!instance_exists(obj_gate)) and (!instance_
 {
     instance_create(640,100,obj_gate);
 }
-if ((global.LevelNumber = 3.01) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
+if ((global.LevelNumber = 3.08) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
 {
     instance_create(1216, 680,obj_gate);
 }
-if ((global.LevelNumber = 3.02) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
+if ((global.LevelNumber = 3.07) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
 {
     instance_create(48,352,obj_gate);
 }
-if ((global.LevelNumber = 3.03) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
+if ((global.LevelNumber = 3.06) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
 {
     instance_create(1184,608,obj_gate);
 }
-if ((global.LevelNumber = 3.07) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
+if ((global.LevelNumber = 3.04) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
 {
     instance_create(672,32,obj_gate);
 }
