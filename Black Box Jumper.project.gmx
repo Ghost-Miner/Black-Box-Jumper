@@ -337,6 +337,7 @@
             <object>objects\obj_LevelSelect_H_6</object>
             <object>objects\obj_LevelSelect_H_7</object>
             <object>objects\obj_LevelSelect_H_8</object>
+            <object>objects\obj_LevelSelect_H_9</object>
           </objects>
           <object>objects\obj_Easy_LevelSelectr</object>
           <object>objects\obj_Medium_lvl_select</object>
@@ -550,6 +551,7 @@
         <room>rooms\room_MEDIUM_Level_12</room>
         <room>rooms\room_MEDIUM_Level_13</room>
         <room>rooms\room_MEDIUM_Level_14</room>
+        <room>rooms\room_MEDIUM_Level_15</room>
       </rooms>
       <rooms name="Hard">
         <room>rooms\room_HARD_Level_1</room>
@@ -560,6 +562,7 @@
         <room>rooms\room_HARD_Level_6</room>
         <room>rooms\room_HARD_Level_7</room>
         <room>rooms\room_HARD_Level_8</room>
+        <room>rooms\room_HARD_Level_9</room>
       </rooms>
     </rooms>
     <room>rooms\room_Speedrun_Finished</room>

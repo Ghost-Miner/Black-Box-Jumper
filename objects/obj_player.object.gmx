@@ -335,7 +335,7 @@ if (global.Cheats = 1 or debug_mode)
     //GO TO NEXT LEVEL
     if (keyboard_check_pressed(ord("2")))
     {
-        if (global.LevelNumber &lt; 3.08)
+        if (global.LevelNumber &lt; 3.09)
         {
             room_goto_next();
         }
@@ -1604,7 +1604,7 @@ room_restart();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>CHANGE SPRITE ANGLE</string>
+            <string>== CHANGE SPRITE ANGLE</string>
           </argument>
         </arguments>
       </action>
@@ -1691,6 +1691,7 @@ room_restart();
           <argument>
             <kind>1</kind>
             <string>ImageAngle = 180;
+global.imageAngle = 180;
 </string>
           </argument>
         </arguments>
@@ -1792,6 +1793,7 @@ room_restart();
           <argument>
             <kind>1</kind>
             <string>ImageAngle = 0
+global.imageAngle = 0
 </string>
           </argument>
         </arguments>

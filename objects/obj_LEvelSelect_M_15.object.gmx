@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>ini_open(global.DataDir + "\Levels.dat");
 
-LevelName = room_MEDIUM_Level_14;
+LevelName = room_MEDIUM_Level_15;
 LevelNumber = 15;
 LoadLevel = ini_read_string("Medium","Level 15","false");
 ini_close();

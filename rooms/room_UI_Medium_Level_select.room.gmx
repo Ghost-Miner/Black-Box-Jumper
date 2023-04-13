@@ -11,7 +11,7 @@
   <colour>0</colour>
   <showcolour>-1</showcolour>
   <code>global.LastLevel = false;
-global.difficulty = "NotALevel";</code>
+global.difficulty = "Medium";</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -73,6 +73,7 @@ global.difficulty = "NotALevel";</code>
     <instance objName="obj_Hard_lvl_select" x="352" y="592" name="inst_24287B09" locked="0" code="" scaleX="0.720000028610229" scaleY="0.685185194015503" colour="4294967295" rotation="0"/>
     <instance objName="obj_LEvelSelect_M_14" x="224" y="368" name="inst_62640F7E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_LEvelSelect_M_13" x="224" y="288" name="inst_D009576B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_LEvelSelect_M_15" x="224" y="448" name="inst_87DEE0FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
