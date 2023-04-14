@@ -37,7 +37,7 @@ if ((global.LevelNumber = 1.11) and (!instance_exists(obj_gate)) and (!instance_
 {
     instance_create(640,100,obj_gate);
 }
-if ((global.LevelNumber = 3.09) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
+if ((global.LevelNumber = 3.10) and (!instance_exists(obj_gate)) and (!instance_exists(obj_key)))
 {
     instance_create(1216, 680,obj_gate);
 }

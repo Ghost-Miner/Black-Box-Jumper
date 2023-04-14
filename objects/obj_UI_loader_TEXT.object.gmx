@@ -199,9 +199,9 @@ global.LvlStatsMedium = working_directory + "Game data" + "\Level statisctics" +
 global.LvlStatsHard = working_directory + "Game data" + "\Level statisctics" +"\Hard";
 
 //Game info
-global.Unfinished = true;
-global.GameVersion = "1.6";
-global.GameVersionShort = "1.6";
+global.Unfinished = false;
+global.GameVersion = "1.6 Pre-Release 1";
+global.GameVersionShort = "1.6 Pre-1";
 
 //Tutorial
 if (file_exists(working_directory + "\Game data" + "\GameInfo.dat"))

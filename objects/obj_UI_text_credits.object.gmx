@@ -36,7 +36,7 @@ draw_set_valign(fa_top);
 draw_set_font(fnt_small)
 draw_set_color(c_white)
 draw_text(x,y,"Game made by GhostMiner");
-draw_text(x,y+50,"for GameDev.tv Community Jam 2020");
+draw_text(x,y+50,"Version: " + global.GameVersion);
 draw_text(x,y+150,"Design: GhostMiner");
 draw_text(x,y+200,"Music: Kevin MacLeod");
 draw_text(x,y+250,"Sound effects: freesound.org");

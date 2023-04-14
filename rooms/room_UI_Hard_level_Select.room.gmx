@@ -68,6 +68,7 @@ global.difficulty = "Hard";</code>
     <instance objName="obj_LevelSelect_H_7" x="128" y="208" name="inst_4A009A5A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_LevelSelect_H_8" x="128" y="288" name="inst_19B2E2B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_LevelSelect_H_9" x="128" y="368" name="inst_5437D247" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_LevelSelect_H_10" x="128" y="448" name="inst_C799A6D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

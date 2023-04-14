@@ -284,7 +284,7 @@ y += vsp;
           <argument>
             <kind>1</kind>
             <string>///Start the timer
-if (keyboard_check(global.KeyLeft) or keyboard_check(global.KeyRight) or keyboard_check(global.KeyJump) or keyboard_check(global.KeyShoot))
+if (keyboard_check_pressed(global.KeyLeft) or keyboard_check_pressed(global.KeyRight) or keyboard_check_pressed(global.KeyJump) or keyboard_check_pressed(global.KeyShoot))
 {
     global.TimerActive = 1 
 }
@@ -335,7 +335,7 @@ if (global.Cheats = 1 or debug_mode)
     //GO TO NEXT LEVEL
     if (keyboard_check_pressed(ord("2")))
     {
-        if (global.LevelNumber &lt; 3.09)
+        if (global.LevelNumber &lt; 3.10)
         {
             room_goto_next();
         }
@@ -975,6 +975,18 @@ if (global.Cheats = 0 or debug_mode)
             ini_write_string("Easy","Level 12","true");
             break;    
             
+        case 1.13:
+            ini_write_string("Easy","Level 13","true");
+            break;    
+            
+        case 1.14:
+            ini_write_string("Easy","Level 14","true");
+            break;    
+            
+        case 1.15:
+            ini_write_string("Easy","Level 15","true");
+            break;    
+            
     // M E D I U M    
         case 2.01: 
             ini_write_string("Medium","Level 1","true");
@@ -1023,6 +1035,18 @@ if (global.Cheats = 0 or debug_mode)
         case 2.12:
             ini_write_string("Medium","Level 12","true");
             break;   
+            
+        case 2.13:
+            ini_write_string("Medium","Level 13","true");
+            break;    
+            
+        case 2.14:
+            ini_write_string("Medium","Level 14","true");
+            break;    
+            
+        case 2.15:
+            ini_write_string("Medium","Level 15","true");
+            break;    
           
      // H A R D  
                 case 3.01: 

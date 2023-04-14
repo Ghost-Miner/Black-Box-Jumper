@@ -263,7 +263,14 @@
     <option_html5_usesplash>False</option_html5_usesplash>
     <option_icon>nil</option_icon>
     <option_in_app_purchase_sandbox_mode>0</option_in_app_purchase_sandbox_mode>
-    <option_information>--&lt;[ GAME INFORMATION ]&gt;--
+    <option_information>=====&lt;[ B L A C K   B O X   J U M P E R ]&gt;=====
+
+--&lt;[ GAME INFORMATION ]&gt;--
+Author: GhostMiner
+Version: 1.6
+Year released: 2020
+Last update: 2023
+
 Black Box Jumper is a platformer with simple objective.
 Each level must be finished by collecting all keys in given time 
 
@@ -274,7 +281,7 @@ WEBSITE: Ghost-Miner.github.io
 Discord:    Discord.gg/DjUBY9h
 Youtube:  YouTube.com/GhostMinerMC
 Twitter:    @_Ghostminer
-</option_information>
+=======================================</option_information>
     <option_interpolate>True</option_interpolate>
     <option_ios_adcolony_enable_V4VC>false</option_ios_adcolony_enable_V4VC>
     <option_ios_advertising_enable>false</option_ios_advertising_enable>
