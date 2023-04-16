@@ -10,7 +10,9 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>global.LevelNumber = 1.10</code>
+  <code>global.LevelNumber = 1.10
+
+global.doubleJump = false;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

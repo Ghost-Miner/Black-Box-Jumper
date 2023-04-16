@@ -39,10 +39,15 @@ global.TimerActive = 0;
 
 jumps = 0;
 jumpsmax = 2;
-if (global.doubleJump = false)
-{
-    jumpsmax = 1;    
+/*if (global.doubleJump = false)
+{ 
+jumpsmax = 1; 
+//instance_create(1184,32,obj_doubkleJump_indicaor);
 }
+else 
+{ 
+jumpsmax = 2; 
+}*/
 </string>
           </argument>
         </arguments>

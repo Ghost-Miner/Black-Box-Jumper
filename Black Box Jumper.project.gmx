@@ -144,6 +144,11 @@
     <sprite>sprites\spr_CC_bgr</sprite>
     <sprite>sprites\spr_Reset_controls</sprite>
     <sprite>sprites\rickroll_1</sprite>
+    <sprite>sprites\spr_double_Jump_on</sprite>
+    <sprite>sprites\spr_double_Jump_off</sprite>
+    <sprite>sprites\spr_discord</sprite>
+    <sprite>sprites\sor_youtube</sprite>
+    <sprite>sprites\spr_itchio</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -485,13 +490,14 @@
     <object>objects\obj_Opn_spd_Records</object>
     <object>objects\obj_dark_overlay</object>
     <object>objects\obj_discord_link</object>
-    <object>objects\obj_Twitter_link</object>
+    <object>objects\obj_youtube_link</object>
     <object>objects\spr_itchio_linl</object>
     <object>objects\obj_get_Editor</object>
     <object>objects\obj_open_lvls_folder</object>
     <object>objects\obj_CC_reserved</object>
     <object>objects\o_rickroll</object>
     <object>objects\credits_info</object>
+    <object>objects\obj_doubkleJump_indicaor</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_Screenshot</timeline>

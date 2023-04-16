@@ -12,7 +12,9 @@
   <showcolour>-1</showcolour>
   <code>global.LevelNumber = 1.12
 global.LastLevel = false;
-global.difficulty = "Easy";</code>
+global.difficulty = "Easy";
+
+global.doubleJump = false;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
