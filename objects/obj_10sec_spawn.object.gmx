@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-100</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -55,11 +55,28 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_halign(fa_center);
-draw_set_valign(fa_middle);
-draw_set_font(fnt_timer);
-draw_set_color(c_white);
-draw_text(room_width/2,32,"TIME LEFT: 10 seconds");
+            <string>// Class timer renderer
+if (global.classicTimer = true)
+{
+    draw_set_halign(fa_center);
+    draw_set_valign(fa_middle);
+    draw_set_font(fnt_timer)
+
+    draw_set_color(c_white)
+    draw_text(room_width/2,32,"10 seconds")
+}
+// New timer renderer
+else 
+{
+    draw_set_halign(fa_center);
+    draw_set_valign(fa_middle);
+    draw_set_font(fnt_xlarge)
+    draw_set_alpha(0.25);
+
+    draw_set_color(c_white)
+    draw_text(room_width/2,room_height/2,"10 s.")
+}
+draw_set_alpha(1);
 </string>
           </argument>
         </arguments>

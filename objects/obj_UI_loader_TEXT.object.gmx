@@ -203,7 +203,8 @@ global.Unfinished = false;
 global.GameVersion = "1.6";
 global.GameVersionShort = "1.6";
 
-global.doubleJump = true;
+global.doubleJump = true; // Unused
+global.classicTimer = true;
 
 //Tutorial
 if (file_exists(working_directory + "\Game data" + "\GameInfo.dat"))

@@ -30,13 +30,25 @@ draw_set_font(fnt_xsmall);
 draw_set_valign(fa_middle);
 draw_set_halign(fa_center);
 
-if global.Speedrun = false
+// no speedrun w/ old timer
+if (global.Speedrun = false and global.classicTimer = true )
 {
     draw_text(room_width/2,64,"Attempts: " + string(global.Attempts));
 }
-else
+//no speedrun w new timer
+else if (global.Speedrun = false and global.classicTimer = false)
+{
+    draw_text(room_width/2,32,"Attempts: " + string(global.Attempts));
+}
+//speedrun w old title
+else if (global.Speedrun = true and global.classicTimer = true)
 {
     draw_text(room_width/2,96,"Attempts: " + string(global.Attempts));
+}
+//speedrun w new title
+else
+{
+    draw_text(room_width/2,32,"Attempts: " + string(global.Attempts));
 }
 </string>
           </argument>

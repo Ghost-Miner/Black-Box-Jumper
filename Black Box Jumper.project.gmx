@@ -49,6 +49,7 @@
         <sprites name="Options">
           <sprite>sprites\spr_UI_ResetProgress</sprite>
           <sprite>sprites\spr_UI_Opt_advanced</sprite>
+          <sprite>sprites\spr_clasic_timer</sprite>
           <sprite>sprites\spr_UI_OpenSCREENSHOTfolder</sprite>
           <sprite>sprites\spr_UI_Progress_Reset_title</sprite>
           <sprite>sprites\spr_UI_Opt_MusicON</sprite>
@@ -213,6 +214,7 @@
     <font>fonts\font16</font>
     <font>fonts\font17</font>
     <font>fonts\font18</font>
+    <font>fonts\fnt_xlarge</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
@@ -285,8 +287,10 @@
           <object>objects\obj_Opt_UI_Music</object>
           <object>objects\obj_ShowFPS_toggler</object>
           <object>objects\obj_Fullscreen_toggle</object>
+          <object>objects\obj_classtimer_toggle_on</object>
           <object>objects\obj_Fullscreen</object>
           <object>objects\obj_ShowFPS</object>
+          <object>objects\obj_ClassicTimer</object>
           <object>objects\obj_UI_Opt_Sound</object>
           <object>objects\obj_UI_ProgressResetInfo</object>
           <object>objects\obj_UI_Opt_Mouse_defaulkt</object>
