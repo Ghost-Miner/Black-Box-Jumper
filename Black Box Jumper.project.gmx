@@ -111,9 +111,7 @@
       </sprites>
     </sprites>
     <sprites name="Misc">
-      <sprite>sprites\spr_UI_loading</sprite>
       <sprite>sprites\spr_UI_loading_new</sprite>
-      <sprite>sprites\spr_UI_loading_old</sprite>
       <sprite>sprites\spr_arrow</sprite>
       <sprite>sprites\spr_IncompatibleFiles</sprite>
       <sprite>sprites\spr_credits</sprite>
@@ -157,11 +155,6 @@
     <background>background\bgr_UI_background</background>
     <background>background\bgr_game_fiished</background>
     <background>background\bgr_TUT_Timer</background>
-    <background>background\bgr_hard_lvl_1</background>
-    <background>background\bgr_hard_lvl_2</background>
-    <background>background\bgr_hard_lvl3</background>
-    <background>background\bgr_editor</background>
-    <background>background\bg_templat</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
