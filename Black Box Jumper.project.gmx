@@ -113,7 +113,6 @@
     <sprites name="Misc">
       <sprite>sprites\spr_UI_loading_new</sprite>
       <sprite>sprites\spr_arrow</sprite>
-      <sprite>sprites\spr_IncompatibleFiles</sprite>
       <sprite>sprites\spr_credits</sprite>
     </sprites>
     <sprite>sprites\spr_UI_toggler_ON</sprite>
