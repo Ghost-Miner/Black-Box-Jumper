@@ -512,7 +512,7 @@ Twitter:    @_Ghostminer
     <option_version_build>56</option_version_build>
     <option_version_company>GhostMiner (author)</option_version_company>
     <option_version_copyright></option_version_copyright>
-    <option_version_description>Black Box Jumper - Made by GhostMiner, 2020-2021 &amp; 2023</option_version_description>
+    <option_version_description>Black Box Jumper 1.6 - Made by GhostMiner, 2020-2021 &amp; 2023</option_version_description>
     <option_version_major>1</option_version_major>
     <option_version_minor>6</option_version_minor>
     <option_version_product>Black Box Jumper</option_version_product>
@@ -593,7 +593,7 @@ Twitter:    @_Ghostminer
     <option_windows_company_info>GhostMiner (author)</option_windows_company_info>
     <option_windows_copyright_info></option_windows_copyright_info>
     <option_windows_create_textures_on_demand>False</option_windows_create_textures_on_demand>
-    <option_windows_description_info>Black Box Jumper - Made by GhostMiner, 2020-2021 &amp; 2023</option_windows_description_info>
+    <option_windows_description_info>Black Box Jumper 1.6 - Made by GhostMiner, 2020-2021 &amp; 2023</option_windows_description_info>
     <option_windows_enable_steam>0</option_windows_enable_steam>
     <option_windows_game_icon>Configs\Default\windows\runner_icon.ico</option_windows_game_icon>
     <option_windows_license>Configs\Default\windows\License.txt</option_windows_license>
